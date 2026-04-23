@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dr. Vivek Allahbadia | Robotic Knee Surgeon, Mumbai</title>
+<meta name="description" content="Dr. Vivek Allahbadia – HOD Orthopaedics at Hinduja Healthcare Surgical, Khar. Mumbai's leading robotic knee replacement surgeon with 26+ years of experience."/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,ital,wght@6..72,0,200..800;6..72,1,200..800&family=Manrope:wght@200..800&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "on-surface-variant": "#42474f",
+          "primary": "#00355f",
+          "on-tertiary": "#ffffff",
+          "background": "#f7f9fb",
+          "tertiary-fixed": "#97f0ff",
+          "surface-container-low": "#f2f4f6",
+          "on-surface": "#191c1e",
+          "on-primary-fixed-variant": "#07497d",
+          "surface-dim": "#d8dadc",
+          "secondary-fixed": "#d2e4ff",
+          "surface-variant": "#e0e3e5",
+          "tertiary-fixed-dim": "#6cd5e6",
+          "primary-fixed-dim": "#a0c9ff",
+          "on-tertiary-container": "#5dc8d8",
+          "on-background": "#191c1e",
+          "primary-container": "#0f4c81",
+          "surface-container-highest": "#e0e3e5",
+          "surface": "#f7f9fb",
+          "on-primary": "#ffffff",
+          "on-tertiary-fixed": "#001f24",
+          "surface-container-lowest": "#ffffff",
+          "outline": "#727780",
+          "primary-fixed": "#d2e4ff",
+          "surface-container": "#eceef0",
+          "surface-container-high": "#e6e8ea",
+          "secondary-container": "#d2e4ff",
+          "on-primary-fixed": "#001c37",
+          "secondary": "#4f6076",
+          "tertiary": "#003940",
+          "tertiary-container": "#00525b",
+          "outline-variant": "#c2c7d1",
+          "inverse-surface": "#2d3133",
+          "on-primary-container": "#8ebdf9"
+        },
+        borderRadius: {
+          DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem",
+          "2xl": "1rem", "3xl": "1.5rem", full: "9999px"
+        },
+        fontFamily: {
+          headline: ["Newsreader"],
+          display: ["Newsreader"],
+          body: ["Manrope"],
+          label: ["Manrope"],
+          "serif-elegant": ["Cormorant Garamond"]
+        }
+      }
+    }
+  }
+</script>
+</head>
+<body class="bg-background text-on-surface">
+
+<!-- ── Navigation ─────────────────────────────────────────── -->
+<header class="fixed top-0 w-full z-50 glass-header">
+  <div class="flex justify-between items-center px-6 md:px-10 py-4 max-w-7xl mx-auto">
+    <a href="index.html" class="flex flex-col leading-tight">
+      <span class="font-headline text-xl font-bold text-primary tracking-tight">Dr. Vivek Allahbadia</span>
+      <span class="text-xs font-label text-on-surface-variant tracking-widest uppercase">HOD Orthopaedics · Hinduja Khar</span>
+    </a>
+    <nav class="hidden md:flex items-center gap-7">
+      <a href="index.html" data-page="index.html" class="font-headline text-primary border-b-2 border-primary pb-0.5 font-semibold tracking-tight">Home</a>
+      <a href="about.html" data-page="about.html" class="font-headline text-on-surface-variant hover:text-primary transition-colors tracking-tight">About</a>
+      <a href="robot.html" data-page="robot.html" class="font-headline text-on-surface-variant hover:text-primary transition-colors tracking-tight">CORI Robot</a>
+      <a href="#specializations" class="font-headline text-on-surface-variant hover:text-primary transition-colors tracking-tight">Expertise</a>
+      <a href="#reviews" class="font-headline text-on-surface-variant hover:text-primary transition-colors tracking-tight">Reviews</a>
+      <a href="#contact" class="font-headline text-on-surface-variant hover:text-primary transition-colors tracking-tight">Contact</a>
+    </nav>
+    <a href="#contact" class="hidden md:inline-flex btn-primary text-sm py-2.5 px-5 shadow-none">
+      Book Consultation
+    </a>
+    <button id="menu-btn" class="md:hidden p-2 rounded-lg hover:bg-surface-container transition-colors">
+      <span class="material-symbols-outlined text-primary">menu</span>
+    </button>
+  </div>
+</header>
+
+<!-- ── Mobile Menu ─────────────────────────────────────────── -->
+<div id="mobile-menu">
+  <button id="menu-close" class="absolute top-5 right-6">
+    <span class="material-symbols-outlined text-primary text-3xl">close</span>
+  </button>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Dr. Allahbadia</a>
+  <a href="robot.html">CORI Robot</a>
+  <a href="#reviews">Patient Reviews</a>
+  <a href="#contact">Book Consultation</a>
+</div>
+
+<main class="pt-24">
+
+  <!-- ── Hero Section ──────────────────────────────────────── -->
+  <section class="max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-7">
+      <span class="vitals-chip anim-fade-up">Mumbai's Premier Robotic Knee Surgeon</span>
+      <h1 class="text-5xl md:text-7xl font-bold text-primary leading-tight tracking-tighter font-headline anim-fade-up delay-100">
+        Precision Robotics.<br/><em class="elegant-serif font-normal">Pain-Free Knees.</em>
+      </h1>
+      <p class="text-lg text-on-surface-variant leading-relaxed font-body max-w-lg anim-fade-up delay-200">
+        Dr. Vivek Allahbadia — HOD, Orthopaedics at Hinduja Healthcare Surgical, Khar — combines 26 years of surgical mastery with the Smith+Nephew CORI robotic system to deliver outcomes that restore your life, not just your knee.
+      </p>
+      <div class="flex flex-wrap gap-4 anim-fade-up delay-300">
+        <a href="#contact" class="btn-primary">
+          Schedule Consultation
+          <span class="material-symbols-outlined text-lg">arrow_forward</span>
+        </a>
+        <a href="robot.html" class="btn-secondary">
+          See the CORI Robot <span class="material-symbols-outlined">precision_manufacturing</span>
+        </a>
+      </div>
+      <div class="flex gap-8 pt-2 anim-fade-up delay-400">
+        <div>
+          <div class="stat-number" data-count="26" data-suffix="+">0+</div>
+          <div class="text-xs text-on-surface-variant uppercase tracking-widest font-label">Years Experience</div>
+        </div>
+        <div class="w-px bg-outline-variant"></div>
+        <div>
+          <div class="stat-number" data-count="98" data-suffix="%">0%</div>
+          <div class="text-xs text-on-surface-variant uppercase tracking-widest font-label">Patient Rating</div>
+        </div>
+        <div class="w-px bg-outline-variant"></div>
+        <div>
+          <div class="stat-number" data-count="5000" data-suffix="+">0+</div>
+          <div class="text-xs text-on-surface-variant uppercase tracking-widest font-label">Surgeries Performed</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Visual -->
+    <div class="relative anim-fade-in delay-300">
+      <div class="absolute inset-0 gradient-bg rounded-[3rem] -rotate-2 scale-105 opacity-10"></div>
+      <div class="relative rounded-[3rem] overflow-hidden shadow-2xl">
+        <img
+          src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=80"
+          alt="Dr. Vivek Allahbadia – Orthopaedic Surgeon"
+          class="w-full h-[580px] object-cover object-top"
+        />
+        <!-- Floating credential badge -->
+        <div class="absolute bottom-6 left-6 right-6 glass-header rounded-2xl p-4 flex items-center gap-4">
+          <div class="icon-badge">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;">verified</span>
+          </div>
+          <div>
+            <div class="font-bold text-primary font-headline text-sm">Fellowship Trained · Sheffield, UK</div>
+            <div class="text-xs text-on-surface-variant font-label">MBBS · MS Ortho · FCPS · Joint Replacement Fellow</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Full-width Overlay ─────────────────────────────────── -->
+  <section class="relative h-[520px] w-full overflow-hidden">
+    <img
+      src="https://images.unsplash.com/photo-1581595219315-a187dd40c322?w=1600&q=80"
+      alt="Robotic surgery in progress"
+      class="absolute inset-0 w-full h-full object-cover"
+    />
+    <div class="absolute inset-0 bg-primary/60 backdrop-blur-[3px] flex items-center justify-center px-8">
+      <div class="text-center space-y-6 max-w-3xl">
+        <h2 class="text-white text-5xl md:text-7xl elegant-serif drop-shadow-2xl leading-tight italic">
+          "Where surgical experience meets robotic precision"
+        </h2>
+        <p class="text-white/75 font-body text-lg">
+          Dr. Vivek Allahbadia · HOD Orthopaedics, Hinduja Healthcare Surgical, Khar
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Trust Signals Row ─────────────────────────────────── -->
+  <section class="bg-surface-container-low py-16 px-6 md:px-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
+      <div class="card-tonal text-center reveal">
+        <div class="icon-badge mx-auto mb-4">
+          <span class="material-symbols-outlined">school</span>
+        </div>
+        <div class="font-bold text-primary font-headline text-lg">Fellowship Trained</div>
+        <div class="text-sm text-on-surface-variant mt-1">Northern General Hospital, Sheffield, UK</div>
+      </div>
+      <div class="card-tonal text-center reveal" data-delay="100">
+        <div class="icon-badge mx-auto mb-4">
+          <span class="material-symbols-outlined">precision_manufacturing</span>
+        </div>
+        <div class="font-bold text-primary font-headline text-lg">CORI Robotic System</div>
+        <div class="text-sm text-on-surface-variant mt-1">Smith+Nephew, Hinduja Khar</div>
+      </div>
+      <div class="card-tonal text-center reveal" data-delay="200">
+        <div class="icon-badge mx-auto mb-4">
+          <span class="material-symbols-outlined">emoji_events</span>
+        </div>
+        <div class="font-bold text-primary font-headline text-lg">Lions Club Award</div>
+        <div class="text-sm text-on-surface-variant mt-1">Felicitated in Medical Excellence</div>
+      </div>
+      <div class="card-tonal text-center reveal" data-delay="300">
+        <div class="icon-badge mx-auto mb-4">
+          <span class="material-symbols-outlined">menu_book</span>
+        </div>
+        <div class="font-bold text-primary font-headline text-lg">Published Research</div>
+        <div class="text-sm text-on-surface-variant mt-1">Indian Journal of Orthopaedics</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Specializations ───────────────────────────────────── -->
+  <section id="specializations" class="py-24 px-6 md:px-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-14 max-w-2xl reveal">
+        <span class="section-tag">Clinical Expertise</span>
+        <h2 class="text-4xl md:text-5xl font-bold text-primary font-headline tracking-tight mb-4">
+          Surgical Specializations
+        </h2>
+        <p class="text-on-surface-variant font-body text-lg leading-relaxed">
+          Dr. Allahbadia's practice spans the full spectrum of joint reconstruction — from primary knee replacements to complex revision surgeries, all enhanced by robotic precision.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <!-- Spec 1 -->
+        <div class="card-tonal flex flex-col items-start reveal">
+          <div class="icon-badge mb-5">
+            <span class="material-symbols-outlined text-2xl">medical_services</span>
+          </div>
+          <h3 class="font-bold text-primary font-headline text-xl mb-3">Total Knee Replacement</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Robotic-assisted total knee arthroplasty for advanced osteoarthritis, customized to your unique anatomy using the CORI system.</p>
+        </div>
+        <!-- Spec 2 -->
+        <div class="card-tonal flex flex-col items-start reveal" data-delay="100">
+          <div class="icon-badge mb-5">
+            <span class="material-symbols-outlined text-2xl">settings_suggest</span>
+          </div>
+          <h3 class="font-bold text-primary font-headline text-xl mb-3">Partial Knee Arthroplasty</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Preserving healthy ligaments and bone with targeted restoration — robotic guidance ensures perfect implant balance.</p>
+        </div>
+        <!-- Spec 3 -->
+        <div class="card-tonal flex flex-col items-start reveal" data-delay="200">
+          <div class="icon-badge mb-5">
+            <span class="material-symbols-outlined text-2xl">clinical_notes</span>
+          </div>
+          <h3 class="font-bold text-primary font-headline text-xl mb-3">Revision Knee Surgery</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Precision corrective procedures for failed or worn implants. Dr. Allahbadia specializes in complex cases others find challenging.</p>
+        </div>
+        <!-- Spec 4 -->
+        <div class="card-tonal flex flex-col items-start reveal" data-delay="300">
+          <div class="icon-badge mb-5">
+            <span class="material-symbols-outlined text-2xl">sports_soccer</span>
+          </div>
+          <h3 class="font-bold text-primary font-headline text-xl mb-3">Sports Injuries & Arthroscopy</h3>
+          <p class="text-on-surface-variant text-sm leading-relaxed">Knee and shoulder arthroscopy, ligament repairs, and sports trauma management for active patients seeking rapid return to activity.</p>
+        </div>
+      </div>
+
+      <!-- Why Robotic callout -->
+      <div class="mt-14 bg-primary/5 rounded-[2rem] p-10 md:p-14 grid md:grid-cols-2 gap-12 items-center reveal">
+        <div>
+          <h3 class="text-2xl font-bold text-primary font-headline mb-6">Why Dr. Allahbadia Chooses Robotics</h3>
+          <ul class="space-y-4">
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-on-tertiary-container mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <span class="text-on-surface-variant">Sub-millimeter accuracy in bone preparation — no CT scans or pre-op MRI required with the CORI system.</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-on-tertiary-container mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <span class="text-on-surface-variant">Real-time soft tissue balancing for a natural-feeling joint that lasts longer.</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-on-tertiary-container mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <span class="text-on-surface-variant">Significantly reduced post-operative pain — patients report faster discharge and less dependency on pain medication.</span>
+            </li>
+            <li class="flex items-start gap-4">
+              <span class="material-symbols-outlined text-on-tertiary-container mt-0.5" style="font-variation-settings:'FILL' 1;">check_circle</span>
+              <span class="text-on-surface-variant">Intra-operative 3D modelling ensures every surgery is tailored to your specific anatomy, not a standard template.</span>
+            </li>
+          </ul>
+          <a href="robot.html" class="btn-primary mt-8 text-sm py-3 px-6">
+            Explore the CORI Technology <span class="material-symbols-outlined text-sm">arrow_forward</span>
+          </a>
+        </div>
+        <div class="space-y-4">
+          <p class="pull-quote">
+            "I believe the future of knee surgery is not just about replacing a joint — it's about restoring a life, with precision only robotics can provide."
+          </p>
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-0.5 bg-on-tertiary-container"></div>
+            <span class="font-bold text-primary uppercase text-xs tracking-widest font-label">Dr. Vivek Allahbadia</span>
+          </div>
+          <div class="pt-4">
+            <a href="about.html" class="btn-secondary px-0 text-sm">
+              View Full Profile <span class="material-symbols-outlined text-sm">open_in_new</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Comparison Table ───────────────────────────────────── -->
+  <section class="gradient-bg text-white py-24 px-6 md:px-10">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="section-tag text-white/60">Evidence-Based Outcomes</span>
+        <h2 class="text-4xl font-bold font-headline tracking-tight">
+          Robotic vs. Traditional Knee Surgery
+        </h2>
+      </div>
+      <div class="bg-primary-container rounded-[2rem] overflow-hidden ghost-border">
+        <table class="w-full text-left">
+          <thead>
+            <tr class="bg-white/5">
+              <th class="p-6 md:p-8 text-base font-bold font-headline">Metric</th>
+              <th class="p-6 md:p-8 text-base font-bold font-headline text-on-tertiary-container">CORI Robotic Surgery</th>
+              <th class="p-6 md:p-8 text-base font-bold font-headline opacity-50">Traditional Surgery</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="compare-row">
+              <td class="font-semibold">Precision</td>
+              <td class="text-on-tertiary-container">Sub-millimeter accuracy via 3D intra-op mapping</td>
+              <td class="opacity-50">Standard mechanical cutting guides</td>
+            </tr>
+            <tr class="compare-row">
+              <td class="font-semibold">Pre-op Imaging</td>
+              <td class="text-on-tertiary-container">No CT / MRI needed — image-agnostic</td>
+              <td class="opacity-50">Typically requires pre-op imaging</td>
+            </tr>
+            <tr class="compare-row">
+              <td class="font-semibold">Pain Post-Op</td>
+              <td class="text-on-tertiary-container">Significantly reduced soft tissue trauma</td>
+              <td class="opacity-50">Moderate to high post-operative pain</td>
+            </tr>
+            <tr class="compare-row">
+              <td class="font-semibold">Recovery</td>
+              <td class="text-on-tertiary-container">Return to activity in 4–6 weeks</td>
+              <td class="opacity-50">Standard 8–12 weeks recovery</td>
+            </tr>
+            <tr class="compare-row">
+              <td class="font-semibold">Hospital Stay</td>
+              <td class="text-on-tertiary-container">Often 1 night or outpatient</td>
+              <td class="opacity-50">1–3 nights on average</td>
+            </tr>
+            <tr class="compare-row">
+              <td class="font-semibold">Personalisation</td>
+              <td class="text-on-tertiary-container">Fully customized to patient anatomy</td>
+              <td class="opacity-50">Standard template-based approach</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="text-center mt-10">
+        <a href="robot.html" class="btn-primary bg-white text-primary hover:bg-white/90 shadow-none">
+          Learn About the CORI System <span class="material-symbols-outlined text-sm">arrow_forward</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Patient Reviews ────────────────────────────────────── -->
+  <section id="reviews" class="py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 mb-12 flex justify-between items-end reveal">
+      <div>
+        <span class="section-tag">Restored Lives</span>
+        <h2 class="text-4xl font-bold text-primary font-headline tracking-tight">Patient Stories</h2>
+        <p class="text-on-surface-variant font-body mt-2">Real outcomes from Dr. Allahbadia's robotic knee patients in Mumbai.</p>
+      </div>
+      <div class="flex gap-3">
+        <button id="reviews-prev" class="w-11 h-11 rounded-full ghost-border flex items-center justify-center hover:bg-surface-container transition-all">
+          <span class="material-symbols-outlined">chevron_left</span>
+        </button>
+        <button id="reviews-next" class="w-11 h-11 rounded-full ghost-border flex items-center justify-center hover:bg-surface-container transition-all">
+          <span class="material-symbols-outlined">chevron_right</span>
+        </button>
+      </div>
+    </div>
+
+    <div id="reviews-carousel" class="flex gap-6 overflow-x-auto px-6 md:px-10 pb-8 hide-scrollbar snap-x">
+      <!-- Review 1 -->
+      <div class="min-w-[380px] card-tonal snap-center flex-shrink-0">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-xl flex-shrink-0">R</div>
+          <div>
+            <h4 class="font-bold text-primary font-headline">Ramesh Nair</h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-widest">Total Knee Replacement, 2023</p>
+          </div>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed font-body text-sm">"Dr. Allahbadia explained the CORI robotic system so clearly. The surgery was pain-free and I was walking without support within days. Truly life-changing."</p>
+        <div class="mt-5 flex stars">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+        </div>
+      </div>
+      <!-- Review 2 -->
+      <div class="min-w-[380px] card-tonal snap-center flex-shrink-0">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-xl flex-shrink-0">S</div>
+          <div>
+            <h4 class="font-bold text-primary font-headline">Sunita Mehta</h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-widest">Bilateral Knee Replacement, 2023</p>
+          </div>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed font-body text-sm">"I was terrified about bilateral knee replacement at 62. Dr. Allahbadia's calm confidence and the robotic precision made all the difference. I was back in my garden in 6 weeks."</p>
+        <div class="mt-5 flex stars">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+        </div>
+      </div>
+      <!-- Review 3 -->
+      <div class="min-w-[380px] card-tonal snap-center flex-shrink-0">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-xl flex-shrink-0">A</div>
+          <div>
+            <h4 class="font-bold text-primary font-headline">Arjun Patel</h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-widest">Partial Knee Replacement, 2024</p>
+          </div>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed font-body text-sm">"As a former athlete, I needed precision. The CORI robot ensured my alignment was perfect. Three months later I'm playing tennis again. Dr. Allahbadia is exceptional."</p>
+        <div class="mt-5 flex stars">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+        </div>
+      </div>
+      <!-- Review 4 -->
+      <div class="min-w-[380px] card-tonal snap-center flex-shrink-0">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-xl flex-shrink-0">P</div>
+          <div>
+            <h4 class="font-bold text-primary font-headline">Priya Sharma</h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-widest">Revision Knee Surgery, 2022</p>
+          </div>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed font-body text-sm">"Two previous surgeons had given up on my case. Dr. Allahbadia took it on with the CORI system and gave me my mobility back. I cannot thank him enough."</p>
+        <div class="mt-5 flex stars">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+        </div>
+      </div>
+      <!-- Review 5 -->
+      <div class="min-w-[380px] card-tonal snap-center flex-shrink-0">
+        <div class="flex items-center gap-4 mb-5">
+          <div class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-xl flex-shrink-0">V</div>
+          <div>
+            <h4 class="font-bold text-primary font-headline">Vijay Iyer</h4>
+            <p class="text-xs text-on-surface-variant uppercase tracking-widest">Arthroscopy, 2023</p>
+          </div>
+        </div>
+        <p class="text-on-surface-variant leading-relaxed font-body text-sm">"Had a knee arthroscopy at Hinduja Khar. The facility is top-class, the care team is exceptional, and Dr. Allahbadia's communication is outstanding. Back to cycling in 3 weeks."</p>
+        <div class="mt-5 flex stars">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">star</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Education / Video Library ─────────────────────────── -->
+  <section class="bg-surface-container-low py-24 px-6 md:px-10">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12 reveal">
+        <span class="section-tag">Patient Education</span>
+        <h2 class="text-4xl font-bold text-primary font-headline tracking-tight mb-3">Video Library</h2>
+        <p class="text-on-surface-variant max-w-xl font-body">Understand your procedure, manage expectations, and hear from patients who've already taken their step toward a pain-free life.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8">
+        <!-- Video 1 -->
+        <div class="video-card group cursor-pointer reveal">
+          <div class="relative aspect-video rounded-2xl overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=600&q=80" alt="Understanding CORI Robotic Knee Surgery" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-primary/25 flex items-center justify-center play-btn">
+              <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <h4 class="font-bold text-primary font-headline text-lg">Understanding CORI Robotic Surgery</h4>
+          <p class="text-sm text-on-surface-variant mt-1">How the Smith+Nephew system maps your unique anatomy.</p>
+        </div>
+        <!-- Video 2 -->
+        <div class="video-card group cursor-pointer reveal" data-delay="100">
+          <div class="relative aspect-video rounded-2xl overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&q=80" alt="Life After Knee Replacement" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-primary/25 flex items-center justify-center play-btn">
+              <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <h4 class="font-bold text-primary font-headline text-lg">Life After Knee Replacement</h4>
+          <p class="text-sm text-on-surface-variant mt-1">Recovery timelines, milestones, and returning to activity.</p>
+        </div>
+        <!-- Video 3 -->
+        <div class="video-card group cursor-pointer reveal" data-delay="200">
+          <div class="relative aspect-video rounded-2xl overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600&q=80" alt="Patient Interview Post-Surgery" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-primary/25 flex items-center justify-center play-btn">
+              <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <h4 class="font-bold text-primary font-headline text-lg">Patient Interviews: Post-Surgery</h4>
+          <p class="text-sm text-on-surface-variant mt-1">Real conversations with patients 3–6 months after robotic knee surgery.</p>
+        </div>
+        <!-- Video 4 -->
+        <div class="video-card group cursor-pointer reveal">
+          <div class="relative aspect-video rounded-2xl overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=600&q=80" alt="Pain Management After Knee Surgery" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-primary/25 flex items-center justify-center play-btn">
+              <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <h4 class="font-bold text-primary font-headline text-lg">Pain-Free Protocol</h4>
+          <p class="text-sm text-on-surface-variant mt-1">Dr. Allahbadia's approach to pain management before, during and after surgery.</p>
+        </div>
+        <!-- Video 5 -->
+        <div class="video-card group cursor-pointer reveal" data-delay="100">
+          <div class="relative aspect-video rounded-2xl overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=600&q=80" alt="Robotic vs Traditional" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-primary/25 flex items-center justify-center play-btn">
+              <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <h4 class="font-bold text-primary font-headline text-lg">Robotic vs. Traditional Surgery</h4>
+          <p class="text-sm text-on-surface-variant mt-1">A direct comparison from Dr. Allahbadia's surgical experience.</p>
+        </div>
+        <!-- Video 6 -->
+        <div class="video-card group cursor-pointer reveal" data-delay="200">
+          <div class="relative aspect-video rounded-2xl overflow-hidden mb-4">
+            <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=600&q=80" alt="Success Roundtable" class="w-full h-full object-cover"/>
+            <div class="absolute inset-0 bg-primary/25 flex items-center justify-center play-btn">
+              <div class="bg-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg">
+                <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings:'FILL' 1;">play_arrow</span>
+              </div>
+            </div>
+          </div>
+          <h4 class="font-bold text-primary font-headline text-lg">Patient Success Roundtable</h4>
+          <p class="text-sm text-on-surface-variant mt-1">Multiple patients share their robotic knee replacement experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Appointment / Contact ──────────────────────────────── -->
+  <section id="contact" class="py-24 px-6 md:px-10">
+    <div class="max-w-5xl mx-auto text-center space-y-8 reveal">
+      <span class="vitals-chip">Book an Appointment</span>
+      <h2 class="text-4xl md:text-5xl font-bold text-primary font-headline tracking-tight">
+        Take the first step<br/><em class="elegant-serif font-normal">toward pain-free movement</em>
+      </h2>
+      <p class="text-on-surface-variant font-body text-lg max-w-xl mx-auto">
+        Consultations are available at Hinduja Healthcare Surgical, Khar, Mumbai. Bring your imaging and we'll create a personalised surgical plan for you.
+      </p>
+      <div class="flex flex-col md:flex-row items-center justify-center gap-6 pt-4">
+        <div class="card-tonal flex items-center gap-4 min-w-[260px]">
+          <div class="icon-badge flex-shrink-0">
+            <span class="material-symbols-outlined">location_on</span>
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-primary font-headline text-sm">Hinduja Healthcare Surgical</div>
+            <div class="text-xs text-on-surface-variant">724, 11th Road, Khar West, Mumbai 400052</div>
+          </div>
+        </div>
+        <div class="card-tonal flex items-center gap-4 min-w-[260px]">
+          <div class="icon-badge flex-shrink-0">
+            <span class="material-symbols-outlined">call</span>
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-primary font-headline text-sm">Call the Clinic</div>
+            <div class="text-xs text-on-surface-variant">+91 22 4510 8989 · Ask for Orthopaedics</div>
+          </div>
+        </div>
+        <div class="card-tonal flex items-center gap-4 min-w-[260px]">
+          <div class="icon-badge flex-shrink-0">
+            <span class="material-symbols-outlined">person</span>
+          </div>
+          <div class="text-left">
+            <div class="font-bold text-primary font-headline text-sm">LinkedIn Profile</div>
+            <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank" rel="noopener" class="text-xs text-on-tertiary-container hover:underline">linkedin.com/in/vivek-allahbadia-7404577</a>
+          </div>
+        </div>
+      </div>
+      <a href="about.html" class="btn-primary inline-flex mt-4">
+        View Full Surgeon Profile <span class="material-symbols-outlined">open_in_new</span>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ──────────────────────────────────────────────── -->
+<footer class="w-full py-12 px-6 md:px-10 bg-surface-container-low">
+  <div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto gap-6">
+    <div>
+      <div class="font-headline text-lg font-bold text-primary">Dr. Vivek Allahbadia</div>
+      <div class="text-xs text-on-surface-variant tracking-widest uppercase font-label mt-1">HOD Orthopaedics · Hinduja Healthcare Surgical, Khar</div>
+    </div>
+    <nav class="flex flex-wrap gap-6 justify-center">
+      <a href="index.html" class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm">Home</a>
+      <a href="about.html" class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm">About</a>
+      <a href="robot.html" class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm">CORI Robot</a>
+      <a href="#reviews" class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm">Reviews</a>
+      <a href="#contact" class="text-on-surface-variant hover:text-primary transition-colors font-body text-sm">Contact</a>
+    </nav>
+    <p class="text-on-surface-variant font-body text-xs">
+      © 2025 Dr. Vivek Allahbadia. Hinduja Healthcare Surgical, Mumbai.
+    </p>
+  </div>
+</footer>
+
+<!-- Scroll to top -->
+<button id="scroll-top" aria-label="Scroll to top">
+  <span class="material-symbols-outlined text-sm">arrow_upward</span>
+</button>
+
+<script src="main.js"></script>
+</body>
+</html>
