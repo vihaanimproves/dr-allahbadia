@@ -39,20 +39,20 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
 
 /* ── Hero slide animations ── */
 @keyframes slideLeft {
-  from { opacity:0; transform:translateX(60px); }
+  from { opacity:0; transform:translateX(260px); }
   to   { opacity:1; transform:translateX(0); }
 }
 @keyframes slideRight {
-  from { opacity:0; transform:translateX(-60px); }
+  from { opacity:0; transform:translateX(-260px); }
   to   { opacity:1; transform:translateX(0); }
 }
 @keyframes heroImgIn {
-  from { opacity:0; transform:scale(1.04); }
+  from { opacity:0; transform:scale(1.06); }
   to   { opacity:1; transform:scale(1); }
 }
-.hero-left  { opacity:0; animation: slideLeft  .9s cubic-bezier(.22,.6,.36,1) .15s forwards; }
-.hero-right { opacity:0; animation: slideRight .9s cubic-bezier(.22,.6,.36,1) .15s forwards; }
-.hero-img   { opacity:0; animation: heroImgIn  .8s cubic-bezier(.22,.6,.36,1) .05s forwards; }
+.hero-left  { opacity:0; animation: slideLeft  1.1s cubic-bezier(.16,.6,.3,1) .1s forwards; }
+.hero-right { opacity:0; animation: slideRight 1.1s cubic-bezier(.16,.6,.3,1) .1s forwards; }
+.hero-img   { opacity:0; animation: heroImgIn  .7s cubic-bezier(.22,.6,.36,1) 0s  forwards; }
 .eyebrow{font-size:10px;font-weight:800;letter-spacing:.20em;text-transform:uppercase;color:rgba(0,53,95,.65);margin-bottom:.25rem;}
 .rule{height:1px;background:rgba(0,53,95,.1);}
 .stat-n{font-family:"Newsreader",serif;font-size:4rem;font-weight:300;color:#00355f;line-height:1;}
@@ -195,9 +195,9 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
   <div class="rv d1 flex items-center justify-center">
     <div style="border-radius:1.5rem;overflow:hidden;border:1px solid rgba(255,255,255,0.1);box-shadow:0 32px 80px rgba(0,0,0,0.4);width:100%;max-width:520px;">
       <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/MAKO_robotic_arm_at_OrthoIndy.jpg/800px-MAKO_robotic_arm_at_OrthoIndy.jpg"
+        src="images/CORI.png"
         alt="Robotic-Assisted Knee Surgery System — CORI Surgical System, Smith+Nephew"
-        style="width:100%;height:420px;object-fit:cover;object-position:center;display:block;filter:brightness(.82) saturate(0.75);"
+        style="width:100%;height:420px;object-fit:contain;object-position:center;display:block;background:#ffffff;padding:24px;"
       />
       <!-- Caption bar -->
       <div style="background:rgba(0,0,0,0.55);backdrop-filter:blur(12px);padding:14px 20px;display:flex;align-items:center;justify-content:space-between;">
