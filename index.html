@@ -46,6 +46,7 @@
   h1,h2,h3,.font-serif{font-family:'Newsreader',serif;}
   .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
   .editorial-shadow{box-shadow:0 32px 64px -12px rgba(0,53,95,0.06);}
+<style>
 /* ── Marquee ── */
 @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
 .marquee-track { animation: marquee 32s linear infinite; }
@@ -76,6 +77,36 @@ body { background-color: #E8EAED; }
 .bg-surface-container-low { background-color: #DFE2E6 !important; }
 .bg-surface-container { background-color: #D8DBE0 !important; }
 .bg-surface-container-lowest { background-color: #ffffff !important; }
+
+/* ── Hero slide animations ── */
+@keyframes slideLeft {
+  from { opacity:0; transform:translateX(260px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+@keyframes slideRight {
+  from { opacity:0; transform:translateX(-260px); }
+  to   { opacity:1; transform:translateX(0); }
+}
+@keyframes heroImgIn {
+  from { opacity:0; transform:scale(1.06); }
+  to   { opacity:1; transform:scale(1); }
+}
+.hero-left  { opacity:0; animation: slideLeft  1.1s cubic-bezier(.16,.6,.3,1) .1s forwards; }
+.hero-right { opacity:0; animation: slideRight 1.1s cubic-bezier(.16,.6,.3,1) .1s forwards; }
+.hero-img   { opacity:0; animation: heroImgIn  .7s cubic-bezier(.22,.6,.36,1) 0s  forwards; }
+.eyebrow-hero{font-size:10px;font-weight:800;letter-spacing:.20em;text-transform:uppercase;color:rgba(0,53,95,.65);}
+
+/* ── Editorial USP: blue background, always fully visible, no animation ── */
+#editorial-usp {
+  background: linear-gradient(160deg, #00264d 0%, #00355f 55%, #004a6e 100%) !important;
+}
+#editorial-usp,
+#editorial-usp * {
+  opacity: 1 !important;
+  transform: none !important;
+  animation: none !important;
+  transition: none !important;
+}
 </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white">
@@ -90,6 +121,7 @@ body { background-color: #E8EAED; }
     <a href="about.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">About</a>
     <a href="testimonials.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Patient Testimonials</a>
     <a href="robot.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">CORI Robotics</a>
+    <a href="gallery.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Gallery</a>
     <a href="appointments.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
   </div>
   <a href="appointments.html" class="shrink-0"><button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-medium transition-all scale-95 active:opacity-80 text-sm">Schedule Consultation</button></a>
@@ -98,59 +130,117 @@ body { background-color: #E8EAED; }
 
 <main class="pt-20">
 
-<!-- ── HERO ── -->
-<section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
-<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-  <div class="md:col-span-7">
-    <h1 class="text-6xl md:text-8xl font-headline font-light text-primary leading-[1.05] mb-3">
-      Dr. Vivek<br/>Allahbadia
-    </h1>
-    <!-- Degrees — compact single line -->
-    <p class="text-xs font-body font-bold text-on-surface-variant tracking-[0.18em] uppercase mb-5">
-      MS Orth&nbsp;·&nbsp;D'Orth&nbsp;·&nbsp;FCPS Orth&nbsp;·&nbsp;MCH Orth (UK)
-    </p>
-    <!-- HOD badge — below title -->
-    <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-xs font-bold tracking-widest uppercase mb-8 rounded-full">
-      <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">local_hospital</span>
-      HOD, Orthopaedics — Hinduja Healthcare Surgical, Khar
-    </div>
-    <p class="text-xl font-headline italic text-on-surface-variant mb-10 max-w-lg">
-      Mumbai's leading robotic knee surgeon. Pain-free surgery. Faster recovery.
-    </p>
-    <div class="space-y-4 pt-8 border-t border-outline-variant/30">
-      <div class="flex items-start gap-4">
-        <span class="material-symbols-outlined text-primary-container" style="font-variation-settings:'FILL' 1;">verified</span>
-        <div>
-          <p class="font-bold text-primary">28+ Years · 98% Patient Rating · 5,000+ Surgeries</p>
-          <p class="text-on-surface-variant text-sm">MS ORTH · D'ORTH · FCPS ORTH · MCH ORTH (UK)</p>
+<!-- 1. HERO -->
+<section class="overflow-hidden relative" style="min-height:88vh;background:#E8EAED;">
+
+  <!-- Doctor image — absolutely placed between the two text columns -->
+  <div class="hidden lg:block hero-img" style="
+    position:absolute;
+    top:9vh;
+    bottom:0;
+    left:calc(39% - 20px);
+    width:36%;
+    z-index:1;
+    pointer-events:none;
+    overflow:hidden;
+  ">
+    <img
+      src="images/abouthero.png"
+      alt="Dr. Vivek Allahbadia — Orthopaedic Surgeon, Mumbai"
+      style="
+        width:100%;
+        height:100%;
+        object-fit:contain;
+        object-position:top center;
+        transform:scaleX(-1);
+        display:block;
+      "
+    />
+  </div>
+
+  <!-- Foreground grid: text left | stats right — both above the doctor -->
+  <div style="
+    position:relative;
+    z-index:10;
+    display:grid;
+    grid-template-columns:1fr 260px;
+    align-items:center;
+    min-height:88vh;
+    max-width:1536px;
+    margin:0 auto;
+    padding:5rem 20px;
+    gap:0;
+  ">
+
+    <!-- LEFT: text -->
+    <div class="hero-left flex flex-col justify-center" style="padding-right:2rem;margin-top:-9vh;">
+      <p class="eyebrow-hero mb-5">About Dr. Vivek Allahbadia</p>
+      <h1 class="font-headline font-light text-primary tracking-tight mb-8"
+          style="font-size:clamp(2.82rem,4.4vw,4.84rem);line-height:.93;">
+        Precision. Innovation.<br/>Compassion.
+      </h1>
+      <p class="text-on-surface-variant leading-relaxed mb-10" style="max-width:26rem;font-size:1.1rem;">
+        28 years of surgical mastery. Fellowship trained in the UK. Pioneer of robotic knee surgery in Mumbai.
+        The right treatment — every time.
+      </p>
+      <div class="space-y-4">
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">school</span>
+          <span style="font-size:14px;font-weight:600;color:#00355f;">Fellowship — Northern General Hospital, Sheffield UK</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">precision_manufacturing</span>
+          <span style="font-size:14px;font-weight:600;color:#00355f;">CORI Robotic Surgery Specialist</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">menu_book</span>
+          <span style="font-size:14px;font-weight:600;color:#00355f;">Published · Indian Journal of Orthopaedics</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">emoji_events</span>
+          <span style="font-size:14px;font-weight:600;color:#00355f;">Lions Club International Award</span>
+        </div>
+        <div class="flex items-center gap-3">
+          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">mic</span>
+          <span style="font-size:14px;font-weight:600;color:#00355f;">The Ranveer Show — TRS #333</span>
         </div>
       </div>
-      <div class="flex items-start gap-4">
-        <span class="material-symbols-outlined text-primary-container" style="font-variation-settings:'FILL' 1;">precision_manufacturing</span>
-        <div>
-          <p class="font-bold text-primary">CORI Robotic Surgery Specialist</p>
-          <p class="text-on-surface-variant text-sm">Smith+Nephew CORI System · Hinduja Khar</p>
-        </div>
+    </div>
+
+    <!-- RIGHT: stats -->
+    <div class="hero-right flex flex-col justify-center" style="
+      padding-left:2rem;
+      
+      gap:0;
+    ">
+      <div style="padding-bottom:2rem;margin-bottom:2rem;">
+        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">28<span style="font-size:1.6rem;">+</span></div>
+        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Years Experience</p>
+      </div>
+      <div style="padding-bottom:2rem;margin-bottom:2rem;">
+        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">5,000<span style="font-size:1.6rem;">+</span></div>
+        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Surgeries Performed</p>
+      </div>
+      <div style="padding-bottom:2rem;margin-bottom:2rem;">
+        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">98<span style="font-size:1.6rem;">%</span></div>
+        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Patient Satisfaction</p>
+      </div>
+      <div>
+        <div class="font-headline font-light" style="font-size:4rem;color:#5dc8d8;line-height:1;">4.5<span style="font-size:1.6rem;">&#9733;</span></div>
+        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Average Star Rating</p>
       </div>
     </div>
+
   </div>
-  <div class="md:col-span-5 relative">
-    <div class="rounded-[2rem] overflow-hidden aspect-[4/5] editorial-shadow bg-surface-container-high relative group">
-      <img alt="Dr. Vivek Allahbadia" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=80"/>
-      <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
-    </div>
-    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-tertiary-fixed-dim/30 blur-3xl rounded-full"></div>
-  </div>
-</div>
 </section>
 
 <!-- ── EDITORIAL USP SECTION ── -->
-<section class="bg-surface py-28 px-8 overflow-hidden">
+<section id="editorial-usp" style="background:linear-gradient(160deg,#00264d 0%,#00355f 55%,#004a6e 100%);" class="py-28 px-8 overflow-hidden">
   <div class="max-w-7xl mx-auto">
 
     <!-- Eyebrow label -->
-    <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-on-surface-variant mb-16 flex items-center gap-4">
-      <span class="inline-block w-10 h-px bg-on-tertiary-container"></span>
+    <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-white/50 mb-16 flex items-center gap-4">
+      <span class="inline-block w-10 h-px bg-white/30"></span>
       The two things that define every outcome
     </p>
 
@@ -158,76 +248,76 @@ body { background-color: #E8EAED; }
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-0">
 
       <!-- Left: Pain-free -->
-      <div class="border-r-0 lg:border-r border-outline-variant/25 pr-0 lg:pr-20 pb-16 lg:pb-0">
-        <div class="inline-flex items-center gap-2 bg-tertiary-fixed/60 text-on-tertiary-fixed text-[10px] font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full mb-8">
-          <span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-fixed inline-block"></span>
+      <div class="border-r-0 lg:border-r border-white/15 pr-0 lg:pr-20 pb-16 lg:pb-0">
+        <div class="inline-flex items-center gap-2 bg-white/15 text-white text-[10px] font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full mb-8">
+          <span class="w-1.5 h-1.5 rounded-full bg-white inline-block"></span>
           Primary USP
         </div>
-        <h2 class="text-7xl md:text-[96px] font-headline font-light text-primary leading-[0.95] tracking-tight mb-8">
+        <h2 class="text-7xl md:text-[96px] font-headline font-light text-white leading-[0.95] tracking-tight mb-8">
           Pain&#8209;free<br/><em class="italic">surgery.</em>
         </h2>
-        <p class="text-on-surface-variant leading-relaxed max-w-sm mb-10">
+        <p class="text-white/70 leading-relaxed max-w-sm mb-10">
           Robotic precision means far less soft tissue trauma than traditional surgery. Less damage means less pain — and a recovery that routinely surprises patients with how smooth and quick it is.
         </p>
         <!-- Inline stats, no boxes -->
         <div class="flex items-start gap-10">
           <div>
-            <p class="text-4xl font-headline font-light text-primary leading-none">24<span class="text-xl">hrs</span></p>
-            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-2">Walking</p>
+            <p class="text-4xl font-headline font-light text-white leading-none">24<span class="text-xl">hrs</span></p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-white/50 mt-2">Walking</p>
           </div>
-          <div class="w-px h-10 bg-outline-variant/40 self-center"></div>
+          <div class="w-px h-10 bg-white/20 self-center"></div>
           <div>
-            <p class="text-4xl font-headline font-light text-primary leading-none">1<span class="text-xl"> night</span></p>
-            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-2">Hospital Stay</p>
+            <p class="text-4xl font-headline font-light text-white leading-none">1<span class="text-xl"> night</span></p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-white/50 mt-2">Hospital Stay</p>
           </div>
-          <div class="w-px h-10 bg-outline-variant/40 self-center"></div>
+          <div class="w-px h-10 bg-white/20 self-center"></div>
           <div>
-            <p class="text-4xl font-headline font-light text-primary leading-none">2–3<span class="text-xl">wks</span></p>
-            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-2">Pain-Free Full Recovery</p>
+            <p class="text-4xl font-headline font-light text-white leading-none">2–3<span class="text-xl">wks</span></p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-white/50 mt-2">Pain-Free Full Recovery</p>
           </div>
         </div>
       </div>
 
       <!-- Right: CORI System -->
       <div class="pl-0 lg:pl-20 pt-16 lg:pt-0">
-        <div class="inline-flex items-center gap-2 text-primary text-[10px] font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full mb-8" style="background:rgba(0,53,95,0.07)">
-          <span class="w-1.5 h-1.5 rounded-full bg-primary inline-block"></span>
+        <div class="inline-flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-[0.25em] px-4 py-2 rounded-full mb-8" style="background:rgba(255,255,255,0.12)">
+          <span class="w-1.5 h-1.5 rounded-full bg-white inline-block"></span>
           CORI Robotic System
         </div>
-        <h2 class="text-7xl md:text-[96px] font-headline font-light text-primary leading-[0.95] tracking-tight mb-8">
+        <h2 class="text-7xl md:text-[96px] font-headline font-light text-white leading-[0.95] tracking-tight mb-8">
           CORI™<br/><em class="italic">precision.</em>
         </h2>
-        <p class="text-on-surface-variant leading-relaxed max-w-sm mb-10">
+        <p class="text-white/70 leading-relaxed max-w-sm mb-10">
           The world's only handheld robotic knee system. No CT scan. No pre-op MRI. Live 3D mapping during surgery — every cut placed to sub-millimeter accuracy.
         </p>
         <!-- 3 selling stats -->
         <div class="flex items-start gap-10 mb-10">
           <div>
-            <p class="text-4xl font-headline font-light text-primary leading-none">0</p>
-            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-2">Pre-op Scans<br/>Required</p>
+            <p class="text-4xl font-headline font-light text-white leading-none">0</p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-white/50 mt-2">Pre-op Scans<br/>Required</p>
           </div>
-          <div class="w-px h-10 bg-outline-variant/40 self-center"></div>
+          <div class="w-px h-10 bg-white/20 self-center"></div>
           <div>
-            <p class="text-4xl font-headline font-light text-primary leading-none">1<span class="text-xl">st</span></p>
-            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-2">Robotic System<br/>for Revision TKR</p>
+            <p class="text-4xl font-headline font-light text-white leading-none">1<span class="text-xl">st</span></p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-white/50 mt-2">Robotic System<br/>for Revision TKR</p>
           </div>
-          <div class="w-px h-10 bg-outline-variant/40 self-center"></div>
+          <div class="w-px h-10 bg-white/20 self-center"></div>
           <div>
-            <p class="text-4xl font-headline font-light text-on-tertiary-container leading-none">AI</p>
-            <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-2">RI.KNEE<br/>Guided Planning</p>
+            <p class="text-4xl font-headline font-light leading-none" style="color:#97f0ff;">AI</p>
+            <p class="text-[10px] font-bold uppercase tracking-widest text-white/50 mt-2">RI.KNEE<br/>Guided Planning</p>
           </div>
         </div>
-        <a href="robot.html" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest border-b border-primary pb-0.5 hover:opacity-70 transition-opacity">
+        <a href="robot.html" class="inline-flex items-center gap-2 text-white font-bold text-xs uppercase tracking-widest border-b border-white/50 pb-0.5 hover:opacity-70 transition-opacity">
           Full CORI System Details <span class="material-symbols-outlined text-sm">arrow_forward</span>
         </a>
       </div>
     </div>
 
     <!-- Full-width bottom rule + CTA -->
-    <div class="mt-20 pt-10 border-t border-outline-variant/25 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
-      <p class="text-on-surface-variant text-sm italic font-headline max-w-lg">
+    <div class="mt-20 pt-10 border-t border-white/15 flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
+      <p class="text-white/65 text-sm italic font-headline max-w-lg">
         "You're not just getting a robot. You're getting a surgeon with 28 years of experience who knows exactly how to use it."
-        <span class="block mt-2 not-italic font-bold text-primary text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
+        <span class="block mt-2 not-italic font-bold text-white/80 text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
       </p>
       <a href="appointments.html" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all whitespace-nowrap editorial-shadow text-sm">
         Book a Consultation
@@ -795,9 +885,9 @@ body { background-color: #E8EAED; }
     </div>
   </a>
   <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-outline-variant/25">
-    <p class="text-on-surface-variant text-sm italic font-headline max-w-lg">
+    <p class="text-white/65 text-sm italic font-headline max-w-lg">
       "Most patients come to me confused about what's causing their pain. My job starts with making you understand it." 
-      <span class="block mt-2 not-italic font-bold text-primary text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
+      <span class="block mt-2 not-italic font-bold text-white/80 text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
     </p>
     <a href="appointments.html" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all whitespace-nowrap editorial-shadow text-sm shrink-0">
       Discuss Your Pain
@@ -1372,7 +1462,8 @@ body { background-color: #E8EAED; }
       </div>
       <div class="p-10">
         <span class="text-tertiary font-label text-xs uppercase tracking-widest font-bold block mb-3">Operating Theatre · CORI Robotic Surgery</span>
-        <h3 class="text-2xl font-headline font-semibold text-primary mb-5">Operates at Hinduja Khar</h3>
+        <h3 class="text-2xl font-headline font-semibold text-primary mb-3">Operates at Hinduja Khar</h3>
+        <p class="text-xs font-bold uppercase tracking-widest" style="color:#c0392b;margin-bottom:1.25rem;">Strictly by appointment only — no walk-ins</p>
         <div class="space-y-3 mb-8 text-on-surface-variant text-sm">
           <div class="flex gap-3 items-start"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>724, 11th Road, Khar West, Mumbai 400052</span></div>
           <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">call</span><span>+91 22 4510 8989</span></div>
@@ -1396,8 +1487,9 @@ body { background-color: #E8EAED; }
         <span class="text-tertiary font-label text-xs uppercase tracking-widest font-bold block mb-3">OPD Consultation Clinics</span>
         <h3 class="text-2xl font-headline font-semibold text-primary mb-5">Consultations at Wadala / Matunga</h3>
         <div class="space-y-3 mb-8 text-on-surface-variant text-sm">
-          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>Wadala, Mumbai</span></div>
-          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>Matunga, Mumbai</span></div>
+          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>261-262, Rd Number 19, Wadala Village, Wadala, Mumbai 400031</span></div>
+          <div class="flex gap-3 items-start"><span class="material-symbols-outlined text-primary text-base mt-0.5">location_on</span><span>Matunga, Mumbai</span></div>
+          <div class="flex gap-3 items-center"><a href="https://maps.app.goo.gl/BdcjQot6Zp7bNbUa7" target="_blank" class="text-on-tertiary-container text-xs font-bold hover:opacity-70 transition-opacity flex items-center gap-1"><span class="material-symbols-outlined text-xs">map</span>View on Google Maps</a></div>
           <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">event_available</span><span>Also at Criti Care: Malad, Andheri, Juhu, Kurla</span></div>
         </div>
         <div class="flex flex-col gap-3">
@@ -1471,10 +1563,30 @@ body { background-color: #E8EAED; }
     });
   }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
   document.querySelectorAll('section, .group, .editorial-shadow, h2, h1').forEach(function(el){
+    if(el.id === 'editorial-usp' || el.closest('#editorial-usp')) return;
     if(!el.classList.contains('fade-in-up')) el.classList.add('fade-in-up');
     io.observe(el);
   });
+
+  // Immediately strip any fade-in-up from editorial section and all its descendants
+  var usp = document.getElementById('editorial-usp');
+  if(usp){
+    usp.classList.remove('fade-in-up');
+    usp.classList.add('visible');
+    usp.querySelectorAll('*').forEach(function(child){
+      child.classList.remove('fade-in-up');
+      child.classList.add('visible');
+    });
+  }
 })();
+// Belt-and-suspenders: run again after full load
+window.addEventListener('load', function(){
+  var usp = document.getElementById('editorial-usp');
+  if(!usp) return;
+  usp.classList.remove('fade-in-up');
+  usp.classList.add('visible');
+  usp.querySelectorAll('*').forEach(function(c){ c.classList.remove('fade-in-up'); c.classList.add('visible'); });
+});
 // Page-exit
 document.querySelectorAll('a[href]').forEach(function(a){
   var h = a.getAttribute('href');

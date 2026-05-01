@@ -34,18 +34,19 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- ── UNIFORM HEADER ── -->
+<!-- UNIFORM HEADER -->
 <header class="fixed top-0 w-full z-50 bg-[#E8EAED]/85 backdrop-blur-xl border-b border-slate-200/50">
 <nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-  <a href="index.html" class="text-2xl font-headline italic text-blue-900 shrink-0">Dr. Vivek Allahbadia</a>
+  <a href="index.html" class="text-2xl font-serif italic text-blue-900 shrink-0">Dr. Vivek Allahbadia</a>
   <div class="hidden md:flex items-center gap-7">
-    <a href="index.html" class="text-slate-600 text-sm font-medium hover:text-blue-800 transition-colors">Home</a>
-    <a href="about.html" class="text-slate-600 text-sm font-medium hover:text-blue-800 transition-colors">About</a>
-    <a href="testimonials.html" class="text-slate-600 text-sm font-medium hover:text-blue-800 transition-colors">Patient Testimonials</a>
-    <a href="robot.html" class="text-blue-700 text-sm font-medium border-b-2 border-blue-700 pb-1">CORI Robotics</a>
-    <a href="appointments.html" class="text-slate-600 text-sm font-medium hover:text-blue-800 transition-colors">Appointments</a>
+    <a href="index.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Home</a>
+    <a href="about.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">About</a>
+    <a href="testimonials.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Patient Testimonials</a>
+    <a href="robot.html"         class="text-blue-700 border-b-2 border-blue-700 pb-1 font-sans font-medium">CORI Robotics</a>
+    <a href="appointments.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
   </div>
-  <a href="appointments.html"><button class="bg-gradient-to-br from-primary to-primary-container text-white px-6 py-3 rounded-xl text-sm font-bold hover:opacity-90 transition-all">Schedule Consultation</button></a>
+  <a href="appointments.html" class="shrink-0"><button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-medium transition-all scale-95 active:opacity-80 text-sm">Schedule Consultation</button></a>
 </nav>
 </header>
 
@@ -234,34 +235,7 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
 </div>
 </section>
 
-<!-- ═══ 7. DR. ALLAHBADIA — IMAGE left, credentials right ═══ -->
-<section class="py-20 px-5">
-<div class="max-w-screen-2xl mx-auto grid lg:grid-cols-2 gap-12 items-center">
-  <!-- IMAGE 4 — doctor portrait -->
-  <div class="rv" style="position:relative;border-radius:1.5rem;overflow:hidden;height:520px;">
-    <img src="images/abouthero.png" alt="Dr. Vivek Allahbadia, HOD Orthopaedics, Hinduja Khar" style="width:100%;height:100%;object-fit:cover;object-position:top center;"/>
-    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(0,25,55,.88) 0%,transparent 55%);"></div>
-    <div style="position:absolute;bottom:1.5rem;left:1.5rem;right:1.5rem;">
-      <p class="font-headline font-light text-white" style="font-size:1.9rem;line-height:1.1;">Dr. Vivek Allahbadia</p>
-      <p style="color:rgba(151,240,255,.85);font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-top:.5rem;">HOD Orthopaedics · Hinduja Healthcare Surgical, Khar</p>
-    </div>
-  </div>
 
-  <div class="rv d1">
-    <p class="eyebrow mb-4">At Hinduja Healthcare Surgical, Khar</p>
-    <h2 class="font-headline font-light text-primary mb-5" style="font-size:clamp(2.2rem,4vw,3.5rem);line-height:.95;">CORI in Mumbai,<br/><em class="italic">with 28 years behind it</em></h2>
-    <p class="text-base text-on-surface-variant leading-relaxed mb-8">Dr. Allahbadia pairs the CORI system with two decades of computer-assisted surgery experience — making him one of the most technically prepared robotic arthroplasty surgeons in India. He has published an original technique for TKR in obese patients in the Indian Journal of Orthopaedics, and has observed the CUVIS fully-automatic robotic system to continually benchmark outcomes against the world standard.</p>
-    <div class="grid grid-cols-2 gap-px bg-outline-variant/20 rounded-2xl overflow-hidden mb-8">
-      <div class="bg-[#E8EAED] p-5"><p class="font-headline font-light text-primary" style="font-size:2.5rem;line-height:1;">5,000<span style="font-size:1.2rem;">+</span></p><p class="eyebrow mt-1">Surgeries Performed</p></div>
-      <div class="bg-[#E8EAED] p-5"><p class="font-headline font-light text-primary" style="font-size:2.5rem;line-height:1;">98<span style="font-size:1.2rem;">%</span></p><p class="eyebrow mt-1">Patient Satisfaction</p></div>
-    </div>
-    <div class="flex flex-col gap-3">
-      <a href="appointments.html" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest border-b border-primary pb-0.5 hover:opacity-60 transition-opacity w-fit">Book a CORI Consultation <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
-      <a href="about.html" class="inline-flex items-center gap-2 text-on-surface-variant font-bold text-xs uppercase tracking-widest hover:text-primary transition-colors w-fit">Full Profile <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
-    </div>
-  </div>
-</div>
-</section>
 
 <!-- ═══ 8. FAQs ═══ -->
 <section style="background:#DFE2E6;" class="py-20 px-5">

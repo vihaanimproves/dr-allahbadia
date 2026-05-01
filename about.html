@@ -71,6 +71,7 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
     <a href="about.html"         class="text-blue-700 border-b-2 border-blue-700 pb-1 font-sans font-medium">About</a>
     <a href="testimonials.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Patient Testimonials</a>
     <a href="robot.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">CORI Robotics</a>
+    <a href="gallery.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Gallery</a>
     <a href="appointments.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
   </div>
   <a href="appointments.html" class="shrink-0"><button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-medium transition-all scale-95 active:opacity-80 text-sm">Schedule Consultation</button></a>
@@ -79,108 +80,50 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
 
 <main class="pt-20">
 
-<!-- 1. HERO -->
-<section class="overflow-hidden relative" style="min-height:88vh;background:#E8EAED;">
-
-  <!-- Doctor image — absolutely placed between the two text columns -->
-  <div class="hidden lg:block hero-img" style="
-    position:absolute;
-    top:9vh;
-    bottom:0;
-    left:calc(39% - 20px);
-    width:36%;
-    z-index:1;
-    pointer-events:none;
-    overflow:hidden;
-  ">
-    <img
-      src="images/abouthero.png"
-      alt="Dr. Vivek Allahbadia — Orthopaedic Surgeon, Mumbai"
-      style="
-        width:100%;
-        height:100%;
-        object-fit:contain;
-        object-position:top center;
-        transform:scaleX(-1);
-        display:block;
-      "
-    />
-  </div>
-
-  <!-- Foreground grid: text left | stats right — both above the doctor -->
-  <div style="
-    position:relative;
-    z-index:10;
-    display:grid;
-    grid-template-columns:1fr 260px;
-    align-items:center;
-    min-height:88vh;
-    max-width:1536px;
-    margin:0 auto;
-    padding:5rem 20px;
-    gap:0;
-  ">
-
-    <!-- LEFT: text -->
-    <div class="hero-left flex flex-col justify-center" style="padding-right:2rem;margin-top:-9vh;">
-      <p class="eyebrow mb-5">About Dr. Vivek Allahbadia</p>
-      <h1 class="font-headline font-light text-primary tracking-tight mb-8"
-          style="font-size:clamp(2.82rem,4.4vw,4.84rem);line-height:.93;">
-        Precision. Innovation.<br/>Compassion.
-      </h1>
-      <p class="text-on-surface-variant leading-relaxed mb-10" style="max-width:26rem;font-size:1.1rem;">
-        28 years of surgical mastery. Fellowship trained in the UK. Pioneer of robotic knee surgery in Mumbai.
-        The right treatment — every time.
-      </p>
-      <div class="space-y-4">
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">school</span>
-          <span style="font-size:14px;font-weight:600;color:#00355f;">Fellowship — Northern General Hospital, Sheffield UK</span>
+<!-- ── HERO ── -->
+<section class="relative overflow-hidden pt-16 pb-24 md:pt-24 md:pb-32">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+  <div class="md:col-span-7">
+    <h1 class="text-6xl md:text-8xl font-headline font-light text-primary leading-[1.05] mb-3">
+      Dr. Vivek<br/>Allahbadia
+    </h1>
+    <!-- Degrees — compact single line -->
+    <p class="text-xs font-body font-bold text-on-surface-variant tracking-[0.18em] uppercase mb-5">
+      MS Orth&nbsp;·&nbsp;D'Orth&nbsp;·&nbsp;FCPS Orth&nbsp;·&nbsp;MCH Orth (UK)
+    </p>
+    <!-- HOD badge — below title -->
+    <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary text-white text-xs font-bold tracking-widest uppercase mb-8 rounded-full">
+      <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 1;">local_hospital</span>
+      HOD, Orthopaedics — Hinduja Healthcare Surgical, Khar
+    </div>
+    <p class="text-xl font-headline italic text-on-surface-variant mb-10 max-w-lg">
+      Mumbai's leading robotic knee surgeon. Pain-free surgery. Faster recovery.
+    </p>
+    <div class="space-y-4 pt-8 border-t border-outline-variant/30">
+      <div class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-primary-container" style="font-variation-settings:'FILL' 1;">verified</span>
+        <div>
+          <p class="font-bold text-primary">28+ Years · 98% Patient Rating · 5,000+ Surgeries</p>
+          <p class="text-on-surface-variant text-sm">MS ORTH · D'ORTH · FCPS ORTH · MCH ORTH (UK)</p>
         </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">precision_manufacturing</span>
-          <span style="font-size:14px;font-weight:600;color:#00355f;">CORI Robotic Surgery Specialist</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">menu_book</span>
-          <span style="font-size:14px;font-weight:600;color:#00355f;">Published · Indian Journal of Orthopaedics</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">emoji_events</span>
-          <span style="font-size:14px;font-weight:600;color:#00355f;">Lions Club International Award</span>
-        </div>
-        <div class="flex items-center gap-3">
-          <span class="material-symbols-outlined text-primary shrink-0" style="font-size:17px;font-variation-settings:'FILL' 1;">mic</span>
-          <span style="font-size:14px;font-weight:600;color:#00355f;">The Ranveer Show — TRS #333</span>
+      </div>
+      <div class="flex items-start gap-4">
+        <span class="material-symbols-outlined text-primary-container" style="font-variation-settings:'FILL' 1;">precision_manufacturing</span>
+        <div>
+          <p class="font-bold text-primary">CORI Robotic Surgery Specialist</p>
+          <p class="text-on-surface-variant text-sm">Smith+Nephew CORI System · Hinduja Khar</p>
         </div>
       </div>
     </div>
-
-    <!-- RIGHT: stats -->
-    <div class="hero-right flex flex-col justify-center" style="
-      padding-left:2rem;
-      
-      gap:0;
-    ">
-      <div style="padding-bottom:2rem;margin-bottom:2rem;">
-        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">28<span style="font-size:1.6rem;">+</span></div>
-        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Years Experience</p>
-      </div>
-      <div style="padding-bottom:2rem;margin-bottom:2rem;">
-        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">5,000<span style="font-size:1.6rem;">+</span></div>
-        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Surgeries Performed</p>
-      </div>
-      <div style="padding-bottom:2rem;margin-bottom:2rem;">
-        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">98<span style="font-size:1.6rem;">%</span></div>
-        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Patient Satisfaction</p>
-      </div>
-      <div>
-        <div class="font-headline font-light" style="font-size:4rem;color:#5dc8d8;line-height:1;">4.5<span style="font-size:1.6rem;">&#9733;</span></div>
-        <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Average Star Rating</p>
-      </div>
-    </div>
-
   </div>
+  <div class="md:col-span-5 relative">
+    <div class="rounded-[2rem] overflow-hidden aspect-[4/5] editorial-shadow bg-surface-container-high relative group">
+      <img alt="Dr. Vivek Allahbadia" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700&q=80"/>
+      <div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+    </div>
+    <div class="absolute -bottom-6 -right-6 w-32 h-32 bg-tertiary-fixed-dim/30 blur-3xl rounded-full"></div>
+  </div>
+</div>
 </section>
 
 <!-- 2. CORI — full-bleed dark -->
@@ -292,15 +235,10 @@ body.px main{opacity:0!important;transform:translateY(-10px)!important;transitio
       <div class="md:col-span-4"><h3 class="text-3xl font-headline text-primary">FCPS Orthopaedics</h3></div>
       <p class="md:col-span-6 text-base text-on-surface-variant self-center">Fellow of the College of Physicians &amp; Surgeons — one of South Asia's highest surgical certifications.</p>
     </div>
-    <div class="grid md:grid-cols-12 gap-4 py-9 border-t border-black/8 rv" style="background:rgba(0,53,95,.04);">
+    <div class="grid md:grid-cols-12 gap-4 py-9 border-t border-b border-black/8 rv" style="background:rgba(0,53,95,.04);">
       <p class="md:col-span-2 eyebrow self-start pt-1">International</p>
-      <div class="md:col-span-4"><h3 class="text-3xl font-headline text-primary">MCH Orthopaedics (UK)</h3><p class="text-xs text-on-surface-variant mt-1">Northern General Hospital, Sheffield</p></div>
-      <p class="md:col-span-6 text-base text-on-surface-variant self-center">Fellowship in Joint Replacement at one of the UK's foremost arthroplasty centres. Advanced primary &amp; revision techniques under internationally recognised surgeons.</p>
-    </div>
-    <div class="grid md:grid-cols-12 gap-4 py-9 border-t border-b border-black/8 rv d1">
-      <p class="md:col-span-2 eyebrow self-start pt-1">Ongoing</p>
-      <div class="md:col-span-4"><h3 class="text-3xl font-headline text-primary">CME &amp; Workshops</h3></div>
-      <p class="md:col-span-6 text-base text-on-surface-variant self-center">Observed live robotic surgery with CUVIS fully-automatic system at Sakra World Hospital. Active orthopaedic workshop participation and continuous education.</p>
+      <div class="md:col-span-4"><h3 class="text-3xl font-headline text-primary">MCH Orthopaedics (UK)</h3><p class="text-xs text-on-surface-variant mt-1">Northern General Hospital, Sheffield, Scotland · Fellowship in Joint Replacement Surgery</p></div>
+      <p class="md:col-span-6 text-base text-on-surface-variant self-center">Fellowship in Joint Replacement Surgery at one of Scotland and the UK's foremost arthroplasty centres. Advanced training in primary and revision techniques under internationally recognised surgeons — the foundation of his surgical philosophy.</p>
     </div>
   </div>
 </div>
