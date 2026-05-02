@@ -1,0 +1,316 @@
+<html lang="en"><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery | Dr. Vivek Allahbadia</title>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+*{box-sizing:border-box;}
+body{font-family:'Manrope',sans-serif;background:#E8EAED;color:#191c1e;margin:0;}
+h1,h2{font-family:'Newsreader',serif;}
+
+/* ── Masonry grid ── */
+.masonry{
+  columns:3;
+  column-gap:1.1rem;
+  max-width:1400px;
+  margin:0 auto;
+  padding:0 2rem 4rem;
+}
+@media(max-width:900px){.masonry{columns:2;}}
+@media(max-width:560px){.masonry{columns:1;}}
+
+/* ── Photo frame ── */
+.frame{
+  break-inside:avoid;
+  margin-bottom:1.1rem;
+  position:relative;
+  border-radius:1rem;
+  overflow:hidden;
+  background:#fff;
+  box-shadow:0 6px 32px rgba(0,53,95,.09);
+  transition:transform .35s cubic-bezier(.22,.6,.36,1), box-shadow .35s;
+  cursor:pointer;
+}
+.frame:hover{
+  transform:translateY(-5px) scale(1.01);
+  box-shadow:0 18px 54px rgba(0,53,95,.16);
+}
+
+/* ── Placeholder block ── */
+.ph{
+  width:100%;
+  background:linear-gradient(145deg,#e0e3e7,#cdd0d6,#dfe2e6);
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+}
+.ph::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background:
+    repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 12px,
+      rgba(0,53,95,.04) 12px,
+      rgba(0,53,95,.04) 13px
+    );
+}
+.ph-icon{
+  font-size:2.2rem;
+  color:rgba(0,53,95,.2);
+  margin-bottom:.5rem;
+  position:relative;
+  z-index:1;
+}
+.ph-label{
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(0,53,95,.35);
+  position:relative;
+  z-index:1;
+}
+
+/* ── Caption strip ── */
+.caption{
+  padding:.65rem 1rem;
+  border-top:1px solid rgba(0,53,95,.06);
+}
+.caption-tag{
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.18em;
+  text-transform:uppercase;
+  color:rgba(0,53,95,.4);
+}
+
+/* ── Tape accent ── */
+.tape{
+  position:absolute;
+  top:-6px;
+  left:50%;
+  transform:translateX(-50%) rotate(-1.5deg);
+  width:52px;
+  height:22px;
+  background:rgba(151,240,255,.45);
+  border-radius:3px;
+  z-index:10;
+  opacity:.85;
+}
+.tape-r{
+  left:auto;
+  right:12px;
+  transform:rotate(2.5deg);
+}
+
+/* ── Light box overlay ── */
+#lb{position:fixed;inset:0;background:rgba(0,20,45,.88);z-index:100;display:none;align-items:center;justify-content:center;backdrop-filter:blur(12px);}
+#lb.open{display:flex;}
+#lb img{max-width:88vw;max-height:88vh;border-radius:.75rem;box-shadow:0 32px 80px rgba(0,0,0,.4);}
+#lb-close{position:absolute;top:1.5rem;right:1.5rem;background:rgba(255,255,255,.12);border:none;color:white;font-size:1.5rem;width:2.5rem;height:2.5rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+
+/* ── Reveal ── */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .65s cubic-bezier(.22,.6,.36,1),transform .65s cubic-bezier(.22,.6,.36,1);}
+.rv.on{opacity:1;transform:none;}
+@keyframes pIn{from{opacity:0;transform:translateY(12px);}to{opacity:1;transform:none;}}
+main{animation:pIn .5s ease both;}
+</style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.top-0{top:0px}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.flex{display:flex}.hidden{display:none}.h-20{height:5rem}.w-full{width:100%}.max-w-7xl{max-width:80rem}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-7{gap:1.75rem}.px-8{padding-left:2rem;padding-right:2rem}.pt-20{padding-top:5rem}@media (min-width: 768px){.md\:flex{display:flex}}</style></head>
+<body>
+
+<!-- HEADER -->
+<header class="fixed top-0 w-full z-50" style="background:rgba(232,234,237,.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(203,208,215,.5);">
+<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
+  <a href="index.html" style="font-family:'Newsreader',serif;font-size:1.4rem;font-style:italic;color:#1e3a5f;text-decoration:none;">Dr. Vivek Allahbadia</a>
+  <div class="hidden md:flex items-center gap-7">
+    <a href="index.html" style="color:#475569;font-size:.875rem;font-weight:500;text-decoration:none;">Home</a>
+    <a href="about.html" style="color:#475569;font-size:.875rem;font-weight:500;text-decoration:none;">About</a>
+    <a href="testimonials.html" style="color:#475569;font-size:.875rem;font-weight:500;text-decoration:none;">Patient Testimonials</a>
+    <a href="robot.html" style="color:#475569;font-size:.875rem;font-weight:500;text-decoration:none;">CORI Robotics</a>
+    <a href="gallery.html" style="color:#1d4ed8;font-size:.875rem;font-weight:700;border-bottom:2px solid #1d4ed8;padding-bottom:2px;text-decoration:none;">Gallery</a>
+    <a href="appointments.html" style="color:#475569;font-size:.875rem;font-weight:500;text-decoration:none;">Appointments</a>
+  </div>
+  <a href="appointments.html"><button style="background:linear-gradient(135deg,#00355f,#0f4c81);color:white;padding:.75rem 1.5rem;border-radius:.75rem;font-weight:600;font-size:.875rem;border:none;cursor:pointer;">Schedule Consultation</button></a>
+</nav>
+</header>
+
+<main class="pt-20">
+
+<!-- PAGE HEADER -->
+<div style="max-width:1400px;margin:0 auto;padding:3.5rem 2rem 2.5rem;">
+  <p style="font-size:10px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-bottom:1rem;">Dr. Vivek Allahbadia</p>
+  <h1 style="font-family:'Newsreader',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:300;color:#00355f;line-height:.93;margin-bottom:1rem;">Gallery</h1>
+  <p style="color:#42474f;font-size:1rem;max-width:36rem;line-height:1.65;">Moments from 28 years of practice — surgeries, recognitions, research, and the patients whose lives have changed.</p>
+</div>
+
+<!-- MASONRY GRID -->
+<div class="masonry">
+
+  <!-- Frame 1 — tall portrait -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="tape"></div>
+    <div class="ph" style="height:380px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 1</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Portrait · Hinduja Khar</p></div>
+  </div>
+
+  <!-- Frame 2 — wide landscape -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="ph" style="height:220px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 2</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Operating Theatre</p></div>
+  </div>
+
+  <!-- Frame 3 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="tape tape-r"></div>
+    <div class="ph" style="height:300px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 3</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Awards &amp; Recognition</p></div>
+  </div>
+
+  <!-- Frame 4 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="ph" style="height:250px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 4</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Lions Club Felicitation</p></div>
+  </div>
+
+  <!-- Frame 5 — tall -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="tape"></div>
+    <div class="ph" style="height:400px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 5</div>
+    </div>
+    <div class="caption"><p class="caption-tag">CORI Surgical System</p></div>
+  </div>
+
+  <!-- Frame 6 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="ph" style="height:230px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 6</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Research &amp; Publications</p></div>
+  </div>
+
+  <!-- Frame 7 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="tape tape-r"></div>
+    <div class="ph" style="height:280px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 7</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Patient Recovery</p></div>
+  </div>
+
+  <!-- Frame 8 — wide -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="ph" style="height:200px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 8</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Hinduja Healthcare Surgical</p></div>
+  </div>
+
+  <!-- Frame 9 — tall -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="tape"></div>
+    <div class="ph" style="height:360px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 9</div>
+    </div>
+    <div class="caption"><p class="caption-tag">The Ranveer Show</p></div>
+  </div>
+
+  <!-- Frame 10 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="ph" style="height:240px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 10</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Conference &amp; CME</p></div>
+  </div>
+
+  <!-- Frame 11 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="tape tape-r"></div>
+    <div class="ph" style="height:310px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 11</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Fellowship · Sheffield, UK</p></div>
+  </div>
+
+  <!-- Frame 12 -->
+  <div class="frame rv on" onclick="openLb(this)">
+    <div class="ph" style="height:220px;">
+      <div class="ph-icon">📷</div>
+      <div class="ph-label">Photo 12</div>
+    </div>
+    <div class="caption"><p class="caption-tag">Consultation</p></div>
+  </div>
+
+</div><!-- /masonry -->
+
+<!-- Lightbox -->
+<div id="lb">
+  <button id="lb-close" onclick="document.getElementById('lb').classList.remove('open')">✕</button>
+  <img id="lb-img" src="" alt="Gallery photo">
+</div>
+
+</main>
+
+<footer style="background:#f8fafc;border-top:1px solid rgba(203,208,215,.5);padding:2.5rem 2rem;">
+<div style="max-width:1400px;margin:0 auto;display:flex;flex-direction:column;gap:.5rem;">
+  <p style="font-size:11px;color:#94a3b8;">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
+</div>
+</footer>
+
+<script>
+// Reveal on scroll
+(function(){
+  var io=new IntersectionObserver(function(e){e.forEach(function(x,i){if(x.isIntersecting){setTimeout(function(){x.target.classList.add('on');},(i%4)*55);io.unobserve(x.target);}});},{threshold:.06});
+  document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
+})();
+
+// Lightbox — only opens if frame has a real <img> (not placeholder)
+function openLb(frame){
+  var img = frame.querySelector('img:not(.ph *)');
+  if(!img) return; // placeholder — no lightbox
+  document.getElementById('lb-img').src = img.src;
+  document.getElementById('lb').classList.add('open');
+}
+document.getElementById('lb').addEventListener('click', function(e){
+  if(e.target === this) this.classList.remove('open');
+});
+document.addEventListener('keydown', function(e){
+  if(e.key==='Escape') document.getElementById('lb').classList.remove('open');
+});
+
+// Page exit
+document.querySelectorAll('a[href]').forEach(function(a){
+  var h=a.getAttribute('href');
+  if(!h||h[0]==='#'||h.startsWith('http')||h.startsWith('mailto'))return;
+  a.addEventListener('click',function(e){e.preventDefault();setTimeout(function(){window.location=h;},200);});
+});
+</script>
+
+
+</body></html>
