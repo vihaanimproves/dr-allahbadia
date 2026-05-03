@@ -122,7 +122,7 @@ body { background-color: #E8EAED; }
     <a href="testimonials.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Patient Testimonials</a>
     <a href="robot.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">CORI Robotics</a>
     <a href="gallery.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Gallery</a>
-    <a href="appointments.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
+    <a href="appointments.html" class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
   </div>
   <a href="appointments.html" class="shrink-0"><button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-medium transition-all scale-95 active:opacity-80 text-sm">Schedule Consultation</button></a>
 </nav>
@@ -214,19 +214,19 @@ body { background-color: #E8EAED; }
       gap:0;
     ">
       <div style="padding-bottom:2rem;margin-bottom:2rem;">
-        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">28<span style="font-size:1.6rem;">+</span></div>
+        <div class="font-headline font-light stat-counter" data-target="28" data-suffix="+" style="font-size:4rem;color:#00355f;line-height:1;">0<span style="font-size:1.6rem;">+</span></div>
         <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Years Experience</p>
       </div>
       <div style="padding-bottom:2rem;margin-bottom:2rem;">
-        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">5,000<span style="font-size:1.6rem;">+</span></div>
+        <div class="font-headline font-light stat-counter" data-target="5000" data-suffix="+" data-format="thousands" style="font-size:4rem;color:#00355f;line-height:1;">0<span style="font-size:1.6rem;">+</span></div>
         <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Knee Surgeries</p>
       </div>
       <div style="padding-bottom:2rem;margin-bottom:2rem;">
-        <div class="font-headline font-light" style="font-size:4rem;color:#00355f;line-height:1;">98<span style="font-size:1.6rem;">%</span></div>
+        <div class="font-headline font-light stat-counter" data-target="98" data-suffix="%" style="font-size:4rem;color:#00355f;line-height:1;">0<span style="font-size:1.6rem;">%</span></div>
         <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Patient Satisfaction</p>
       </div>
       <div>
-        <div class="font-headline font-light" style="font-size:4rem;color:#5dc8d8;line-height:1;">4.5<span style="font-size:1.6rem;">&#9733;</span></div>
+        <div class="font-headline font-light stat-counter" data-target="4.5" data-suffix="★" data-decimal="1" style="font-size:4rem;color:#5dc8d8;line-height:1;">0<span style="font-size:1.6rem;">★</span></div>
         <p style="font-size:10px;font-weight:800;letter-spacing:.2em;text-transform:uppercase;color:rgba(0,53,95,.5);margin-top:.4rem;">Average Star Rating</p>
       </div>
     </div>
@@ -319,7 +319,7 @@ body { background-color: #E8EAED; }
         "You're not just getting a robot. You're getting a surgeon with 28 years of experience who knows exactly how to use it."
         <span class="block mt-2 not-italic font-bold text-white/80 text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
       </p>
-      <a href="appointments.html" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all whitespace-nowrap editorial-shadow text-sm">
+      <a href="https://wa.me/919820000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all whitespace-nowrap editorial-shadow text-sm">
         Book a Consultation
         <span class="material-symbols-outlined text-sm">arrow_forward</span>
       </a>
@@ -771,7 +771,7 @@ body { background-color: #E8EAED; }
         </div>
       </div>
     </div>
-    <a href="appointments.html" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest border-b border-primary pb-0.5 hover:opacity-70 transition-opacity">
+    <a href="https://wa.me/919820000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest border-b border-primary pb-0.5 hover:opacity-70 transition-opacity">
       Discuss Your Condition <span class="material-symbols-outlined text-sm">arrow_forward</span>
     </a>
   </div>
@@ -786,30 +786,22 @@ body { background-color: #E8EAED; }
     <p class="text-on-surface-variant italic font-headline text-lg">Including some familiar faces.</p>
   </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-    <!-- CELEBRITY SLOT 1 — replace src and name -->
+    <!-- CELEBRITY SLOT 1 -->
     <div class="group">
-      <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow bg-surface-container-high relative">
-        <!-- ★ REPLACE: drop celebrity photo here -->
-        <div class="w-full h-full flex items-center justify-center bg-surface-container-high text-on-surface-variant flex-col gap-3">
-          <span class="material-symbols-outlined text-5xl opacity-30">add_photo_alternate</span>
-          <span class="text-xs font-bold uppercase tracking-widest opacity-40">Add Celebrity Photo</span>
-        </div>
+      <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow relative">
+        <img src="images/prem.jpg" alt="Celebrity patient" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
         <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
       </div>
       <div class="bg-surface p-6 rounded-2xl">
         <span class="text-tertiary-fixed-dim bg-tertiary text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-widest mb-3 inline-block">Celebrity Client</span>
-        <!-- ★ REPLACE: Celebrity name -->
         <h3 class="text-xl font-headline text-primary mb-2">Name Here</h3>
         <p class="text-on-surface-variant text-sm italic font-headline">"Add quote or brief description here."</p>
       </div>
     </div>
     <!-- CELEBRITY SLOT 2 -->
     <div class="group">
-      <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow bg-surface-container-high relative">
-        <div class="w-full h-full flex items-center justify-center bg-surface-container-high text-on-surface-variant flex-col gap-3">
-          <span class="material-symbols-outlined text-5xl opacity-30">add_photo_alternate</span>
-          <span class="text-xs font-bold uppercase tracking-widest opacity-40">Add Celebrity Photo</span>
-        </div>
+      <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow relative">
+        <img src="images/abraham.jpg" alt="Celebrity patient" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
         <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
       </div>
       <div class="bg-surface p-6 rounded-2xl">
@@ -885,11 +877,11 @@ body { background-color: #E8EAED; }
     </div>
   </a>
   <div class="mt-8 flex flex-col md:flex-row items-center justify-between gap-6 pt-8 border-t border-outline-variant/25">
-    <p class="text-white/65 text-sm italic font-headline max-w-lg">
+    <p class="text-primary text-sm italic font-headline max-w-lg">
       "Most patients come to me confused about what's causing their pain. My job starts with making you understand it." 
-      <span class="block mt-2 not-italic font-bold text-white/80 text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
+      <span class="block mt-2 not-italic font-bold text-primary text-xs uppercase tracking-widest">— Dr. Vivek Allahbadia</span>
     </p>
-    <a href="appointments.html" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all whitespace-nowrap editorial-shadow text-sm shrink-0">
+    <a href="https://wa.me/919820000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all whitespace-nowrap editorial-shadow text-sm shrink-0">
       Discuss Your Pain
       <span class="material-symbols-outlined text-sm">arrow_forward</span>
     </a>
@@ -1457,7 +1449,7 @@ body { background-color: #E8EAED; }
     <!-- Card 1: Hinduja Khar — Operates -->
     <div class="bg-surface-container-lowest rounded-[24px] overflow-hidden editorial-shadow transition-transform duration-500 hover:-translate-y-2">
       <div class="h-56 bg-surface-container-high relative overflow-hidden">
-        <img class="w-full h-full object-cover grayscale opacity-70" src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=800&q=80" alt="Hinduja Healthcare Surgical Khar"/>
+        <img class="w-full h-full object-cover" src="images/hindujakhar.jpg" alt="Hinduja Healthcare Surgical Khar"/>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-surface-container-lowest"></div>
       </div>
       <div class="p-10">
@@ -1470,7 +1462,7 @@ body { background-color: #E8EAED; }
           <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">precision_manufacturing</span><span>CORI Robotic System on-site</span></div>
         </div>
         <div class="flex flex-col gap-3">
-          <a href="appointments.html" class="w-full bg-gradient-to-br from-primary to-primary-container text-white text-center font-bold py-4 rounded-2xl hover:opacity-90 transition-all text-sm tracking-wide shadow-md shadow-primary/20">Book Appointment</a>
+          <a href="https://wa.me/919820000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="w-full bg-gradient-to-br from-primary to-primary-container text-white text-center font-bold py-4 rounded-2xl hover:opacity-90 transition-all text-sm tracking-wide shadow-md shadow-primary/20">Book Appointment</a>
           <a href="https://maps.google.com/?q=Hinduja+Healthcare+Surgical+Khar+Mumbai" target="_blank" class="w-full text-center text-primary font-bold text-xs uppercase tracking-widest py-3 hover:opacity-60 transition-opacity inline-flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-sm">map</span> View on Google Maps
           </a>
@@ -1493,7 +1485,7 @@ body { background-color: #E8EAED; }
           <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">event_available</span><span>Also at Criti Care: Malad, Andheri, Juhu, Kurla</span></div>
         </div>
         <div class="flex flex-col gap-3">
-          <a href="appointments.html" class="w-full bg-gradient-to-br from-primary to-primary-container text-white text-center font-bold py-4 rounded-2xl hover:opacity-90 transition-all text-sm tracking-wide shadow-md shadow-primary/20">Book Consultation</a>
+          <a href="https://wa.me/919820000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="w-full bg-gradient-to-br from-primary to-primary-container text-white text-center font-bold py-4 rounded-2xl hover:opacity-90 transition-all text-sm tracking-wide shadow-md shadow-primary/20">Book Consultation</a>
           <a href="about.html" class="w-full text-center text-primary font-bold text-xs uppercase tracking-widest py-3 hover:opacity-60 transition-opacity inline-flex items-center justify-center gap-2">
             <span class="material-symbols-outlined text-sm">location_on</span> See All Locations
           </a>
@@ -1520,7 +1512,7 @@ body { background-color: #E8EAED; }
     <ul class="space-y-3 text-slate-500">
       <li><a class="hover:text-blue-900 transition-all" href="about.html">About Dr. Allahbadia</a></li>
       <li><a class="hover:text-blue-900 transition-all" href="robot.html">CORI Robotics</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="appointments.html">Book Appointment</a></li>
+      <li><a class="hover:text-blue-900 transition-all" href="https://wa.me/919820000000?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
       <li><a class="hover:text-blue-900 transition-all" href="#">Medical Disclaimer</a></li>
     </ul>
   </div>
@@ -1597,5 +1589,61 @@ document.querySelectorAll('a[href]').forEach(function(a){
     setTimeout(function(){ window.location=h; }, 270);
   });
 });
+</script>
+
+<script>
+// ── Hero stat counter animation ──
+(function(){
+  // Wrap each counter's numeric part in a dedicated <span class="num-val">
+  document.querySelectorAll('.stat-counter').forEach(function(el){
+    var suffixSpan = el.querySelector('span');
+    var numSpan = document.createElement('span');
+    numSpan.className = 'num-val';
+    numSpan.textContent = '0';
+    el.innerHTML = '';
+    el.appendChild(numSpan);
+    if(suffixSpan) el.appendChild(suffixSpan);
+  });
+
+  var started = false;
+
+  function formatNum(val, fmt, decimals){
+    if(decimals) return parseFloat(val).toFixed(parseInt(decimals));
+    if(fmt === 'thousands'){
+      var v = Math.floor(val);
+      return v >= 1000 ? Math.floor(v/1000)+','+('000'+(v%1000)).slice(-3) : v.toString();
+    }
+    return Math.floor(val).toString();
+  }
+
+  function runCounters(){
+    if(started) return;
+    started = true;
+    document.querySelectorAll('.stat-counter').forEach(function(el){
+      var target   = parseFloat(el.getAttribute('data-target'));
+      var fmt      = el.getAttribute('data-format') || '';
+      var dec      = el.getAttribute('data-decimal') || '';
+      var numSpan  = el.querySelector('.num-val');
+      var duration = 1600;
+      var startT   = performance.now();
+
+      function tick(now){
+        var progress = Math.min((now - startT) / duration, 1);
+        var eased    = 1 - Math.pow(1 - progress, 3);
+        numSpan.textContent = formatNum(eased * target, fmt, dec);
+        if(progress < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+
+  // Start when the slide animation BEGINS (animationstart fires immediately)
+  var heroRight = document.querySelector('.hero-right');
+  if(heroRight){
+    heroRight.addEventListener('animationstart', function(){ runCounters(); }, {once:true});
+  }
+  // Fallback if animationstart doesn't fire (e.g. reduced motion)
+  setTimeout(runCounters, 200);
+})();
 </script>
 </body></html>
