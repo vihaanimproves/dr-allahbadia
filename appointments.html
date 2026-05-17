@@ -149,6 +149,39 @@
     box-shadow: 0 8px 32px -8px rgba(0,53,95,0.12);
     border-color: #d2e4ff;
   }
+
+/* ── Modal animation ── */
+#intl-modal {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s ease;
+}
+#intl-modal.modal-open {
+  opacity: 1;
+  pointer-events: all;
+}
+#intl-modal .modal-inner {
+  transform: translateY(32px) scale(.96);
+  transition: transform .35s cubic-bezier(.22,.6,.36,1), opacity .3s ease;
+  opacity: 0;
+}
+#intl-modal.modal-open .modal-inner {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* ── Modal scrollbar ── */
+.modal-scroll-body {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(0,53,95,.25) transparent;
+  overflow-y: overlay;
+}
+.modal-scroll-body::-webkit-scrollbar { width: 4px; }
+.modal-scroll-body::-webkit-scrollbar-track { background: transparent; }
+.modal-scroll-body::-webkit-scrollbar-thumb { background: rgba(0,53,95,.3); border-radius: 9999px; }
+.modal-scroll-body::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
+
+
 </style>
 </head>
 <body class="font-body text-on-surface" style="background:#E8EAED;" selection:bg-secondary-container selection:text-on-secondary-container" style="overflow-x:hidden;">
@@ -338,7 +371,7 @@
 
       <!-- International Patient CTA block -->
       <div class="mt-14">
-        <button onclick="document.getElementById('intl-modal').classList.remove('hidden')"
+        <button onclick="openModal()"
           class="w-full rounded-2xl p-10 text-left hover:opacity-95 transition-all group"
           style="background:linear-gradient(135deg,#00264d 0%,#00355f 55%,#004a6e 100%);border:none;cursor:pointer;">
           <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
@@ -577,23 +610,23 @@ document.querySelectorAll('a[href]').forEach(function(a){
 </script>
 
 <!-- ══ INTERNATIONAL PATIENT MODAL ══ -->
-<div id="intl-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4" style="background:rgba(0,20,45,0.75);backdrop-filter:blur(12px);">
-  <div class="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto rounded-2xl" style="background:#fff;box-shadow:0 32px 80px rgba(0,0,0,0.35);">
+<div id="intl-modal" class="fixed inset-0 z-[100] flex items-center justify-center p-4" style="background:rgba(0,20,45,0.75);backdrop-filter:blur(12px);">
+  <div class="modal-inner relative w-full max-w-3xl rounded-2xl" style="background:#fff;box-shadow:0 32px 80px rgba(0,0,0,0.35);max-height:90vh;display:flex;flex-direction:column;">
 
     <!-- Modal header -->
-    <div class="sticky top-0 z-10 flex items-center justify-between px-8 py-5 border-b border-outline-variant/25" style="background:#00355f;">
+    <div class="sticky top-0 z-10 flex items-center justify-between px-8 py-5 border-b border-outline-variant/25" style="background:#00355f;border-radius:1rem 1rem 0 0;">
       <div>
         <p style="font-size:9px;font-weight:800;letter-spacing:.22em;text-transform:uppercase;color:rgba(151,240,255,.6);margin-bottom:.3rem;">Patients from Across the World</p>
         <h2 class="font-headline font-light text-white" style="font-size:1.6rem;line-height:1.1;">International Patients — <em class="italic">You are welcome here.</em></h2>
       </div>
-      <button onclick="document.getElementById('intl-modal').classList.add('hidden')"
+      <button onclick="closeModal()"
         style="width:2.5rem;height:2.5rem;border-radius:50%;background:rgba(255,255,255,.15);border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;color:white;font-size:1.2rem;flex-shrink:0;margin-left:1rem;">
         ✕
       </button>
     </div>
 
     <!-- Modal body -->
-    <div class="px-8 py-8">
+    <div class="px-8 py-8 modal-scroll-body" style="overflow-y:auto;flex:1;border-radius:0 0 1rem 1rem;">
       <p class="text-on-surface-variant text-base leading-relaxed mb-8">
         Dr. Allahbadia accepts patients from the Gulf, East Africa, South-East Asia, the UK, and beyond. Here is exactly how the process works — from your first email to your flight home.
       </p>
@@ -689,12 +722,18 @@ document.querySelectorAll('a[href]').forEach(function(a){
 </div>
 
 <script>
-// Close modal on backdrop click
+function openModal() {
+  document.getElementById('intl-modal').classList.add('modal-open');
+  setTimeout(updateModalThumb, 50);
+}
+function closeModal() {
+  document.getElementById('intl-modal').classList.remove('modal-open');
+}
 document.getElementById('intl-modal').addEventListener('click', function(e){
-  if(e.target === this) this.classList.add('hidden');
+  if(e.target === this) closeModal();
 });
 document.addEventListener('keydown', function(e){
-  if(e.key === 'Escape') document.getElementById('intl-modal').classList.add('hidden');
+  if(e.key === 'Escape') closeModal();
 });
 </script>
 </body></html>
