@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400;1,6..72,600&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
   tailwind.config = {
@@ -180,7 +180,7 @@
 .modal-scroll-body::-webkit-scrollbar-button { display: none; height: 0; width: 0; }
 </style>
 </head>
-<body class="font-body text-on-surface" style="background:#E8EAED;overflow-x:hidden;">
+<body class="font-body text-on-surface" style="background:#E8EAED;" selection:bg-secondary-container selection:text-on-secondary-container" style="overflow-x:hidden;">
 
 <!-- UNIFORM HEADER -->
 <header class="fixed top-0 w-full z-50 bg-[#E8EAED]/85 backdrop-blur-xl border-b border-slate-200/50">
@@ -206,14 +206,13 @@
       <!-- Text -->
       <div class="md:col-span-7">
         <span class="text-tertiary font-label uppercase tracking-widest text-xs font-bold mb-6 block">From the desk of Dr. Allahbadia</span>
-        <h1 class="font-headline font-light text-primary tracking-tight mb-8" style="font-size:clamp(2.5rem,4.4vw,4.5rem);line-height:.93;">Knee pain is debilitating — but the road to recovery doesn't have to be.</h1>
+        <h1 class="text-4xl md:text-4xl font-headline font-semibold text-primary leading-tight mb-6">Knee pain is debilitating — but the road to recovery doesn't have to be.</h1>
         <div class="mb-8"></div>
-        <p class="text-on-surface-variant leading-relaxed mb-6 font-light" style="font-size:1.1rem;">
+        <p class="text-on-surface-variant text-base leading-relaxed mb-6 font-light">
           After attaining decades of surgical experience, I want you to know: <strong class="text-primary font-semibold">You don't have to live with this pain.</strong> With Robotic Assisted Surgery, recovery is faster and more precise than ever. It doesn't have to be a frightening or painful experience — modern robotic technology has fundamentally changed what patients feel before, during, and after the procedure.
         </p>
-
         <p class="text-on-surface-variant text-base leading-relaxed mb-8 font-light">
-          My first priority is always to explore every non-surgical route available. Physiotherapy, injections, lifestyle changes — all are considered carefully before you are laid on the surgical table. When surgery is the right choice, the best surgical route is devised and advised to you personally. 
+          My first priority is always to explore every non-surgical route available. Physiotherapy, injections, lifestyle changes — all are considered carefully before you are laid on the surgical table. When surgery is the right choice, depending on the case the best plan of surgical route is devised and advised to you. So that you can feel the joy of pain-free movement as soon as possible. 
         </p>
         <ul class="space-y-4 mb-8">
           <li class="flex items-start gap-3 text-sm text-on-surface-variant">
@@ -224,7 +223,14 @@
             <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
             <span><strong class="text-primary">Pain-free within 48 hours of surgery</strong> — walking on your own feet</span>
           </li>
-
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            <span><strong class="text-primary">Back to daily life in a few weeks</strong> after operation and physiotherapy — not months</span>
+          </li>
+          <li class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <span class="material-symbols-outlined text-on-tertiary-container text-base mt-0.5 flex-shrink-0" style="font-variation-settings:'FILL' 1;">check_circle</span>
+            <span><strong class="text-primary">Non-surgical options always explored first</strong> — surgery only when truly needed</span>
+          </li>
         </ul>
         <div class="mb-4"></div><p class="text-primary font-semibold text-sm italic font-headline">The consultation is the beginning of your recovery. Let's start there.</p>
       </div>
@@ -242,7 +248,7 @@
     <div class="max-w-screen-2xl mx-auto px-5">
       <div class="max-w-2xl mb-14">
         <span class="font-label uppercase tracking-widest text-xs font-bold mb-4 block" style="color:rgba(151,240,255,.6);">What to expect</span>
-        <h2 class="font-headline font-light leading-tight" style="font-size:clamp(2.5rem,5vw,4rem);color:#ffffff;">
+        <h2 class="text-4xl md:text-5xl font-headline font-semibold leading-tight" style="color:#ffffff;">
           What you get after<br/><em class="font-normal italic" style="color:#ffffff;">booking a consultation.</em>
         </h2>
       </div>
@@ -419,7 +425,7 @@
               <span class="material-symbols-outlined text-primary flex-shrink-0">call</span>
               <div>
                 <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-0.5">Phone</p>
-                <p class="text-on-surface-variant text-sm">+91 98202 18181</p>
+                <p class="text-on-surface-variant text-sm">+91 22 4510 8989</p>
               </div>
             </div>
           </div>
@@ -457,7 +463,7 @@
               <span class="material-symbols-outlined text-primary flex-shrink-0">call</span>
               <div>
                 <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-0.5">Phone</p>
-                <p class="text-on-surface-variant text-sm">+91 86526 20972</p>
+                <p class="text-on-surface-variant text-sm">+91 9082940157</p>
               </div>
             </div>
           </div>
@@ -495,7 +501,7 @@
               <span class="material-symbols-outlined text-primary flex-shrink-0">call</span>
               <div>
                 <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mb-0.5">Phone</p>
-                <p class="text-on-surface-variant text-sm">+91 98202 18181</p>
+                <p class="text-on-surface-variant text-sm">+91 9082137823</p>
               </div>
             </div>
           </div>
@@ -512,48 +518,18 @@
 </main>
 
 <!-- Footer -->
-<footer class="bg-slate-50 w-full py-16 border-t-0">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 font-sans text-sm">
-  <div>
-    <div class="text-xl font-serif text-blue-900 mb-5">Dr. Vivek Allahbadia</div>
-    <p class="text-slate-500 mb-5 text-sm">Hinduja Healthcare Surgical, Khar · Mumbai's leading robotic knee surgeon.</p>
-    <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank">
-      <span class="material-symbols-outlined text-blue-900 opacity-60 hover:opacity-100 cursor-pointer">person</span>
-    </a>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Quick Links</h5>
-    <ul class="space-y-3 text-slate-500">
-      <li><a class="hover:text-blue-900 transition-all" href="about.html">About Dr. Allahbadia</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="robot.html">CORI Robotics</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="#">Medical Disclaimer</a></li>
-    </ul>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Expertise</h5>
-    <ul class="space-y-3 text-slate-500">
-      <li>Total Knee Replacement</li>
-      <li>CORI Robotic Surgery</li>
-      <li>Revision Knee Surgery</li>
-      <li>Sports Injuries</li>
-    </ul>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Newsletter</h5>
-    <p class="text-slate-500 mb-4 text-sm">Recovery tips and surgical advancements.</p>
-    <div class="flex bg-white rounded-lg p-1 border border-outline-variant/30">
-      <input class="bg-transparent border-none focus:ring-0 text-xs flex-1" placeholder="Your Email" type="email"/>
-      <button class="bg-primary text-white p-2 rounded-md"><span class="material-symbols-outlined text-sm">send</span></button>
-    </div>
-  </div>
+<footer class="bg-slate-50 border-t border-slate-200/50 w-full py-12 px-8">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="space-y-4">
+<div class="font-newsreader italic text-xl text-blue-900">Dr. Vivek Allahbadia · HOD Orthopaedics</div>
+<div class="text-slate-600 font-manrope text-sm tracking-wide">© 2026 Dr. Vivek Allahbadia · HOD Orthopaedics. Precision in Motion.</div>
 </div>
-<div class="max-w-7xl mx-auto px-8 pt-10 mt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-  <p class="text-slate-400 text-xs">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
-  <div class="flex gap-8">
-    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Medical Accuracy Guaranteed</span>
-    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Patient Data Protected</span>
-  </div>
+<div class="flex flex-wrap gap-x-12 gap-y-4">
+<a class="text-slate-600 hover:text-blue-700 font-manrope text-sm tracking-wide transition-colors" href="about.html">About</a>
+<a class="text-slate-600 hover:text-blue-700 font-manrope text-sm tracking-wide transition-colors" href="robot.html">CORI Robotics</a>
+<a class="text-slate-600 hover:text-blue-700 font-manrope text-sm tracking-wide transition-colors" href="index.html">Home</a>
+<a class="text-slate-600 hover:text-blue-700 font-manrope text-sm tracking-wide transition-colors" href="#">Privacy Policy</a>
+</div>
 </div>
 </footer>
 
@@ -695,7 +671,7 @@ document.querySelectorAll('a[href]').forEach(function(a){
           <h3 class="font-headline font-semibold text-white text-lg mb-1">Ready to start the process?</h3>
           <p class="text-white/60 text-sm">Email your reports and we will get back with a personal assessment.</p>
         </div>
-        <a href="mailto:orthopod4u@gmail.com" class="bg-white text-primary px-7 py-3.5 rounded-xl font-bold whitespace-nowrap hover:opacity-90 transition-all shadow flex items-center gap-3 text-sm flex-shrink-0">
+        <a href="mailto:vivekallahbadia@gmail.com" class="bg-white text-primary px-7 py-3.5 rounded-xl font-bold whitespace-nowrap hover:opacity-90 transition-all shadow flex items-center gap-3 text-sm flex-shrink-0">
           <span class="material-symbols-outlined text-base">mail</span>
           Send Your Reports
         </a>
@@ -708,7 +684,7 @@ document.querySelectorAll('a[href]').forEach(function(a){
 <script>
 // Close modal on backdrop click
 document.getElementById('intl-modal').addEventListener('click', function(e){
-  if(e.target === this) closeModal();
+  if(e.target === this) this.classList.add('hidden');
 });
 document.addEventListener('keydown', function(e){
   if(e.key === 'Escape') closeModal();

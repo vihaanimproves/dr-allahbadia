@@ -107,6 +107,61 @@ body { background-color: #E8EAED; }
   animation: none !important;
   transition: none !important;
 }
+
+/* ── Celebrity card shimmer border ── */
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
+@keyframes spin-angle {
+  to { --angle: 360deg; }
+}
+.celeb-card {
+  position: relative;
+  border-radius: 1rem;
+  transition: transform 0.35s cubic-bezier(0.22,0.6,0.36,1), box-shadow 0.35s ease;
+}
+.celeb-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: 1.15rem;
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0%,
+    transparent 35%,
+    #c0c0c0 45%,
+    #e8e0c8 50%,
+    #d4af37 53%,
+    #f5e6a3 57%,
+    #d4af37 60%,
+    #e8e0c8 63%,
+    #c0c0c0 67%,
+    transparent 75%,
+    transparent 100%
+  );
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 0;
+}
+.celeb-card::after {
+  content: '';
+  position: absolute;
+  inset: 1px;
+  border-radius: 0.95rem;
+  background: #E8EAED;
+  z-index: 1;
+}
+.celeb-card > * { position: relative; z-index: 2; }
+.celeb-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0,53,95,0.13);
+}
+.celeb-card:hover::before {
+  opacity: 1;
+  animation: spin-angle 2s linear infinite;
+}
 </style>
 </head>
 <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-white">
@@ -398,55 +453,34 @@ body { background-color: #E8EAED; }
   </div>
   <div>
     <h2 class="text-5xl font-headline text-primary mb-4">Major conditions,<br/><span class="italic">minor surgeries.</span></h2>
-    <p class="text-base text-on-surface-variant mb-10 leading-relaxed">
+    <p class="text-base text-on-surface-variant mb-6 leading-relaxed">
       Whatever is happening with your knee — there is a solution. No case is too complex, no condition too far gone.
     </p>
     <!-- 6 conditions — editorial numbered list -->
-    <div class="space-y-0 divide-y divide-outline-variant/20 mb-10">
+    <div class="space-y-0 divide-y divide-outline-variant/20 mb-4">
       <div class="flex items-center gap-6 py-4 group">
         <span class="text-3xl font-headline font-light text-outline/40 w-8 shrink-0 group-hover:text-primary transition-colors">01</span>
         <div>
-          <p class="font-bold text-primary">Total &amp; Partial Knee Replacement</p>
+          <p class="font-bold text-primary">Total Knee Replacement</p>
           <p class="text-xs text-on-surface-variant">Robotic precision for primary arthroplasty — every case personalised to your anatomy.</p>
         </div>
       </div>
       <div class="flex items-center gap-6 py-4 group">
         <span class="text-3xl font-headline font-light text-outline/40 w-8 shrink-0 group-hover:text-primary transition-colors">02</span>
         <div>
-          <p class="font-bold text-primary">Revision Knee Surgery</p>
-          <p class="text-xs text-on-surface-variant">Correcting failed implants. The CORI is the world's only robotic system cleared for revision surgery.</p>
+          <p class="font-bold text-primary">Partial Knee Replacement</p>
+          <p class="text-xs text-on-surface-variant">Preserving healthy bone and ligament — when only part of the joint is affected.</p>
         </div>
       </div>
       <div class="flex items-center gap-6 py-4 group">
         <span class="text-3xl font-headline font-light text-outline/40 w-8 shrink-0 group-hover:text-primary transition-colors">03</span>
         <div>
-          <p class="font-bold text-primary">Knee Arthroscopy</p>
-          <p class="text-xs text-on-surface-variant">Minimally invasive diagnostics and treatment — meniscus repair, cartilage work, and more.</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-6 py-4 group">
-        <span class="text-3xl font-headline font-light text-outline/40 w-8 shrink-0 group-hover:text-primary transition-colors">04</span>
-        <div>
-          <p class="font-bold text-primary">Ligament &amp; ACL Reconstruction</p>
-          <p class="text-xs text-on-surface-variant">Sport and trauma injuries — returning athletes and active patients to full mobility.</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-6 py-4 group">
-        <span class="text-3xl font-headline font-light text-outline/40 w-8 shrink-0 group-hover:text-primary transition-colors">05</span>
-        <div>
-          <p class="font-bold text-primary">Osteoarthritis &amp; Cartilage Damage</p>
-          <p class="text-xs text-on-surface-variant">From early-stage management through to definitive surgical solutions.</p>
-        </div>
-      </div>
-      <div class="flex items-center gap-6 py-4 group">
-        <span class="text-3xl font-headline font-light text-outline/40 w-8 shrink-0 group-hover:text-primary transition-colors">06</span>
-        <div>
-          <p class="font-bold text-primary">Deformity Correction &amp; Complex Cases</p>
-          <p class="text-xs text-on-surface-variant">High-risk anatomy, severe deformity, obese patients — cases others decline.</p>
+          <p class="font-bold text-primary">Revision Knee Surgery</p>
+          <p class="text-xs text-on-surface-variant">Correcting failed implants. The CORI is the world's only robotic system cleared for revision surgery.</p>
         </div>
       </div>
     </div>
-    <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-widest border-b border-primary pb-0.5 hover:opacity-70 transition-opacity">
+    <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="-mt-14 inline-flex items-center gap-0 text-primary font-bold text-xs uppercase tracking-widest border-b border-primary pb-0.50 hover:opacity-70 transition-opacity">
       Discuss Your Condition <span class="material-symbols-outlined text-sm">arrow_forward</span>
     </a>
   </div>
@@ -462,7 +496,7 @@ body { background-color: #E8EAED; }
   </div>
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     <!-- CELEBRITY SLOT 1 -->
-    <div class="group">
+    <div class="group celeb-card">
       <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow relative">
         <img src="images/prem.jpg" alt="Celebrity patient" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
         <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
@@ -473,7 +507,7 @@ body { background-color: #E8EAED; }
       </div>
     </div>
     <!-- CELEBRITY SLOT 2 -->
-    <div class="group">
+    <div class="group celeb-card">
       <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow relative">
         <img src="images/abraham.jpg" alt="Celebrity patient" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
         <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
@@ -484,7 +518,7 @@ body { background-color: #E8EAED; }
       </div>
     </div>
     <!-- CELEBRITY SLOT 3 -->
-    <div class="group">
+    <div class="group celeb-card">
       <div class="rounded-2xl overflow-hidden aspect-[4/5] mb-5 editorial-shadow relative">
         <img src="images/ranveer.jpg" alt="Celebrity patient" style="width:100%;height:100%;object-fit:cover;object-position:center top;"/>
         <div class="absolute inset-0 bg-gradient-to-t from-primary/30 to-transparent"></div>
@@ -852,67 +886,10 @@ body { background-color: #E8EAED; }
         </div>
       </a>
 
-      <!--  SEAMLESS LOOP — duplicate cards 1-10 identically  -->
-
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/1568968584797914/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">2:34</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Five weeks after right total knee replacement — back on his feet, back to life. Exactly what recovery should look like.</p><p class="vprocedure">Right Total Knee Replacement · 5 Weeks Post-Op</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/796084832853568/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">3:12</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Three months after two cardiac stents, both knees replaced in a single stage.</p><p class="vprocedure">Bilateral Single-Stage · 3 Months Post-Cardiac</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/870501465759842/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1483721310020-03333e577078?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">4:05</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Four weeks after bilateral total knee replacement — completely pain-free, full function restored.</p><p class="vprocedure">Bilateral TKR · 4 Weeks Post-Op</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/742327865591083/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">3:48</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Six weeks after right total knee replacement — leading a completely normal life.</p><p class="vname">Priya Sharma</p><p class="vprocedure">Revision Knee Surgery</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/1195437929196120/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">2:55</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Day 10 after surgery — full quadriceps strength fully regained. Pain-free knee replacement, exactly as promised.</p><p class="vname">Vijay Iyer</p><p class="vprocedure">Knee Arthroscopy</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/1279067380906819/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">3:20</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Day 3 after bilateral total knee replacement — completely pain-free from day one.</p><p class="vname">Meena Krishnan</p><p class="vprocedure">Total Knee Replacement</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/820779847197610/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1530026186672-2cd00ffc50fe?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">2:18</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Day 3 after surgery — walking pain-free, unassisted.</p><p class="vname">Deepak Malhotra</p><p class="vprocedure">Total Knee Replacement</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/1221827236446406/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1584820927498-cfe5211fd8bf?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">4:40</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Pain-free total knee replacement — a patient whose life has changed completely.</p><p class="vname">Nisha Bhatia</p><p class="vprocedure">Total Knee Replacement</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/1425550055344961/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">3:05</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">"I suffered for 4 years. One week after surgery I was living normally again. I feel like myself again."</p><p class="vname">Rajesh Kumar</p><p class="vprocedure">Total Knee Replacement</p></div>
-      </a>
-      <a href="https://www.facebook.com/vivek.allahbadia/videos/1444125696661323/" target="_blank" rel="noopener" target="_blank" rel="noopener" class="vcard">
-        <div class="vcard-thumb"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=500&q=75" alt=""/><div class="vplay"><div class="vplay-btn"><svg viewBox="0 0 24 24" width="22" height="22"><path fill="#00355f" d="M8 5v14l11-7z"/></svg></div></div><div class="fb-badge"><svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>Watch on Facebook</div><div class="vdur">5:15</div></div>
-        <div class="vcard-body"><div class="vstars">★★★★★</div><p class="vquote">Pain management in knee replacement has never been better — and this patient's recovery is the proof.</p><p class="vname">Ananya Menon</p><p class="vprocedure">Partial Knee Replacement</p></div>
-      </a>
-
-    </div><!-- /vtrack-fwd -->
-  </div><!-- /row 1 -->
-
-  <!-- Bottom CTA -->
-  <div class="max-w-7xl mx-auto px-8 mt-12 flex flex-col md:flex-row items-center justify-between gap-5">
-    <p style="color:rgba(255,255,255,0.4);font-size:13px;font-style:italic;font-family:'Newsreader',serif;">
-      Hover to pause · Click any card to watch on Facebook
-    </p>
-    <a href="https://www.facebook.com/drvivekallahbadia" target="_blank" rel="noopener"
-       style="display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,0.09);border:1px solid rgba(255,255,255,0.14);color:white;font-weight:700;font-size:13px;padding:0.85rem 1.75rem;border-radius:0.875rem;text-decoration:none;transition:background .2s;"
-       onmouseover="this.style.background='rgba(255,255,255,0.16)'" onmouseout="this.style.background='rgba(255,255,255,0.09)'">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="#97f0ff"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-      Follow on Facebook for More Stories
-      <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
-    </a>
+    </div> <!-- end track -->
   </div>
-
 </section>
+
 
 <!-- ── FAQ: Traditional vs Robotic Surgery ── -->
 <section style="background:#DFE2E6;">
@@ -930,9 +907,8 @@ body { background-color: #E8EAED; }
       <h2 style="font-family:'Newsreader',serif;font-size:clamp(3rem,6vw,5.5rem);font-weight:300;color:#00355f;line-height:.92;margin:0 0 2rem;">Robotic or Traditional —<br/><em style="font-style:italic;">Which Do You Actually Need?</em></h2>
 
       <!-- Quote — large, prominent, inline -->
-      <p style="font-family:'Newsreader',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:600;color:#00355f;line-height:1.3;margin:0 0 2rem;padding:1.75rem 2rem;background:rgba(0,53,95,.05);border-left:4px solid #5dc8d8;border-radius:0 1rem 1rem 0;">
-        Robotic assistance makes a good doctor better.<br/>
-        <span style="color:#0a7a8a;">It does not make a bad doctor good.</span>
+      <p style="font-family:'Newsreader',serif;font-size:clamp(1.4rem,2.5vw,2rem);font-weight:600;color:#218c9d;line-height:1.3;margin:0 0 2rem;padding:1.75rem 2rem;background:rgba(0,53,95,.05);border-left:4px solid #218c9d;border-radius:0 1rem 1rem 0;">
+        Robotic assistance makes an experienced doctor better.<br/>
       </p>
 
       <!-- Intro text in two columns -->
@@ -1104,7 +1080,7 @@ function toggleFaq(btn) {
       </div>
     </div>
     <div class="flex flex-wrap gap-3">
-      <a href="https://maps.google.com/search/Dr+Vivek+Allahbadia+Hinduja+Khar" target="_blank" class="inline-flex items-center gap-2 border border-outline-variant text-primary px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-surface-container transition-all">
+      <a href="https://share.google/TCzcBQjXcQox6aByK" target="_blank" class="inline-flex items-center gap-2 border border-outline-variant text-primary px-5 py-2.5 rounded-xl font-bold text-xs hover:bg-surface-container transition-all">
         <svg width="11" height="11" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
         Google Reviews <span class="material-symbols-outlined text-sm">open_in_new</span>
       </a>
@@ -1257,7 +1233,6 @@ function toggleFaq(btn) {
 </div>
 </section>
 
-
 <!-- ── CONTACT ── -->
 <section class="py-24 bg-surface-container-low px-8">
 <div class="max-w-7xl mx-auto">
@@ -1278,7 +1253,7 @@ function toggleFaq(btn) {
         <p class="text-xs font-bold uppercase tracking-widest" style="color:#c0392b;margin-bottom:1.25rem;">Strictly by appointment only — no walk-ins</p>
         <div class="space-y-3 mb-8 text-on-surface-variant text-sm">
           <div class="flex gap-3 items-start"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>724, 11th Road, Khar West, Mumbai 400052</span></div>
-          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">call</span><span>+91 22 4510 8989</span></div>
+          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">call</span><span>+91 9820218181</span></div>
           <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">precision_manufacturing</span><span>CORI Robotic System on-site</span></div>
         </div>
         <div class="flex flex-col gap-3">
@@ -1292,22 +1267,22 @@ function toggleFaq(btn) {
     <!-- Card 2: Wadala / Matunga Consultations -->
     <div class="bg-surface-container-lowest rounded-[24px] overflow-hidden editorial-shadow transition-transform duration-500 hover:-translate-y-2">
       <div class="h-56 bg-surface-container-high relative overflow-hidden">
-        <img class="w-full h-full object-cover" src="images/wadala clinic.jpeg" alt="Consultation Clinic Wadala Matunga"/>
+        <img class="w-full h-full object-cover" src="images/vlsrbldg.jpg" alt="Consultation Clinic Wadala"/>
         <div class="absolute inset-0 bg-gradient-to-b from-transparent to-surface-container-lowest"></div>
       </div>
       <div class="p-10">
         <span class="text-tertiary font-label text-xs uppercase tracking-widest font-bold block mb-3">OPD Consultation Clinics</span>
-        <h3 class="text-2xl font-headline font-semibold text-primary mb-5">Consultations at Wadala / Matunga</h3>
+        <h3 class="text-2xl font-headline font-semibold text-primary mb-3">Consultations at VLSR THE CLINIC</h3>
+        <p class="text-xs font-bold uppercase tracking-widest" style="color:#16a34a;margin-bottom:1.25rem;">Walk-Ins Allowed</p>
         <div class="space-y-3 mb-8 text-on-surface-variant text-sm">
-          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>261-262, Rd Number 19, Wadala Village, Wadala, Mumbai 400031</span></div>
-          <div class="flex gap-3 items-start"><span class="material-symbols-outlined text-primary text-base mt-0.5">location_on</span><span>Matunga, Mumbai</span></div>
-          <div class="flex gap-3 items-center"><a href="https://maps.app.goo.gl/BdcjQot6Zp7bNbUa7" target="_blank" class="text-on-tertiary-container text-xs font-bold hover:opacity-70 transition-opacity flex items-center gap-1"><span class="material-symbols-outlined text-xs">map</span>View on Google Maps</a></div>
-          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">event_available</span><span>Also at Criti Care: Malad, Andheri, Juhu, Kurla</span></div>
+          <div class="flex gap-3 items-start"><span class="material-symbols-outlined text-primary text-base">location_on</span><span>2nd Floor, Corinthian Building. Linking Road, Khar(West), Mumbai - 400052</span></div>
+          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">call</span><span>+91 8652620972</span></div>
+          <div class="flex gap-3 items-center"><span class="material-symbols-outlined text-primary text-base">near_me</span><span>Linking Road, Khar, Mumbai.</span></div>
         </div>
         <div class="flex flex-col gap-3">
-          <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="w-full bg-gradient-to-br from-primary to-primary-container text-white text-center font-bold py-4 rounded-2xl hover:opacity-90 transition-all text-sm tracking-wide shadow-md shadow-primary/20">Book Consultation</a>
-          <a href="about.html" class="w-full text-center text-primary font-bold text-xs uppercase tracking-widest py-3 hover:opacity-60 transition-opacity inline-flex items-center justify-center gap-2">
-            <span class="material-symbols-outlined text-sm">location_on</span> See All Locations
+          <a href="https://wa.me/918652620972?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="w-full bg-gradient-to-br from-primary to-primary-container text-white text-center font-bold py-4 rounded-2xl hover:opacity-90 transition-all text-sm tracking-wide shadow-md shadow-primary/20">Book Appointment</a>
+          <a href="https://maps.app.goo.gl/JrJW4MpYiF8QRxqW7" target="_blank" class="w-full text-center text-primary font-bold text-xs uppercase tracking-widest py-3 hover:opacity-60 transition-opacity inline-flex items-center justify-center gap-2">
+            <span class="material-symbols-outlined text-sm">map</span> View on Google Maps
           </a>
         </div>
       </div>
@@ -1317,7 +1292,6 @@ function toggleFaq(btn) {
 </section>
 
 
-<!-- ── FOOTER ── -->
 <footer class="bg-slate-50 w-full py-16 border-t-0">
 <div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 font-sans text-sm">
   <div>

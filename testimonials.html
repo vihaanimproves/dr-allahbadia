@@ -495,13 +495,7 @@
   </div>
 
   <!-- Platform filter tabs -->
-  <div class="flex flex-wrap gap-2 mb-10 fade-in-up" id="review-tabs">
-    <button onclick="filterReviews('all')" class="review-tab active px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border transition-all" data-filter="all">All Reviews</button>
-    <button onclick="filterReviews('justdial')" class="review-tab px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border transition-all" data-filter="justdial">Justdial</button>
-    <button onclick="filterReviews('google')" class="review-tab px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border transition-all" data-filter="google">Google</button>
-    <button onclick="filterReviews('hexahealth')" class="review-tab px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest border transition-all" data-filter="hexahealth">HexaHealth</button>
-
-  </div>
+  
 
   <!-- Reviews masonry grid -->
   <div id="reviews-grid" class="columns-1 md:columns-2 lg:columns-3 gap-5 space-y-5">
@@ -564,6 +558,42 @@
     
 
     <!-- ─── GOOGLE ─── -->
+
+
+    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="google">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">S</div>
+          <div>
+            <p class="font-bold text-primary text-sm">Sugata Mukherjee</p>
+            <p class="text-[10px] text-on-surface-variant">Local Guide · 23 reviews</p>
+          </div>
+        </div>
+        <div>
+          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">Google</span>
+          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
+        </div>
+      </div>
+      <p class="text-sm text-on-surface-variant leading-relaxed">"Doctor is very good — I strongly believe he will treat you like a family member. 100% recommended."</p>
+    </div>
+
+    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="google">
+      <div class="flex items-center justify-between mb-4">
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">D</div>
+          <div>
+            <p class="font-bold text-primary text-sm">Dev Majmudar</p>
+            <p class="text-[10px] text-on-surface-variant">Local Guide · 143 reviews</p>
+          </div>
+        </div>
+        <div>
+          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">Google</span>
+          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
+        </div>
+      </div>
+      <p class="text-sm text-on-surface-variant leading-relaxed">"Dr. Allahbadia operated on both my parents for hip replacement in a span of 5 years — both around age 80. He is an excellent surgeon with top-notch skills whose approach is to keep things simple, with minimum risk. A gifted surgeon and a life saver in my mother's case."</p>
+    </div>
+
 
     <div class="review-card break-inside-avoid mb-5 bg-primary text-white rounded-2xl p-7" data-source="google">
       <div class="flex items-center justify-between mb-4">
@@ -701,4 +731,54 @@ document.querySelectorAll('.video-thumb[data-mp4]').forEach(function(thumb) {
   });
 });
 </script>
-</body></html>
+</div><!-- /reviews-grid -->
+
+</section>
+
+<footer class="bg-slate-50 w-full py-16 border-t-0">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 font-sans text-sm">
+  <div>
+    <div class="text-xl font-serif text-blue-900 mb-5">Dr. Vivek Allahbadia</div>
+    <p class="text-slate-500 mb-5 text-sm">Hinduja Healthcare Surgical, Khar · Mumbai's leading robotic knee surgeon.</p>
+    <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank">
+      <span class="material-symbols-outlined text-blue-900 opacity-60 hover:opacity-100 cursor-pointer">person</span>
+    </a>
+  </div>
+  <div>
+    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Quick Links</h5>
+    <ul class="space-y-3 text-slate-500">
+      <li><a class="hover:text-blue-900 transition-all" href="about.html">About Dr. Allahbadia</a></li>
+      <li><a class="hover:text-blue-900 transition-all" href="robot.html">CORI Robotics</a></li>
+      <li><a class="hover:text-blue-900 transition-all" href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
+      <li><a class="hover:text-blue-900 transition-all" href="#">Medical Disclaimer</a></li>
+    </ul>
+  </div>
+  <div>
+    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Expertise</h5>
+    <ul class="space-y-3 text-slate-500">
+      <li>Total Knee Replacement</li>
+      <li>CORI Robotic Surgery</li>
+      <li>Revision Knee Surgery</li>
+      <li>Sports Injuries</li>
+    </ul>
+  </div>
+  <div>
+    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Newsletter</h5>
+    <p class="text-slate-500 mb-4 text-sm">Recovery tips and surgical advancements.</p>
+    <div class="flex bg-white rounded-lg p-1 border border-outline-variant/30">
+      <input class="bg-transparent border-none focus:ring-0 text-xs flex-1" placeholder="Your Email" type="email"/>
+      <button class="bg-primary text-white p-2 rounded-md"><span class="material-symbols-outlined text-sm">send</span></button>
+    </div>
+  </div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pt-10 mt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+  <p class="text-slate-400 text-xs">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
+  <div class="flex gap-8">
+    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Medical Accuracy Guaranteed</span>
+    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Patient Data Protected</span>
+  </div>
+</div>
+</footer>
+
+</body>
+</html>
