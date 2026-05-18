@@ -3,6 +3,35 @@
 <head>
 <meta charset="utf-8"/>
 <link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          "primary": "#00355f",
+          "primary-container": "#0f4c81",
+          "on-primary": "#ffffff",
+          "surface": "#E8EAED",
+          "surface-container-low": "#DFE2E6",
+          "surface-container-high": "#d0d3d8",
+          "surface-container-lowest": "#ffffff",
+          "on-surface": "#191c1e",
+          "on-surface-variant": "#42474f",
+          "on-tertiary-container": "#5dc8d8",
+          "outline-variant": "#c2c7d1",
+          "tertiary": "#5dc8d8"
+        },
+        fontFamily: {
+          "headline": ["Newsreader", "serif"],
+          "body": ["Manrope", "sans-serif"],
+          "label": ["Manrope", "sans-serif"]
+        }
+      }
+    }
+  }
+</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Gallery | Dr. Vivek Allahbadia</title>
 <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet"/>
@@ -51,30 +80,6 @@ h1{font-family:'Newsreader',serif;}
 .rv.on{opacity:1;transform:translateY(0);}
 </style>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          "primary": "#00355f",
-          "primary-container": "#0f4c81",
-          "on-primary": "#ffffff",
-          "surface": "#E8EAED",
-          "surface-container-low": "#DFE2E6",
-          "surface-container-high": "#d0d3d8",
-          "surface-container-lowest": "#ffffff",
-          "on-surface": "#191c1e",
-          "on-surface-variant": "#42474f",
-          "on-tertiary-container": "#5dc8d8",
-          "outline-variant": "#c2c7d1",
-          "tertiary": "#5dc8d8"
-        },
-        fontFamily: {"headline":["Newsreader"],"body":["Manrope"],"label":["Manrope"]}
-      }
-    }
-  }
-</script>
 </head>
 <body>
 
@@ -110,7 +115,7 @@ h1{font-family:'Newsreader',serif;}
 
 <!-- PHOTO GRID — tight, 3 cols -->
 <div style="max-width:1280px;margin:0 auto;padding:.5rem 1rem 1.5rem;display:grid;grid-template-columns:repeat(3,1fr);column-gap:.6rem;row-gap:.8rem;align-items:start;">
-  <div class="rv" style="display:flex;justify-content:center;padding-top:0px;">
+<div class="rv" style="display:flex;justify-content:center;padding-top:0px;">
     <div class="pol" style="width:360px;transform:rotate(-1.8deg);">
       <div class="tl tape"></div>
       <div style="width:342px;height:220px;overflow:hidden;">
@@ -118,7 +123,55 @@ h1{font-family:'Newsreader',serif;}
       </div>
     </div>
   </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:4px;">
+<div class="rv" style="display:flex;justify-content:center;padding-top:18px;">
+    <div class="pol" style="width:355px;transform:rotate(2.5deg);">
+      <div class="tape tl"></div>
+      <div style="width:337px;height:260px;overflow:hidden;">
+        <img src="images/prem.jpg" alt="Prem Chopra"/>
+      </div>
+    </div>
+  </div>
+<div class="rv" style="display:flex;justify-content:center;padding-top:8px;">
+    <div class="pol" style="width:355px;transform:rotate(-3.2deg);">
+      <div class="tr tape"></div>
+      <div style="width:337px;height:250px;overflow:hidden;">
+        <img src="images/gallery3.jpeg" alt="The Ranveer Show"/>
+      </div>
+    </div>
+  </div>
+<div class="rv" style="display:flex;justify-content:center;padding-top:26px;">
+    <div class="pol" style="width:360px;transform:rotate(1.2deg);">
+      <div class="pin"></div>
+      <div style="width:342px;height:270px;overflow:hidden;">
+        <img src="images/gallery5.jpeg" alt="Research"/>
+      </div>
+    </div>
+  </div>
+<div class="rv" style="display:flex;justify-content:center;padding-top:6px;">
+    <div class="pol" style="width:360px;transform:rotate(-2.8deg);">
+      <div class="tape tr"></div>
+      <div style="width:342px;height:260px;overflow:hidden;">
+        <img src="images/abraham.jpg" alt="John Abraham"/>
+      </div>
+    </div>
+  </div>
+<div class="rv" style="display:flex;justify-content:center;padding-top:14px;">
+    <div class="pol" style="width:355px;transform:rotate(3.5deg);">
+      <div class="tc tape"></div>
+      <div style="width:337px;height:215px;overflow:hidden;">
+        <img src="images/gallery6.jpeg" alt="Conference"/>
+      </div>
+    </div>
+  </div>
+<div class="rv" style="display:flex;justify-content:center;padding-top:30px;">
+    <div class="pol" style="width:358px;transform:rotate(-1.5deg);">
+      <div class="tc tape"></div>
+      <div style="width:340px;height:195px;overflow:hidden;">
+        <img src="images/gallery7.jpeg" alt="Awards"/>
+      </div>
+    </div>
+  </div>
+<div class="rv" style="display:flex;justify-content:center;padding-top:4px;">
     <div class="pol" style="width:370px;transform:rotate(4.0deg);">
       <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round"><path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/></svg>
       <div style="width:352px;height:340px;overflow:hidden;">
@@ -126,55 +179,29 @@ h1{font-family:'Newsreader',serif;}
       </div>
     </div>
   </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:10px;">
-    <div class="pol" style="width:355px;transform:rotate(3.5deg);">
-      <div class="tr tape"></div>
-      <div style="width:337px;height:250px;overflow:hidden;">
-        <img src="images/gallery3.jpeg" alt="The Ranveer Show"/>
+<div class="rv" style="display:flex;justify-content:center;padding-top:20px;">
+    <div class="pol" style="width:358px;transform:rotate(2.0deg);">
+      <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round"><path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/></svg>
+      <div style="width:340px;height:260px;overflow:hidden;">
+        <img src="images/ranveer.jpg" alt="Ranveer Allahbadia"/>
       </div>
     </div>
   </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:6px;">
-    <div class="pol" style="width:360px;transform:rotate(-0.8deg);">
-      <div class="pin"></div>
-      <div style="width:342px;height:270px;overflow:hidden;">
-        <img src="images/gallery5.jpeg" alt="Research"/>
-      </div>
-    </div>
-  </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:20px;">
-    <div class="pol" style="width:352px;transform:rotate(2.2deg);">
+<div class="rv" style="display:flex;justify-content:center;padding-top:12px;">
+    <div class="pol" style="width:352px;transform:rotate(-2.2deg);">
       <div class="tl tape"></div>
       <div style="width:334px;height:185px;overflow:hidden;">
         <img src="images/gallery4.jpeg" alt="Operating Theatre"/>
       </div>
     </div>
   </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:14px;">
-    <div class="pol" style="width:355px;transform:rotate(1.8deg);">
-      <div class="tc tape"></div>
-      <div style="width:337px;height:215px;overflow:hidden;">
-        <img src="images/gallery6.jpeg" alt="Conference"/>
-      </div>
-    </div>
-  </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:0px;">
-    <div class="pol" style="width:358px;transform:rotate(-3.0deg);">
-      <div class="tc tape"></div>
-      <div style="width:340px;height:195px;overflow:hidden;">
-        <img src="images/gallery7.jpeg" alt="Awards"/>
-      </div>
-    </div>
-  </div>
-  <div class="rv" style="display:flex;justify-content:center;padding-top:28px;">
-    <div class="pol" style="width:365px;transform:rotate(1.5deg);">
+<div class="rv" style="display:flex;justify-content:center;padding-top:24px;">
+    <div class="pol" style="width:365px;transform:rotate(1.8deg);">
       <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round"><path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/></svg>
       <div style="width:347px;height:205px;overflow:hidden;">
         <img src="images/gallery2.jpeg" alt="CORI Surgical System"/>
       </div>
     </div>
-  </div>
-  <div class="rv" style="display:flex;flex-direction:column;align-items:center;">
   </div>
 
 </div><!-- /grid -->
