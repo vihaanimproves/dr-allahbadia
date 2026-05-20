@@ -3,10 +3,28 @@
 # https://www.drallahbadia.com/
 #
 # Strategy: Allow all legitimate search and AI crawlers full
-# access to all pages. Block only known scrapers and bad bots.
+# access to all pages.
+# Block only known scrapers and bad bots.
 # This site's GEO value depends on AI assistants being able
 # to crawl and cite every page freely.
 # ============================================================
+
+# ── Real-Time AI Conversational Assistants ──────────────────
+# Placed at the top to completely bypass generic wildcard crawl delays
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Agent
+Allow: /
+
+User-agent: Gemini-Deep-Research
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
 
 
 # ── Default: allow all well-behaved bots ────────────────────
