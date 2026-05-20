@@ -1,0 +1,128 @@
+# ============================================================
+# robots.txt — Dr. Vivek Allahbadia
+# https://www.drvivekallahbadia.com/
+#
+# Strategy: Allow all legitimate search and AI crawlers full
+# access to all pages. Block only known scrapers and bad bots.
+# This site's GEO value depends on AI assistants being able
+# to crawl and cite every page freely.
+# ============================================================
+
+
+# ── Default: allow all well-behaved bots ────────────────────
+User-agent: *
+Allow: /
+Disallow: /cdn-cgi/
+Crawl-delay: 2
+
+
+# ── Google ───────────────────────────────────────────────────
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+
+User-agent: Googlebot-Video
+Allow: /
+
+
+# ── Bing / Microsoft ─────────────────────────────────────────
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+
+
+# ── AI Search & Answer Engines ───────────────────────────────
+# GPTBot — ChatGPT / OpenAI web browsing and training
+User-agent: GPTBot
+Allow: /
+
+# OAI-SearchBot — OpenAI real-time search
+User-agent: OAI-SearchBot
+Allow: /
+
+# PerplexityBot — Perplexity AI answer engine
+User-agent: PerplexityBot
+Allow: /
+
+# Claude / Anthropic — Claude.ai and API citations
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Cohere — Command R AI assistant
+User-agent: cohere-ai
+Allow: /
+
+# Meta AI — Llama / Meta AI assistant
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: meta-externalfetcher
+Allow: /
+
+# YouBot — You.com AI search
+User-agent: YouBot
+Allow: /
+
+# CCBot — Common Crawl (powers many LLM training sets)
+User-agent: CCBot
+Allow: /
+
+# Bytespider — ByteDance / TikTok AI
+User-agent: Bytespider
+Allow: /
+
+# DuckDuckBot — DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+
+# Applebot — Apple Siri / Spotlight
+User-agent: Applebot
+Allow: /
+
+# Applebot-Extended — Apple AI training
+User-agent: Applebot-Extended
+Allow: /
+
+# Google-Extended — Gemini AI training and Bard
+User-agent: Google-Extended
+Allow: /
+
+
+# ── Medical & Health Indexers ────────────────────────────────
+User-agent: Healthlinebot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 5
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 5
+
+
+# ── Block known malicious / spam scrapers ───────────────────
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: SplitSignalBot
+Disallow: /
+
+User-agent: Majestic-12
+Disallow: /
+
+
+# ── Sitemap ──────────────────────────────────────────────────
+Sitemap: https://www.drvivekallahbadia.com/sitemap.xml
