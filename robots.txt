@@ -1,6 +1,6 @@
 # ============================================================
 # robots.txt — Dr. Vivek Allahbadia
-# https://www.drvivekallahbadia.com/
+# https://www.drallahbadia.com/
 #
 # Strategy: Allow all legitimate search and AI crawlers full
 # access to all pages. Block only known scrapers and bad bots.
@@ -125,4 +125,4 @@ Disallow: /
 
 
 # ── Sitemap ──────────────────────────────────────────────────
-Sitemap: https://www.drvivekallahbadia.com/sitemap.xml
+Sitemap: https://www.drallahbadia.com/sitemap.xml

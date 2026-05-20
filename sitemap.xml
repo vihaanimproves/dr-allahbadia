@@ -6,7 +6,7 @@
 
   <!--
     sitemap.xml — Dr. Vivek Allahbadia
-    https://www.drvivekallahbadia.com/
+    https://www.drallahbadia.com/
 
     Strategy:
     - changefreq and priority reflect how often content changes
@@ -17,22 +17,22 @@
 
   <!-- ── Home ─────────────────────────────────────────────── -->
   <url>
-    <loc>https://www.drvivekallahbadia.com/</loc>
+    <loc>https://www.drallahbadia.com/</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/abouthero.png</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/abouthero.png</image:loc>
       <image:title>Dr. Vivek Allahbadia — Robotic Knee Surgeon, Mumbai</image:title>
       <image:caption>Dr. Vivek Allahbadia, HOD Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/surgery.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/surgery.jpg</image:loc>
       <image:title>CORI Robotic Knee Surgery — Hinduja Healthcare Surgical, Khar</image:title>
       <image:caption>Dr. Allahbadia performing CORI robotic knee replacement at Hinduja Healthcare Surgical, Khar, Mumbai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/hindujahero.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/hindujahero.jpg</image:loc>
       <image:title>Hinduja Healthcare Surgical, Khar West, Mumbai</image:title>
       <image:caption>Hinduja Healthcare Surgical hospital, Khar West, Mumbai — primary surgery centre for Dr. Vivek Allahbadia</image:caption>
     </image:image>
@@ -40,12 +40,12 @@
 
   <!-- ── Appointments ─────────────────────────────────────── -->
   <url>
-    <loc>https://www.drvivekallahbadia.com/appointments.html</loc>
+    <loc>https://www.drallahbadia.com/appointments.html</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.95</priority>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/vlsr.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/vlsr.jpg</image:loc>
       <image:title>VLSR The Clinic — Dr. Vivek Allahbadia Consulting Room, Khar West</image:title>
       <image:caption>VLSR The Clinic consulting room, Khar West, Mumbai — Dr. Vivek Allahbadia OPD consultations Monday to Friday, 4–5 PM</image:caption>
     </image:image>
@@ -53,22 +53,22 @@
 
   <!-- ── CORI Robotics ─────────────────────────────────────── -->
   <url>
-    <loc>https://www.drvivekallahbadia.com/robot.html</loc>
+    <loc>https://www.drallahbadia.com/robot.html</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.90</priority>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/aboutcori.png</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/aboutcori.png</image:loc>
       <image:title>Smith+Nephew CORI Robotic Surgical System — Hinduja Healthcare Surgical, Khar</image:title>
       <image:caption>The Smith+Nephew CORI handheld robotic knee system used by Dr. Vivek Allahbadia at Hinduja Healthcare Surgical, Khar, Mumbai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/corimg.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/corimg.jpg</image:loc>
       <image:title>CORI Surgical System — How It Works</image:title>
       <image:caption>CORI platform, RI.KNEE software, and real-time robotic-guided bone cutting — explainer video thumbnail</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/corimg2.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/corimg2.jpg</image:loc>
       <image:title>CORI — Handheld Robotic Burr and Digital Tensioner</image:title>
       <image:caption>CORI system in detail — handheld robotic burr, Digital Tensioner, and imageless knee mapping</image:caption>
     </image:image>
@@ -76,17 +76,17 @@
 
   <!-- ── About ─────────────────────────────────────────────── -->
   <url>
-    <loc>https://www.drvivekallahbadia.com/about.html</loc>
+    <loc>https://www.drallahbadia.com/about.html</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/about.png</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/about.png</image:loc>
       <image:title>Dr. Vivek Allahbadia — HOD Orthopaedics, Hinduja Healthcare Surgical, Khar</image:title>
       <image:caption>Dr. Vivek Allahbadia, MS Orth, FCPS, MCh (UK), Head of Department Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/CORI.png</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/CORI.png</image:loc>
       <image:title>Smith+Nephew CORI System — Dr. Vivek Allahbadia</image:title>
       <image:caption>CORI robotic surgical system at Hinduja Healthcare Surgical, Khar — used exclusively by Dr. Vivek Allahbadia</image:caption>
     </image:image>
@@ -94,22 +94,22 @@
 
   <!-- ── Patient Testimonials ──────────────────────────────── -->
   <url>
-    <loc>https://www.drvivekallahbadia.com/testimonials.html</loc>
+    <loc>https://www.drallahbadia.com/testimonials.html</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.80</priority>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/thumbnails/ftthumb1.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/thumbnails/ftthumb1.jpg</image:loc>
       <image:title>Patient Recovery — Right Total Knee Replacement, 5 Weeks Post-Op</image:title>
       <image:caption>Patient walking pain-free 5 weeks after right total knee replacement by Dr. Vivek Allahbadia</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/thumbnails/ftthumb2.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/thumbnails/ftthumb2.jpg</image:loc>
       <image:title>Patient — Bilateral Knee Replacement 3 Months Post-Cardiac</image:title>
       <image:caption>Bilateral single-stage knee replacement performed 3 months after cardiac stents — patient recovery video</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/thumbnails/ftthumb3.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/thumbnails/ftthumb3.jpg</image:loc>
       <image:title>Patient — Bilateral Total Knee Replacement, 4 Weeks Post-Op</image:title>
       <image:caption>Patient completely pain-free at 4 weeks after bilateral total knee replacement by Dr. Allahbadia</image:caption>
     </image:image>
@@ -117,62 +117,62 @@
 
   <!-- ── Gallery ───────────────────────────────────────────── -->
   <url>
-    <loc>https://www.drvivekallahbadia.com/gallery.html</loc>
+    <loc>https://www.drallahbadia.com/gallery.html</loc>
     <lastmod>2025-05-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.65</priority>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery1.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery1.jpeg</image:loc>
       <image:title>Dr. Vivek Allahbadia — Professional Portrait</image:title>
       <image:caption>Professional portrait of Dr. Vivek Allahbadia, HOD Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/prem.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/prem.jpg</image:loc>
       <image:title>Dr. Allahbadia with Prem Chopra</image:title>
       <image:caption>Dr. Vivek Allahbadia with veteran Bollywood actor Prem Chopra</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/abraham.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/abraham.jpg</image:loc>
       <image:title>Dr. Allahbadia with John Abraham</image:title>
       <image:caption>Dr. Vivek Allahbadia with Bollywood actor John Abraham</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/ranveer.jpg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/ranveer.jpg</image:loc>
       <image:title>Dr. Allahbadia with Ranveer Allahbadia</image:title>
       <image:caption>Dr. Vivek Allahbadia with podcaster and fitness influencer Ranveer Allahbadia</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery3.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery3.jpeg</image:loc>
       <image:title>Dr. Allahbadia — The Ranveer Show</image:title>
       <image:caption>Dr. Vivek Allahbadia featured on The Ranveer Show podcast</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery5.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery5.jpeg</image:loc>
       <image:title>Dr. Allahbadia — Peer-Reviewed Research Publications</image:title>
       <image:caption>Dr. Vivek Allahbadia's published research in Bombay Hospital Journal and Journal of Postgraduate Medicine</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery6.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery6.jpeg</image:loc>
       <image:title>Dr. Allahbadia — International Orthopaedic Conference</image:title>
       <image:caption>Dr. Vivek Allahbadia presenting at an international orthopaedic conference</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery7.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery7.jpeg</image:loc>
       <image:title>Dr. Allahbadia — Awards and Recognitions</image:title>
       <image:caption>Dr. Vivek Allahbadia receiving professional awards and recognitions for surgical excellence</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery8.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery8.jpeg</image:loc>
       <image:title>Patient Recovery — Knee Replacement Surgery by Dr. Allahbadia</image:title>
       <image:caption>Patient in recovery following knee replacement surgery at Hinduja Healthcare Surgical, Khar, Mumbai</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery4.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery4.jpeg</image:loc>
       <image:title>Operating Theatre — Dr. Allahbadia Performing Knee Surgery</image:title>
       <image:caption>Dr. Vivek Allahbadia performing orthopaedic knee surgery in the operating theatre at Hinduja Healthcare Surgical, Khar</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://www.drvivekallahbadia.com/images/gallery2.jpeg</image:loc>
+      <image:loc>https://www.drallahbadia.com/images/gallery2.jpeg</image:loc>
       <image:title>CORI Robotic Surgical System at Hinduja Khar</image:title>
       <image:caption>Smith+Nephew CORI robotic surgical system at Hinduja Healthcare Surgical, Khar — used by Dr. Vivek Allahbadia</image:caption>
     </image:image>
