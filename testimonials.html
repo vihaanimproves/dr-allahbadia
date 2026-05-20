@@ -1,785 +1,724 @@
 <!DOCTYPE html>
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Patient Testimonials | Dr. Vivek Allahbadia</title>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config={darkMode:"class",theme:{extend:{
-    colors:{
-      "on-tertiary-fixed-variant":"#004f58","tertiary-fixed-dim":"#6cd5e6",
-      "on-primary-fixed-variant":"#07497d","on-primary-container":"#8ebdf9",
-      "on-surface-variant":"#42474f","surface-container-high":"#e6e8ea",
-      "surface-variant":"#e0e3e5","on-tertiary-fixed":"#001f24",
-      "primary-fixed":"#d2e4ff","on-tertiary":"#ffffff","outline":"#727780",
-      "surface":"#E8EAED","on-surface":"#191c1e",
-      "tertiary-fixed":"#97f0ff",
-      "on-secondary-fixed-variant":"#37485e","secondary-container":"#d2e4ff",
-      "on-background":"#191c1e","on-primary":"#ffffff",
-      "inverse-primary":"#a0c9ff","surface-container-highest":"#e0e3e5",
-      "on-tertiary-container":"#5dc8d8","primary-container":"#0f4c81",
-      "surface-container-lowest":"#ffffff","primary":"#00355f",
-      "background":"#E8EAED","surface-container-low":"#DFE2E6",
-      "secondary":"#4f6076","primary-fixed-dim":"#a0c9ff",
-      "tertiary":"#003940","outline-variant":"#c2c7d1",
-      "on-primary-fixed":"#001c37","surface-container":"#D8DBE0",
-      "tertiary-container":"#00525b","surface-dim":"#d8dadc"
-    },
-    borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},
-    fontFamily:{"headline":["Newsreader"],"body":["Manrope"],"label":["Manrope"]}
-  }}}
-</script>
-<style>
-  body{font-family:'Manrope',sans-serif;background-color:#E8EAED;}
-  h1,h2,h3,.font-serif{font-family:'Newsreader',serif;}
-  .material-symbols-outlined{font-variation-settings:'FILL' 0,'wght' 400,'GRAD' 0,'opsz' 24;}
-  .editorial-shadow{box-shadow:0 32px 64px -12px rgba(0,53,95,0.06);}
-  .hide-scrollbar::-webkit-scrollbar{display:none;}
-  .hide-scrollbar{-ms-overflow-style:none;scrollbar-width:none;}
+<html lang="en">
+<head>
 
-  /* ── Scroll reveal ── */
-  .fade-in-up{opacity:0;transform:translateY(32px);transition:opacity 0.7s cubic-bezier(0.22,0.6,0.36,1),transform 0.7s cubic-bezier(0.22,0.6,0.36,1);}
-  .fade-in-up.visible{opacity:1;transform:translateY(0);}
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  /* ── Page load ── */
-  @keyframes pageIn{from{opacity:0;transform:translateY(18px);}to{opacity:1;transform:translateY(0);}}
-  main{animation:pageIn 0.6s cubic-bezier(0.22,0.6,0.36,1) both;}
-  body.page-exit main{opacity:0!important;transform:translateY(-14px)!important;transition:opacity 0.28s ease,transform 0.28s ease!important;}
+  <!-- ── Primary SEO ──────────────────────────────────────────── -->
+  <title>Patient Testimonials | Dr. Vivek Allahbadia | Knee Surgery Reviews Mumbai</title>
+  <meta name="description" content="Real patient testimonials for Dr. Vivek Allahbadia — knee replacement surgery reviews from Justdial, Google, HexaHealth & Credihealth. 98% patient satisfaction. Hinduja Healthcare Surgical, Khar, Mumbai." />
+  <meta name="keywords" content="Dr Vivek Allahbadia reviews, knee replacement testimonials Mumbai, knee surgery patient reviews Khar, Hinduja Khar knee surgery reviews, robotic knee replacement patient stories Mumbai" />
+  <meta name="author" content="Dr. Vivek Allahbadia" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.drvivekallahbadia.com/testimonials.html" />
 
-  /* ── Zigzag video layout ── */
-  .zigzag-container{
-    position:relative;
+  <!-- ── Geo ──────────────────────────────────────────────────── -->
+  <meta name="geo.region" content="IN-MH" />
+  <meta name="geo.placename" content="Mumbai, Maharashtra, India" />
+  <meta name="geo.position" content="19.0760;72.8777" />
+  <meta name="ICBM" content="19.0760, 72.8777" />
+
+  <!-- ── Open Graph ───────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.drvivekallahbadia.com/testimonials.html" />
+  <meta property="og:title" content="Patient Testimonials | Dr. Vivek Allahbadia | Knee Surgery Mumbai" />
+  <meta property="og:description" content="Real patient reviews and video testimonials. 98% satisfaction rate. Dr. Vivek Allahbadia, Hinduja Healthcare Surgical, Khar, Mumbai." />
+  <meta property="og:image" content="https://www.drvivekallahbadia.com/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Dr. Vivek Allahbadia" />
+
+  <!-- ── Twitter Card ─────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Patient Testimonials | Dr. Vivek Allahbadia" />
+  <meta name="twitter:description" content="Real patient stories. 98% satisfaction. Knee replacement reviews from Justdial, Google, HexaHealth & Credihealth." />
+  <meta name="twitter:image" content="https://www.drvivekallahbadia.com/images/og-cover.jpg" />
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- ── Fonts ─────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- ── Styles ────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Structured Data ──────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",                "item": "https://www.drvivekallahbadia.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Patient Testimonials","item": "https://www.drvivekallahbadia.com/testimonials.html" }
+        ]
+      },
+
+      {
+        "@type": "Physician",
+        "@id": "https://www.drvivekallahbadia.com/#doctor",
+        "name": "Dr. Vivek Allahbadia",
+        "honorificPrefix": "Dr.",
+        "honorificSuffix": "MS Orth, D'Orth, FCPS, MCh (UK)",
+        "jobTitle": "Head of Department, Orthopaedics",
+        "description": "Dr. Vivek Allahbadia is HOD Orthopaedics at Hinduja Healthcare Surgical, Khar, Mumbai. With 28+ years of surgical experience and 5,000+ knee surgeries, he specialises in CORI robotic-assisted knee replacement and complex joint arthroplasty.",
+        "medicalSpecialty": ["Orthopedic Surgery", "Joint Replacement Surgery", "Robotic-Assisted Surgery"],
+        "telephone": "+919820218181",
+        "url": "https://www.drvivekallahbadia.com/",
+        "image": "https://www.drvivekallahbadia.com/images/about.png",
+        "worksFor": { "@id": "https://www.drvivekallahbadia.com/#clinic" },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "bestRating": "5",
+          "ratingCount": "500",
+          "reviewCount": "32"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/vivek-allahbadia-7404577/",
+          "https://www.facebook.com/drvivekallahbadia",
+          "https://www.credihealth.com/doctor/vivek-allahbadia-orthopedist/overview",
+          "https://www.hexahealth.com/mumbai/doctor/dr-vivek-allahbadia-orthopedic-doctor"
+        ]
+      },
+
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://www.drvivekallahbadia.com/#clinic",
+        "name": "Dr. Vivek Allahbadia — Robotic Knee Surgery, Mumbai",
+        "description": "Robotic knee replacement surgery clinic in Mumbai. CORI robotic-assisted total and partial knee replacement, revision knee surgery, and sports injury treatment at Hinduja Healthcare Surgical, Khar.",
+        "url": "https://www.drvivekallahbadia.com/",
+        "telephone": "+919820218181",
+        "priceRange": "₹₹₹",
+        "medicalSpecialty": "Orthopedic Surgery",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "724, SV Road, Khar West",
+          "addressLocality": "Khar, Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400052",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "19.0760",
+          "longitude": "72.8340"
+        }
+      },
+
+      {
+        "@type": "ItemList",
+        "name": "Video Patient Testimonials — Dr. Vivek Allahbadia",
+        "description": "Video testimonials from patients of Dr. Vivek Allahbadia, orthopaedic surgeon at Hinduja Healthcare Surgical, Khar, Mumbai.",
+        "numberOfItems": 6,
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Mrs. Mala Nagpal — Unilateral Knee Replacement",          "description": "Walking without walker within 48 hours post-op. Best knee surgeon." },
+          { "@type": "ListItem", "position": 2, "name": "Mrs. Shanta Hariharan — Robotic Bilateral Knee Replacement","description": "Able to outpace her walking partner after robotic-assisted bilateral knee replacement." },
+          { "@type": "ListItem", "position": 3, "name": "NRI Patient — Bilateral Knee Replacement",                 "description": "Heading home pain-free one month after surgery at Hinduja Khar." },
+          { "@type": "ListItem", "position": 4, "name": "Mrs. Dina Melwani — Single Knee Replacement",              "description": "75 years old, resumed daily mobility within 4 weeks. NRI patient returning to Jakarta." },
+          { "@type": "ListItem", "position": 5, "name": "Mrs. Amarjeet Kaur Talwaar — Bilateral Knee Replacement",  "description": "16 years after surgery — still pain-free, full extension and flexion maintained." },
+          { "@type": "ListItem", "position": 6, "name": "Mr. Manohar Dameja — Bilateral Knee Replacement",          "description": "Pain-free within 3 days post-operation. Walking home with family." }
+        ]
+      },
+
+      {
+        "@type": "AggregateRating",
+        "itemReviewed": { "@id": "https://www.drvivekallahbadia.com/#doctor" },
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "500",
+        "reviewCount": "32"
+      },
+
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Justdial Reviewer" },
+        "reviewBody": "Fantastic results, I would strongly recommend Dr Vivek Allahbadia for knee replacement surgery. We were extremely satisfied with the surgery and post surgery care for our mother's bilateral knee replacement. He puts the patient's anxiety to rest by his calm and collected demeanor. Pleasant personality with great surgical skills.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "itemReviewed": { "@id": "https://www.drvivekallahbadia.com/#doctor" }
+      },
+
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Akshay Bohra" },
+        "reviewBody": "The best doctors are always humble and caring — and that perfectly describes Dr. Vivek Allahbadia and his amazing team. They performed a very complex distal humerus surgery on my father, who is now confidently using his hand again. Dr. Allahbadia has been incredibly genuine and only recommends what is truly necessary.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "itemReviewed": { "@id": "https://www.drvivekallahbadia.com/#doctor" }
+      },
+
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "Dev Majmudar" },
+        "reviewBody": "Dr. Allahbadia operated on both my parents for hip replacement in a span of 5 years — both around age 80. He is an excellent surgeon with top-notch skills whose approach is to keep things simple, with minimum risk. A gifted surgeon and a life saver in my mother's case.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "itemReviewed": { "@id": "https://www.drvivekallahbadia.com/#doctor" }
+      },
+
+      {
+        "@type": "Review",
+        "author": { "@type": "Person", "name": "HexaHealth Patient" },
+        "reviewBody": "Excellent doctor — one of the very few who does not believe in charging high amounts and making money out of his patients. His treatment was very good. Never had an issue after being treated by him.",
+        "reviewRating": { "@type": "Rating", "ratingValue": "5", "bestRating": "5" },
+        "itemReviewed": { "@id": "https://www.drvivekallahbadia.com/#doctor" }
+      },
+
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Is Dr. Vivek Allahbadia's knee surgery really pain-free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes — the overwhelming majority of Dr. Allahbadia's patients report being pain-free within 24–48 hours of surgery. This is a direct result of CORI robotic precision, which minimises soft tissue trauma compared to conventional knee replacement. Multiple patient testimonials on this page document patients walking unassisted within days of surgery."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How long does recovery take after knee replacement with Dr. Allahbadia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most patients walk within 24 hours, are discharged within 3 nights, and return to daily activities within 2–4 weeks. Long-term patients such as Mrs. Amarjeet Kaur Talwaar report being pain-free and fully mobile 16 years after bilateral knee replacement performed by Dr. Allahbadia."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What do patients say about Dr. Vivek Allahbadia?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Patients consistently describe Dr. Allahbadia as calm, compassionate, and only recommending what is genuinely necessary. Reviews across Justdial (4.4★, 32 reviews), HexaHealth (98% satisfaction), and Google give him a 4.9-star average. Patients highlight his surgical skill, honest approach, and the surprisingly fast, pain-free recoveries they experienced."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Has Dr. Allahbadia treated international or NRI patients?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Dr. Allahbadia regularly treats NRI patients who travel to Mumbai specifically for his care. Several testimonials on this page are from patients who flew back home — to Jakarta, the Gulf, and UK — within 4–6 weeks of surgery, pain-free."
+            }
+          }
+        ]
+      }
+
+    ]
   }
+  </script>
 
-  /* The continuous blue centre line */
-  .zigzag-container::before{
-    content:'';
-    position:absolute;
-    left:50%;
-    top:0;
-    bottom:0;
-    width:1.5px;
-    background:linear-gradient(to bottom,transparent 0%,#a0c9ff 5%,#a0c9ff 95%,transparent 100%);
-    transform:translateX(-50%);
-    pointer-events:none;
-    z-index:1;
-  }
-
-  .zigzag-item{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:0;
-    align-items:center;
-    position:relative;
-    padding:48px 0;
-  }
-
-  /* Dot on the centre line */
-  .zigzag-item::before{
-    content:'';
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%,-50%);
-    width:10px;
-    height:10px;
-    border-radius:50%;
-    background:#00355f;
-    border:2px solid #a0c9ff;
-    z-index:2;
-  }
-
-  /* Video always on the left for odd items */
-  .zigzag-item.odd .video-side  { order:1; padding-right:56px; }
-  .zigzag-item.odd .content-side{ order:2; padding-left:56px;  }
-
-  /* Video on the right for even items */
-  .zigzag-item.even .video-side  { order:2; padding-left:56px;  }
-  .zigzag-item.even .content-side{ order:1; padding-right:56px; }
-
-  /* Video wrap constrains width; video-thumb is the aspect-ratio box */
-  .zigzag-item .video-wrap {
-    width: 100%;
-    max-width: 520px;
-  }
-  .zigzag-item.odd  .video-wrap { margin-left: auto;  margin-right: 0; }
-  .zigzag-item.even .video-wrap { margin-left: 0;     margin-right: auto; }
-
-  /* video-wrap width depends on format */
-  .zigzag-item .video-wrap:has([data-format="portrait"])  { max-width: 300px; }
-  .zigzag-item .video-wrap:has([data-format="landscape"]) { max-width: 520px; }
-
-  .zigzag-item .video-thumb {
-    position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 */
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 16px 48px rgba(0,53,95,0.14);
-    background: #000;
-  }
-
-  .zigzag-item .video-thumb iframe {
-    position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    border: none;
-    display: block;
-    background: #000;
-  }
-  .zigzag-item .tag-badge {
-    display: inline-block;
-    margin-top: 10px;
-    background: #97f0ff;
-    color: #001f24;
-    font-size: 10px;
-    font-weight: 700;
-    padding: 3px 12px;
-    border-radius: 999px;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .zigzag-item .content-side .quote {
-    font-family: 'Newsreader', serif;
-    font-size: clamp(1.25rem, 2.2vw, 1.6rem);
-    font-style: italic;
-    line-height: 1.4;
-    color: #00355f;
-    margin-bottom: 16px;
-  }
-  .zigzag-item .content-side .patient-name {
-    font-size: 10px; font-weight: 700; letter-spacing: 0.2em;
-    text-transform: uppercase; color: #42474f; margin-bottom: 6px;
-  }
-  .zigzag-item .content-side .patient-note {
-    font-size: 13px; color: #42474f; line-height: 1.7;
-  }
-
-  @media(max-width:767px){
-    .zigzag-container::before{ left:20px; transform:none; }
-    .zigzag-item{ grid-template-columns:1fr; padding:32px 0 32px 44px; }
-    .zigzag-item::before{ left:20px; top:0; transform:translateX(-50%); }
-    .zigzag-item.odd .video-side,
-    .zigzag-item.even .video-side  { order:1; padding:0 0 20px 0; }
-    .zigzag-item.odd .content-side,
-    .zigzag-item.even .content-side{ order:2; padding:0; }
-  }
-
-  /* ── Zigzag split-from-centre animation ── */
-
-  /* Column wrappers stay fixed in place — they act as clip masks */
-  .zigzag-item .video-side,
-  .zigzag-item .content-side {
-    overflow: hidden;
-  }
-
-  /* Odd: video is LEFT → inner wrap starts right of centre → slides left */
-  .zigzag-item.odd .video-side .side-wrap,
-  /* Even: content is LEFT → inner wrap starts right of centre → slides left */
-  .zigzag-item.even .content-side .side-wrap {
-    opacity: 0;
-    transform: translateX(220px);
-    transition: opacity 0.85s cubic-bezier(.16,.6,.3,1),
-                transform 0.85s cubic-bezier(.16,.6,.3,1);
-  }
-
-  /* Odd: content is RIGHT → inner wrap starts left of centre → slides right */
-  .zigzag-item.odd .content-side .side-wrap,
-  /* Even: video is RIGHT → inner wrap starts left of centre → slides right */
-  .zigzag-item.even .video-side .side-wrap {
-    opacity: 0;
-    transform: translateX(-220px);
-    transition: opacity 0.85s cubic-bezier(.16,.6,.3,1),
-                transform 0.85s cubic-bezier(.16,.6,.3,1);
-  }
-
-  /* Both sides start at exactly the same time — no stagger */
-
-  /* Revealed state */
-  .zigzag-item.zz-visible .video-side .side-wrap,
-  .zigzag-item.zz-visible .content-side .side-wrap {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  /* Mobile: simple fade instead of slide */
-  @media(max-width:767px){
-    .zigzag-item.odd .video-side .side-wrap,
-    .zigzag-item.even .content-side .side-wrap,
-    .zigzag-item.odd .content-side .side-wrap,
-    .zigzag-item.even .video-side .side-wrap {
-      transform: translateY(24px);
-    }
-    .zigzag-item.zz-visible .video-side .side-wrap,
-    .zigzag-item.zz-visible .content-side .side-wrap {
-      transform: translateY(0);
-    }
-  }
-
-  @media(max-width:900px){ .md-cols-reviews{ columns:2 !important; } }
-  @media(max-width:600px){ .md-cols-reviews{ columns:1 !important; } }
-</style>
 </head>
-<body class="bg-[#E8EAED] text-on-surface selection:bg-primary-container selection:text-white">
 
-<!-- UNIFORM HEADER -->
-<header class="fixed top-0 w-full z-50 bg-[#E8EAED]/85 backdrop-blur-xl border-b border-slate-200/50">
-<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-  <a href="index.html" class="text-2xl font-serif italic text-blue-900 shrink-0">Dr. Vivek Allahbadia</a>
-  <div class="hidden md:flex items-center gap-7">
-    <a href="index.html"        class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Home</a>
-    <a href="about.html"        class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">About</a>
-    <a href="testimonials.html" class="text-blue-700 border-b-2 border-blue-700 pb-1 font-sans font-medium">Patient Testimonials</a>
-    <a href="robot.html"        class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">CORI Robotics</a>
-    <a href="gallery.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Gallery</a>
-    <a href="appointments.html" class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
-  </div>
-  <a href="appointments.html" class="shrink-0"><button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-medium transition-all scale-95 active:opacity-80 text-sm">Schedule Consultation</button></a>
-</nav>
+<body>
+
+<!-- ═══════════════════════════════════
+     HEADER
+════════════════════════════════════ -->
+<header class="site-header" role="banner">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-brand" aria-label="Dr. Vivek Allahbadia — Home">Dr. Vivek Allahbadia</a>
+    <div class="nav-links" role="list">
+      <a href="index.html"        data-page="index.html"        class="nav-link" role="listitem">Home</a>
+      <a href="about.html"        data-page="about.html"        class="nav-link" role="listitem">About</a>
+      <a href="testimonials.html" data-page="testimonials.html" class="nav-link" role="listitem">Patient Testimonials</a>
+      <a href="robot.html"        data-page="robot.html"        class="nav-link" role="listitem">CORI Robotics</a>
+      <a href="gallery.html"      data-page="gallery.html"      class="nav-link" role="listitem">Gallery</a>
+      <a href="appointments.html" data-page="appointments.html" class="nav-link" role="listitem">Appointments</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia."
+         target="_blank" rel="noopener"
+         class="btn btn--primary nav-cta"
+         aria-label="Book consultation on WhatsApp">
+        Schedule Consultation
+      </a>
+      <button id="menu-btn" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
 </header>
 
-<main class="pt-20">
-
-<!-- ── HERO ── -->
-<section class="pt-20 pb-16 px-8">
-<div class="max-w-7xl mx-auto">
-  <p class="text-[10px] font-bold uppercase tracking-[0.35em] text-on-surface-variant mb-6 flex items-center gap-4">
-    <span class="inline-block w-10 h-px bg-on-tertiary-container"></span>
-    Real patients. No scripts.
-  </p>
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-end">
-    <div>
-      <h1 class="text-6xl md:text-8xl font-headline font-light text-primary leading-[0.95] tracking-tight">
-        Pain&#8209;free.<br/><em class="italic">In their own</em><br/>words.
-      </h1>
-    </div>
-    <div class="lg:pb-2">
-      <p class="text-on-surface-variant text-lg leading-relaxed max-w-lg">
-        Every patient here expected pain and a long recovery. What they got was something else entirely — a surgery that surprised them, and a life they got back faster than they thought possible.
-      </p>
-      <div class="flex gap-10 mt-8 pt-8 border-t border-outline-variant/25">
-        <div>
-          <p class="text-3xl font-headline font-light text-primary">24<span class="text-lg ml-2">Hours</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Walking Within</p>
-        </div>
-        <div class="w-px h-10 bg-outline-variant/40 self-center"></div>
-        <div>
-          <p class="text-3xl font-headline font-light text-primary">3-4<span class="text-lg ml-2">Weeks</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Full Recovery</p>
-        </div>
-        <div class="w-px h-10 bg-outline-variant/40 self-center"></div>
-        <div>
-          <p class="text-3xl font-headline font-light text-primary">98<span class="text-lg ml-2">%</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Patient Rating</p>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+  <button id="menu-close" class="mobile-menu__close" aria-label="Close navigation menu">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <a href="index.html"        class="mobile-menu__link">Home</a>
+  <a href="about.html"        class="mobile-menu__link">About</a>
+  <a href="testimonials.html" class="mobile-menu__link">Testimonials</a>
+  <a href="robot.html"        class="mobile-menu__link">CORI Robotics</a>
+  <a href="gallery.html"      class="mobile-menu__link">Gallery</a>
+  <a href="appointments.html" class="mobile-menu__link">Appointments</a>
 </div>
-</section>
 
-<!-- ── VIDEO TESTIMONIALS — ZIGZAG ── -->
-<section class="py-16 px-8 bg-surface-container-low">
-<div class="max-w-7xl mx-auto">
-  <div class="mb-16 fade-in-up">
-    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-primary-fixed-variant mb-3">Video Stories</p>
-    <h2 class="text-4xl font-headline text-primary">Stories from our community</h2>
-  </div>
 
-    <div class="zigzag-container">
+<!-- ═══════════════════════════════════
+     MAIN
+════════════════════════════════════ -->
+<main role="main" class="page-main">
 
-    <!-- Video — odd -->
-    <div class="zigzag-item odd">
-      <div class="video-side">
-        <div class="video-wrap">
-          <div class="video-thumb" style="cursor:pointer;" data-mp4="https://media.drallahbadia.com/video1.mp4">
-            <!-- Custom thumbnail — replace thumb1.jpg with actual image -->
-            <img src="thumbnails/thumb1.jpg" alt="Patient video testimonial"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;"
-            />
-            <!-- Play button overlay -->
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,35,72,0.28);transition:background .25s;" onmouseover="this.style.background='rgba(0,35,72,0.45)'" onmouseout="this.style.background='rgba(0,35,72,0.28)'">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.93);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.3);">
-                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
-              </div>
+
+  <!-- ── 1. HERO ────────────────────────────────────────────── -->
+  <section class="test-hero" aria-label="Patient testimonials overview">
+    <div class="container">
+
+      <p class="test-hero__eyebrow">Real patients. No scripts.</p>
+
+      <div class="test-hero__grid">
+
+        <div>
+          <h1 class="test-hero__heading">
+            Pain&#8209;free.<br/><em>In their own</em><br/>words.
+          </h1>
+        </div>
+
+        <div>
+          <p class="test-hero__body">
+            Every patient here expected pain and a long recovery. What they got was something else entirely — a surgery that surprised them, and a life they got back faster than they thought possible.
+          </p>
+
+          <div class="test-hero__stats" aria-label="Recovery statistics">
+            <div>
+              <p class="test-hero__stat-num">24<span class="test-hero__stat-unit">Hours</span></p>
+              <p class="test-hero__stat-label">Walking Within</p>
+            </div>
+            <div class="test-hero__divider" aria-hidden="true"></div>
+            <div>
+              <p class="test-hero__stat-num">3–4<span class="test-hero__stat-unit">Weeks</span></p>
+              <p class="test-hero__stat-label">Full Recovery</p>
+            </div>
+            <div class="test-hero__divider" aria-hidden="true"></div>
+            <div>
+              <p class="test-hero__stat-num">98<span class="test-hero__stat-unit">%</span></p>
+              <p class="test-hero__stat-label">Patient Rating</p>
             </div>
           </div>
-          <span class="tag-badge">Pain-Free</span>
         </div>
-      </div>
-      <div class="content-side">
-        <p class="patient-name">Mrs. Mala Nagpal · Unilateral Knee Replacement</p>
-        <p class="quote">&ldquo;One and Only. Best Knee Surgeon!&rdquo;</p>
-        <p class="patient-note">&ldquo;Walking without walker within 48 Hours Post-Op. Dr. Allahbadia is the best knee surgeon I could ask for. The surgery was virtually pain-free and I was able to head back home in a short span. Truly life-changing.&rdquo;</p>
+
       </div>
     </div>
+  </section>
 
-    <!-- Video — even -->
-    <div class="zigzag-item even">
-      <div class="video-side">
-        <div class="video-wrap">
-          <div class="video-thumb" style="cursor:pointer;" data-mp4="https://media.drallahbadia.com/video2.mp4">
-            <!-- Custom thumbnail — replace thumb2.jpg with actual image -->
-            <img src="thumbnails/thumb2.jpg" alt="Patient video testimonial"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;"
-            />
-            <!-- Play button overlay -->
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,35,72,0.28);transition:background .25s;" onmouseover="this.style.background='rgba(0,35,72,0.45)'" onmouseout="this.style.background='rgba(0,35,72,0.28)'">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.93);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.3);">
-                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+
+  <!-- ── 2. VIDEO TESTIMONIALS — ZIGZAG ─────────────────────── -->
+  <section class="video-section" aria-label="Video patient testimonials">
+    <div class="container">
+
+      <div class="video-section__header fade-in-up" data-delay="0">
+        <p class="video-section__eyebrow">Video Stories</p>
+        <h2 class="video-section__heading">Stories from our community</h2>
+      </div>
+
+      <div class="zigzag-container" role="list" aria-label="Video testimonials">
+
+        <!-- ── Video 1 — odd ──────────────────────────────────── -->
+        <article class="zigzag-item odd" role="listitem" aria-label="Mrs. Mala Nagpal — Unilateral Knee Replacement">
+          <div class="video-side">
+            <div class="video-wrap">
+              <div class="video-thumb" data-mp4="https://media.drallahbadia.com/video1.mp4" role="button" tabindex="0" aria-label="Play patient testimonial video — Mrs. Mala Nagpal">
+                <img src="thumbnails/thumb1.jpg" alt="Patient Mrs. Mala Nagpal — walking pain-free 48 hours after unilateral knee replacement" loading="lazy" />
+                <div class="vthumb-overlay" aria-hidden="true">
+                  <div class="vthumb-play-btn">
+                    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
               </div>
+              <span class="tag-badge">Pain-Free</span>
             </div>
           </div>
-          <span class="tag-badge">The Correct Advice Always</span>
-        </div>
-      </div>
-      <div class="content-side">
-        <p class="patient-name">Mrs. Shanta Hariharan · Robotic Assisted Bilateral Total Knee Replacement</p>
-        <p class="quote">&ldquo;Able to outpace my walking partner.&rdquo;</p>
-        <p class="patient-note">&ldquo;A single Knee Osteotomy that lasted pain-free for 16 years till 2024. When pain returned, with the correct advice once again prescribed by Dr Vivek and with the faith we have on his surgical expertise, we went forward with the Robotic Assisted Knee Surgery and I have had no complications despite it being a year since the operation itself.&rdquo;</p>
-      </div>
-    </div>
+          <div class="content-side">
+            <p class="patient-name">Mrs. Mala Nagpal · Unilateral Knee Replacement</p>
+            <p class="quote">&ldquo;One and Only. Best Knee Surgeon!&rdquo;</p>
+            <p class="patient-note">&ldquo;Walking without walker within 48 Hours Post-Op. Dr. Allahbadia is the best knee surgeon I could ask for. The surgery was virtually pain-free and I was able to head back home in a short span. Truly life-changing.&rdquo;</p>
+          </div>
+        </article>
 
-    <!-- Video — odd -->
-    <div class="zigzag-item odd">
-      <div class="video-side">
-        <div class="video-wrap">
-          <div class="video-thumb" style="cursor:pointer;" data-mp4="https://media.drallahbadia.com/video3.mp4">
-            <!-- Custom thumbnail — replace thumb3.jpg with actual image -->
-            <img src="thumbnails/thumb3.jpg" alt="Patient video testimonial"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;"
-            />
-            <!-- Play button overlay -->
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,35,72,0.28);transition:background .25s;" onmouseover="this.style.background='rgba(0,35,72,0.45)'" onmouseout="this.style.background='rgba(0,35,72,0.28)'">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.93);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.3);">
-                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+        <!-- ── Video 2 — even ─────────────────────────────────── -->
+        <article class="zigzag-item even" role="listitem" aria-label="Mrs. Shanta Hariharan — Robotic Bilateral Knee Replacement">
+          <div class="video-side">
+            <div class="video-wrap">
+              <div class="video-thumb" data-mp4="https://media.drallahbadia.com/video2.mp4" role="button" tabindex="0" aria-label="Play patient testimonial video — Mrs. Shanta Hariharan">
+                <img src="thumbnails/thumb2.jpg" alt="Mrs. Shanta Hariharan — robotic bilateral knee replacement, walking pain-free" loading="lazy" />
+                <div class="vthumb-overlay" aria-hidden="true">
+                  <div class="vthumb-play-btn">
+                    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
               </div>
+              <span class="tag-badge">The Correct Advice Always</span>
             </div>
           </div>
-          <span class="tag-badge">Back to Travelling in 4 Weeks</span>
-        </div>
-      </div>
-      <div class="content-side">
-        <p class="patient-name">NRI Patient · Bilateral Knee Replacement</p>
-        <p class="quote">&ldquo;Heading Home Pain Free.&rdquo;</p>
-        <p class="patient-note">&ldquo;It's been a month since the operation at Hinduja Khar and I've had no complications and am heading home pain free. Grateful for Dr. Vivek Allahbadia.&rdquo;</p>
-      </div>
-    </div>
+          <div class="content-side">
+            <p class="patient-name">Mrs. Shanta Hariharan · Robotic Assisted Bilateral Total Knee Replacement</p>
+            <p class="quote">&ldquo;Able to outpace my walking partner.&rdquo;</p>
+            <p class="patient-note">&ldquo;A single Knee Osteotomy that lasted pain-free for 16 years till 2024. When pain returned, with the correct advice once again prescribed by Dr Vivek and with the faith we have on his surgical expertise, we went forward with the Robotic Assisted Knee Surgery and I have had no complications despite it being a year since the operation itself.&rdquo;</p>
+          </div>
+        </article>
 
-    <!-- Video — even -->
-    <div class="zigzag-item even">
-      <div class="video-side">
-        <div class="video-wrap">
-          <div class="video-thumb" style="cursor:pointer;" data-mp4="https://media.drallahbadia.com/video4.mp4">
-            <!-- Custom thumbnail — replace thumb4.jpg with actual image -->
-            <img src="thumbnails/thumb4.jpg" alt="Patient video testimonial"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;"
-            />
-            <!-- Play button overlay -->
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,35,72,0.28);transition:background .25s;" onmouseover="this.style.background='rgba(0,35,72,0.45)'" onmouseout="this.style.background='rgba(0,35,72,0.28)'">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.93);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.3);">
-                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+        <!-- ── Video 3 — odd ──────────────────────────────────── -->
+        <article class="zigzag-item odd" role="listitem" aria-label="NRI Patient — Bilateral Knee Replacement">
+          <div class="video-side">
+            <div class="video-wrap">
+              <div class="video-thumb" data-mp4="https://media.drallahbadia.com/video3.mp4" role="button" tabindex="0" aria-label="Play patient testimonial video — NRI patient bilateral knee replacement">
+                <img src="thumbnails/thumb3.jpg" alt="NRI patient heading home pain-free one month after bilateral knee replacement at Hinduja Khar" loading="lazy" />
+                <div class="vthumb-overlay" aria-hidden="true">
+                  <div class="vthumb-play-btn">
+                    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
               </div>
+              <span class="tag-badge">Back to Travelling in 4 Weeks</span>
             </div>
           </div>
-          <span class="tag-badge"> Back to daily life</span>
-        </div>
-      </div>
-      <div class="content-side">
-        <p class="patient-name">Mrs. Dina Melwani · NRI Patient · Single Knee Surgery</p>
-        <p class="quote">&ldquo;Bless him with all my heart! &rdquo;</p>
-        <p class="patient-note">&ldquo; 75 Years old and able to resume daily mobility within 4 weeks and heading back home to Jakarta. After a Single Knee Replacement. &rdquo;</p>
-      </div>
-    </div>
+          <div class="content-side">
+            <p class="patient-name">NRI Patient · Bilateral Knee Replacement</p>
+            <p class="quote">&ldquo;Heading Home Pain Free.&rdquo;</p>
+            <p class="patient-note">&ldquo;It's been a month since the operation at Hinduja Khar and I've had no complications and am heading home pain free. Grateful for Dr. Vivek Allahbadia.&rdquo;</p>
+          </div>
+        </article>
 
-    <!-- Video — odd -->
-    <div class="zigzag-item odd">
-      <div class="video-side">
-        <div class="video-wrap">
-          <div class="video-thumb" style="cursor:pointer;" data-mp4="https://media.drallahbadia.com/video5.mp4">
-            <!-- Custom thumbnail — replace thumb5.jpg with actual image -->
-            <img src="thumbnails/thumb5.jpg" alt="Patient video testimonial"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;"
-            />
-            <!-- Play button overlay -->
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,35,72,0.28);transition:background .25s;" onmouseover="this.style.background='rgba(0,35,72,0.45)'" onmouseout="this.style.background='rgba(0,35,72,0.28)'">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.93);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.3);">
-                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+        <!-- ── Video 4 — even ─────────────────────────────────── -->
+        <article class="zigzag-item even" role="listitem" aria-label="Mrs. Dina Melwani — Single Knee Replacement">
+          <div class="video-side">
+            <div class="video-wrap">
+              <div class="video-thumb" data-mp4="https://media.drallahbadia.com/video4.mp4" role="button" tabindex="0" aria-label="Play patient testimonial video — Mrs. Dina Melwani">
+                <img src="thumbnails/thumb4.jpg" alt="Mrs. Dina Melwani, 75, resuming daily mobility 4 weeks after single knee replacement" loading="lazy" />
+                <div class="vthumb-overlay" aria-hidden="true">
+                  <div class="vthumb-play-btn">
+                    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
               </div>
+              <span class="tag-badge">Back to daily life</span>
             </div>
           </div>
-          <span class="tag-badge">Long Term Surgical Result</span>
-        </div>
-      </div>
-      <div class="content-side">
-        <p class="patient-name">Mrs. Amarjeet Kaur Talwaar · Bilateral Knee Replacement</p>
-        <p class="quote">&ldquo;16 Years later and still not in need for any surgical intervention..&rdquo;</p>
-        <p class="patient-note">&ldquo;74 Years Young, the surgery performed by Dr. Allahbadia allows me to walk and move pain free despite the years passed. I am able to extend and bend the knee to it's full capabilities.&rdquo;</p>
-      </div>
-    </div>
+          <div class="content-side">
+            <p class="patient-name">Mrs. Dina Melwani · NRI Patient · Single Knee Surgery</p>
+            <p class="quote">&ldquo;Bless him with all my heart!&rdquo;</p>
+            <p class="patient-note">&ldquo;75 Years old and able to resume daily mobility within 4 weeks and heading back home to Jakarta. After a Single Knee Replacement.&rdquo;</p>
+          </div>
+        </article>
 
-    <!-- Video — even -->
-    <div class="zigzag-item even">
-      <div class="video-side">
-        <div class="video-wrap">
-          <div class="video-thumb" style="cursor:pointer;" data-mp4="https://media.drallahbadia.com/video6.mp4">
-            <!-- Custom thumbnail — replace thumb6.jpg with actual image -->
-            <img src="thumbnails/thumb6.jpg" alt="Patient video testimonial"
-              style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:contain;background:#000;"
-            />
-            <!-- Play button overlay -->
-            <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,35,72,0.28);transition:background .25s;" onmouseover="this.style.background='rgba(0,35,72,0.45)'" onmouseout="this.style.background='rgba(0,35,72,0.28)'">
-              <div style="width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,0.93);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.3);">
-                <svg viewBox="0 0 24 24" width="26" height="26"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+        <!-- ── Video 5 — odd ──────────────────────────────────── -->
+        <article class="zigzag-item odd" role="listitem" aria-label="Mrs. Amarjeet Kaur Talwaar — Bilateral Knee Replacement">
+          <div class="video-side">
+            <div class="video-wrap">
+              <div class="video-thumb" data-mp4="https://media.drallahbadia.com/video5.mp4" role="button" tabindex="0" aria-label="Play patient testimonial video — Mrs. Amarjeet Kaur Talwaar">
+                <img src="thumbnails/thumb5.jpg" alt="Mrs. Amarjeet Kaur Talwaar, 74, still pain-free 16 years after bilateral knee replacement" loading="lazy" />
+                <div class="vthumb-overlay" aria-hidden="true">
+                  <div class="vthumb-play-btn">
+                    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
               </div>
+              <span class="tag-badge">Long Term Surgical Result</span>
             </div>
           </div>
-          <span class="tag-badge">Painless Surgical Results</span>
+          <div class="content-side">
+            <p class="patient-name">Mrs. Amarjeet Kaur Talwaar · Bilateral Knee Replacement</p>
+            <p class="quote">&ldquo;16 Years later and still not in need for any surgical intervention.&rdquo;</p>
+            <p class="patient-note">&ldquo;74 Years Young, the surgery performed by Dr. Allahbadia allows me to walk and move pain free despite the years passed. I am able to extend and bend the knee to its full capabilities.&rdquo;</p>
+          </div>
+        </article>
+
+        <!-- ── Video 6 — even ─────────────────────────────────── -->
+        <article class="zigzag-item even" role="listitem" aria-label="Mr. Manohar Dameja — Bilateral Knee Replacement">
+          <div class="video-side">
+            <div class="video-wrap">
+              <div class="video-thumb" data-mp4="https://media.drallahbadia.com/video6.mp4" role="button" tabindex="0" aria-label="Play patient testimonial video — Mr. Manohar Dameja">
+                <img src="thumbnails/thumb6.jpg" alt="Mr. Manohar Dameja — pain-free within 3 days after bilateral knee replacement at Hinduja Khar" loading="lazy" />
+                <div class="vthumb-overlay" aria-hidden="true">
+                  <div class="vthumb-play-btn">
+                    <svg viewBox="0 0 24 24" width="26" height="26" aria-hidden="true"><path fill="#00355f" d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
+              <span class="tag-badge">Painless Surgical Results</span>
+            </div>
+          </div>
+          <div class="content-side">
+            <p class="patient-name">Mr. Manohar Dameja · Bilateral Knee Replacement</p>
+            <p class="quote">&ldquo;Didn't even feel like I've undergone a knee surgery.&rdquo;</p>
+            <p class="patient-note">&ldquo;Truly happy with the results of my knee surgery as well as my positive experience at Hinduja Khar, under Dr. Vivek Allahbadia. I am pain-free within 3 days Post operation and am charged up to head back home walking with my family.&rdquo;</p>
+          </div>
+        </article>
+
+      </div><!-- /zigzag-container -->
+
+      <div class="video-section__footer fade-in-up" data-delay="0">
+        <a href="https://www.facebook.com/groups/134788193222639" target="_blank" rel="noopener"
+           class="fb-watch-btn"
+           aria-label="Watch more patient testimonials on Facebook">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
+          Watch More on Facebook
+          <span class="material-symbols-outlined" aria-hidden="true">open_in_new</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ── 3. PATIENT REVIEWS — MASONRY GRID ──────────────────── -->
+  <section class="reviews-section" aria-label="Verified patient reviews">
+    <div class="container">
+
+      <div class="reviews-section__header fade-in-up" data-delay="0">
+        <p class="reviews-section__eyebrow">Verified Reviews</p>
+        <div class="reviews-section__top">
+          <div>
+            <h2 class="reviews-section__heading">What Patients Say</h2>
+            <p class="reviews-section__sub">Real reviews sourced from Justdial, HexaHealth, Google &amp; Credihealth — every word written by a patient.</p>
+          </div>
+          <div class="reviews-section__agg" aria-label="Aggregate ratings by platform">
+            <div class="agg-stat">
+              <p class="agg-stat__num">4.4<span class="agg-stat__unit">★</span></p>
+              <p class="agg-stat__label">Justdial</p>
+              <p class="agg-stat__sub">32 Reviews</p>
+            </div>
+            <div class="agg-divider" aria-hidden="true"></div>
+            <div class="agg-stat">
+              <p class="agg-stat__num agg-stat__num--teal">98<span class="agg-stat__unit">%</span></p>
+              <p class="agg-stat__label">HexaHealth</p>
+              <p class="agg-stat__sub">Recommended</p>
+            </div>
+            <div class="agg-divider" aria-hidden="true"></div>
+            <div class="agg-stat">
+              <p class="agg-stat__num agg-stat__num--teal">98<span class="agg-stat__unit">%</span></p>
+              <p class="agg-stat__label">Credihealth</p>
+              <p class="agg-stat__sub">Satisfaction</p>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="content-side">
-        <p class="patient-name">Mr. Manohar Dameja · Bilateral Knee Replacement</p>
-        <p class="quote">&ldquo;Didn't even feel like I've undergone a knee surgery.&rdquo;</p>
-        <p class="patient-note">&ldquo;Truly happy with the results of my knee surgery as well as my positive experience at Hinduja Khar, under Dr. Vivek Allahbadia. I am pain-free within 3 days Post operation and am charged up to head back home walking with my family.&rdquo;</p>
-      </div>
+
+      <div class="reviews-masonry" role="list" aria-label="Patient reviews">
+
+        <!-- ── Justdial ── -->
+        <article class="review-card fade-in-up" data-delay="0" data-source="justdial" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">S</div>
+              <div>
+                <p class="review-card__name">Justdial Reviewer</p>
+                <p class="review-card__procedure">Bilateral Knee Replacement</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <span class="review-badge review-badge--justdial">Justdial</span>
+              <div class="review-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"Fantastic results, I would strongly recommend Dr Vivek Allahbadia for knee replacement surgery. We were extremely satisfied with the surgery and post surgery care for our mother's bilateral knee replacement. He puts the patient's anxiety to rest by his calm and collected demeanor. Pleasant personality with great surgical skills. Hinduja Khar hospital provided a perfect ambiance for speedy recovery."</p>
+        </article>
+
+        <article class="review-card fade-in-up" data-delay="80" data-source="justdial" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">J</div>
+              <div>
+                <p class="review-card__name">Justdial Reviewer</p>
+                <p class="review-card__procedure">Total Knee Replacement · Age 75</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <span class="review-badge review-badge--justdial">Justdial</span>
+              <div class="review-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"Dr. Vivek — my mother underwent Total Knee Replacement with your active participation and today, even at 75 and with a few heart-related hospitalisations, she is fit as a horse. Thumbs up to the 8th floor nursing staff and the entire Hinduja Khar team."</p>
+        </article>
+
+        <article class="review-card fade-in-up" data-delay="160" data-source="justdial" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">J</div>
+              <div>
+                <p class="review-card__name">Justdial Reviewer</p>
+                <p class="review-card__procedure">Total Knee Replacement</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <span class="review-badge review-badge--justdial">Justdial</span>
+              <div class="review-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"Dr Allahbadia is a miracle man. My husband was suffering for the past 4 years. Dr Vivek Allahbadia has done his knee replacement. He has recovered well. Thanks to him. God bless him."</p>
+        </article>
+
+        <!-- ── Google ── -->
+        <article class="review-card fade-in-up" data-delay="0" data-source="google" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">S</div>
+              <div>
+                <p class="review-card__name">Sugata Mukherjee</p>
+                <p class="review-card__procedure">Local Guide · 23 reviews</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <span class="review-badge review-badge--google">Google</span>
+              <div class="review-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"Doctor is very good — I strongly believe he will treat you like a family member. 100% recommended."</p>
+        </article>
+
+        <article class="review-card fade-in-up" data-delay="80" data-source="google" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">D</div>
+              <div>
+                <p class="review-card__name">Dev Majmudar</p>
+                <p class="review-card__procedure">Local Guide · 143 reviews</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <span class="review-badge review-badge--google">Google</span>
+              <div class="review-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"Dr. Allahbadia operated on both my parents for hip replacement in a span of 5 years — both around age 80. He is an excellent surgeon with top-notch skills whose approach is to keep things simple, with minimum risk. A gifted surgeon and a life saver in my mother's case."</p>
+        </article>
+
+        <!-- Dark featured card -->
+        <article class="review-card review-card--dark fade-in-up" data-delay="160" data-source="google" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">A</div>
+              <div>
+                <p class="review-card__name">Akshay Bohra</p>
+                <p class="review-card__procedure">Complex Distal Humerus Surgery · 6 months ago</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <div class="review-google-logo">
+                <svg width="10" height="10" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+                <span class="review-badge review-badge--google-dark">Google</span>
+              </div>
+              <div class="review-stars review-stars--light" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"The best doctors are always humble and caring — and that perfectly describes Dr. Vivek Allahbadia and his amazing team. They performed a very complex distal humerus surgery on my father, who is now confidently using his hand again. Dr. Allahbadia has been incredibly genuine and only recommends what's truly necessary. I'm truly grateful for his dedication and compassion in helping my father regain his independence."</p>
+        </article>
+
+        <!-- ── HexaHealth ── -->
+        <article class="review-card fade-in-up" data-delay="0" data-source="hexahealth" role="listitem">
+          <div class="review-card__header">
+            <div class="review-card__who">
+              <div class="review-card__avatar" aria-hidden="true">H</div>
+              <div>
+                <p class="review-card__name">HexaHealth Patient</p>
+                <p class="review-card__procedure">Orthopaedic Treatment</p>
+              </div>
+            </div>
+            <div class="review-card__right">
+              <span class="review-badge review-badge--hexahealth">HexaHealth</span>
+              <div class="review-stars" aria-label="5 stars">★★★★★</div>
+            </div>
+          </div>
+          <p class="review-card__body">"Excellent doctor — one of the very few who does not believe in charging high amounts and making money out of his patients. His treatment was very good. Never had an issue after being treated by him."</p>
+        </article>
+
+      </div><!-- /reviews-masonry -->
+
     </div>
+  </section>
+  <!-- ── BOOK CTA ────────────────────────────────────────────── -->
+  <section class="section section--surface" aria-label="Book a consultation">
+    <div class="container test-book-cta">
+      <p class="section-eyebrow test-book-cta__eyebrow">Ready to start your journey?</p>
+      <h2 class="test-book-cta__heading">Book a consultation with Dr. Allahbadia</h2>
+      <address class="test-book-cta__address">
+        Hinduja Healthcare Surgical, 724, 11th Road, Khar West, Mumbai — 400 052 ·
+        <a href="tel:+919820218181" aria-label="Call Dr. Allahbadia">+91 98202 18181</a>
+      </address>
+      <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia."
+         target="_blank" rel="noopener"
+         class="btn btn--primary"
+         aria-label="Book a consultation on WhatsApp">
+        Schedule a Consultation
+      </a>
+    </div>
+  </section>
 
-  </div><!-- /zigzag-container -->
 
-  <div class="mt-14 text-center fade-in-up">
-    <a href="https://www.facebook.com/groups/134788193222639" target="_blank" class="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-xl font-bold hover:opacity-90 transition-all editorial-shadow text-sm">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.41c0-3.025 1.792-4.697 4.533-4.697 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.491 0-1.956.93-1.956 1.887v2.255h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073z"/></svg>
-      Watch More on Facebook
-      <span class="material-symbols-outlined text-sm">open_in_new</span>
-    </a>
-  </div>
-</div>
-</section>
+</main>
 
-<!-- ── PATIENT REVIEWS — FULL STATIC GRID ── -->
-<section class="py-20 px-8 bg-[#E8EAED]">
-<div class="max-w-7xl mx-auto">
 
-  <!-- Header + aggregate stats -->
-  <div class="mb-16 fade-in-up">
-    <p class="text-[10px] font-bold uppercase tracking-[0.3em] text-on-primary-fixed-variant mb-3">Verified Reviews</p>
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<!-- ═══════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+
       <div>
-        <h2 class="text-5xl font-headline font-light text-primary">What Patients Say</h2>
-        <p class="text-on-surface-variant text-sm mt-3">Real reviews sourced from Justdial, HexaHealth, Google &amp; Credihealth — every word written by a patient.</p>
+        <p class="footer__brand-name">Dr. Vivek Allahbadia</p>
+        <p class="footer__tagline">Hinduja Healthcare Surgical, Khar · Mumbai.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank" rel="noopener"
+             class="footer__social-link" aria-label="Dr. Allahbadia on LinkedIn">
+            <span class="material-symbols-outlined">person</span>
+          </a>
+        </div>
       </div>
-      <!-- Platform aggregate stats -->
-      <div class="flex flex-wrap gap-8 shrink-0">
-        <div class="text-center">
-          <p class="text-3xl font-headline font-light text-primary leading-none">4.4<span class="text-base">★</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Justdial</p>
-          <p class="text-[10px] text-on-surface-variant/60">32 Reviews</p>
+
+      <nav role="navigation" aria-label="Footer quick links">
+        <h4 class="footer__col-heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a class="footer__link" href="about.html">About Dr. Allahbadia</a></li>
+          <li><a class="footer__link" href="robot.html">CORI Robotics</a></li>
+          <li><a class="footer__link" href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
+          <li><a class="footer__link" href="#">Medical Disclaimer</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4 class="footer__col-heading">Expertise</h4>
+        <ul class="footer__expertise-list">
+          <li class="footer__expertise-item">Total Knee Replacement</li>
+          <li class="footer__expertise-item">CORI Robotic Surgery</li>
+          <li class="footer__expertise-item">Revision Knee Surgery</li>
+          <li class="footer__expertise-item">Sports Injuries</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-heading">Newsletter</h4>
+        <p class="footer__newsletter-desc">Recovery tips and surgical advancements.</p>
+        <div class="footer__email-form">
+          <label for="footer-email" class="sr-only">Your email address</label>
+          <input id="footer-email" class="footer__email-input" type="email" placeholder="Your Email" autocomplete="email" />
+          <button class="footer__email-btn" aria-label="Subscribe to newsletter">
+            <span class="material-symbols-outlined" aria-hidden="true">send</span>
+          </button>
         </div>
-        <div class="w-px h-10 bg-outline-variant/30 self-center hidden md:block"></div>
-        <div class="text-center">
-          <p class="text-3xl font-headline font-light text-on-tertiary-container leading-none">98<span class="text-base">%</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">HexaHealth</p>
-          <p class="text-[10px] text-on-surface-variant/60">Recommended</p>
-        </div>
-        <div class="w-px h-10 bg-outline-variant/30 self-center hidden md:block"></div>
-        <div class="text-center">
-          <p class="text-3xl font-headline font-light text-on-tertiary-container leading-none">98<span class="text-base">%</span></p>
-          <p class="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant mt-1">Credihealth</p>
-          <p class="text-[10px] text-on-surface-variant/60">Satisfaction</p>
-        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
+      <div class="footer__badges">
+        <span class="footer__badge">Medical Accuracy Guaranteed</span>
+        <span class="footer__badge">Patient Data Protected</span>
       </div>
     </div>
   </div>
-
-  <!-- Platform filter tabs -->
-  
-
-  <!-- Reviews masonry grid -->
-  <div id="reviews-grid" class="columns-1 md:columns-2 lg:columns-3 gap-5 space-y-5">
-
-    <!-- ─── JUSTDIAL ─── -->
-
-    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="justdial">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">S</div>
-          <div>
-            <p class="font-bold text-primary text-sm">Justdial Reviewer</p>
-            <p class="text-[10px] text-on-surface-variant">Bilateral Knee Replacement</p>
-          </div>
-        </div>
-        <div>
-          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:rgba(255,103,0,.08);color:#ff6700;">Justdial</span>
-          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-on-surface-variant leading-relaxed">"Fantastic results, I would strongly recommend Dr Vivek Allahbadia for knee replacement surgery. We were extremely satisfied with the surgery and post surgery care for our mother's bilateral knee replacement. He puts the patient's anxiety to rest by his calm and collected demeanor. Pleasant personality with great surgical skills. Hinduja Khar hospital provided a perfect ambiance for speedy recovery."</p>
-    </div>
-
-    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="justdial">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">J</div>
-          <div>
-            <p class="font-bold text-primary text-sm">Justdial Reviewer</p>
-            <p class="text-[10px] text-on-surface-variant">Total Knee Replacement · Age 75</p>
-          </div>
-        </div>
-        <div>
-          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:rgba(255,103,0,.08);color:#ff6700;">Justdial</span>
-          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-on-surface-variant leading-relaxed">"Dr. Vivek — my mother underwent Total Knee Replacement with your active participation and today, even at 75 and with a few heart-related hospitalisations, she is fit as a horse. Thumbs up to the 8th floor nursing staff and the entire Hinduja Khar team."</p>
-    </div>
-
-    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="justdial">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">J</div>
-          <div>
-            <p class="font-bold text-primary text-sm">Justdial Reviewer</p>
-            <p class="text-[10px] text-on-surface-variant">Total Knee Replacement</p>
-          </div>
-        </div>
-        <div>
-          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:rgba(255,103,0,.08);color:#ff6700;">Justdial</span>
-          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-on-surface-variant leading-relaxed">"Dr Allahbadia is a miracle man. My husband was suffering for the past 4 years. Dr Vivek Allahbadia has done his knee replacement. He has recovered well. Thanks to him. God bless him."</p>
-    </div>
-
-    
-
-    
-
-    <!-- ─── GOOGLE ─── -->
-
-
-    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="google">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">S</div>
-          <div>
-            <p class="font-bold text-primary text-sm">Sugata Mukherjee</p>
-            <p class="text-[10px] text-on-surface-variant">Local Guide · 23 reviews</p>
-          </div>
-        </div>
-        <div>
-          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">Google</span>
-          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-on-surface-variant leading-relaxed">"Doctor is very good — I strongly believe he will treat you like a family member. 100% recommended."</p>
-    </div>
-
-    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="google">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">D</div>
-          <div>
-            <p class="font-bold text-primary text-sm">Dev Majmudar</p>
-            <p class="text-[10px] text-on-surface-variant">Local Guide · 143 reviews</p>
-          </div>
-        </div>
-        <div>
-          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full bg-blue-50 text-blue-700">Google</span>
-          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-on-surface-variant leading-relaxed">"Dr. Allahbadia operated on both my parents for hip replacement in a span of 5 years — both around age 80. He is an excellent surgeon with top-notch skills whose approach is to keep things simple, with minimum risk. A gifted surgeon and a life saver in my mother's case."</p>
-    </div>
-
-
-    <div class="review-card break-inside-avoid mb-5 bg-primary text-white rounded-2xl p-7" data-source="google">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-white/15 flex items-center justify-center text-white font-bold font-headline text-sm">A</div>
-          <div>
-            <p class="font-bold text-white text-sm">Akshay Bohra</p>
-            <p class="text-[10px] text-white/50">Complex Distal Humerus Surgery · 6 months ago</p>
-          </div>
-        </div>
-        <div>
-          <div class="flex items-center gap-1">
-            <svg width="10" height="10" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
-            <span class="text-[9px] font-bold text-white/60 uppercase tracking-widest">Google</span>
-          </div>
-          <div class="flex gap-0.5 text-yellow-300 mt-1 justify-end text-xs">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-white/85 leading-relaxed">"The best doctors are always humble and caring — and that perfectly describes Dr. Vivek Allahbadia and his amazing team. They performed a very complex distal humerus surgery on my father, who is now confidently using his hand again. Dr. Allahbadia has been incredibly genuine and only recommends what's truly necessary. I'm truly grateful for his dedication and compassion in helping my father regain his independence."</p>
-    </div>
-
-    <!-- ─── HEXAHEALTH ─── -->
-
-    <div class="review-card break-inside-avoid mb-5 bg-surface-container-lowest rounded-2xl p-7 border border-outline-variant/20" data-source="hexahealth">
-      <div class="flex items-center justify-between mb-4">
-        <div class="flex items-center gap-3">
-          <div class="w-9 h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary font-bold font-headline text-sm">H</div>
-          <div>
-            <p class="font-bold text-primary text-sm">HexaHealth Patient</p>
-            <p class="text-[10px] text-on-surface-variant">Orthopaedic Treatment</p>
-          </div>
-        </div>
-        <div>
-          <span class="text-[9px] font-bold uppercase tracking-widest px-2.5 py-1 rounded-full" style="background:rgba(0,128,96,.08);color:#008060;">HexaHealth</span>
-          <div class="flex gap-0.5 text-yellow-400 mt-1 justify-end">★★★★★</div>
-        </div>
-      </div>
-      <p class="text-sm text-on-surface-variant leading-relaxed">"Excellent doctor — one of the very few who does not believe in charging high amounts and making money out of his patients. His treatment was very good. Never had an issue after being treated by him."</p>
-    </div>
-
-
-
-    <!-- ─── CREDIHEALTH ─── -->
-
-    
-
-    
-
-    
-
-    <!-- ─── More Justdial ─── -->
-    
-
-    
 </footer>
 
-<script>
-// ── General scroll reveal (non-zigzag) ──
-(function(){
-  var io=new IntersectionObserver(function(entries){
-    entries.forEach(function(e,i){
-      if(e.isIntersecting){
-        var d=parseInt(e.target.style.animationDelay||0)*1000||((i%5)*70);
-        setTimeout(function(){e.target.classList.add('visible');},d);
-        io.unobserve(e.target);
-      }
-    });
-  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-  document.querySelectorAll('.fade-in-up,section,h1,h2').forEach(function(el){
-    if(!el.classList.contains('fade-in-up'))el.classList.add('fade-in-up');
-    io.observe(el);
-  });
-})();
+<button id="scroll-top" aria-label="Scroll back to top">
+  <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+</button>
 
-// ── Zigzag split-from-centre ──
-(function(){
-  // Wrap each side's children in .side-wrap so overflow:hidden on the
-  // column clips the inner element — clipping boundary never moves with transform
-  document.querySelectorAll('.zigzag-item').forEach(function(item) {
-    item.querySelectorAll('.video-side, .content-side').forEach(function(side) {
-      var wrap = document.createElement('div');
-      wrap.className = 'side-wrap';
-      // move all children into wrap
-      while (side.firstChild) wrap.appendChild(side.firstChild);
-      side.appendChild(wrap);
-    });
-  });
-
-  // Intersection observer: fire when top of row is 60% down the viewport
-  var zzObserver = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        entry.target.classList.add('zz-visible');
-        zzObserver.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0,
-    rootMargin: '0px 0px -40% 0px'
-  });
-
-  document.querySelectorAll('.zigzag-item').forEach(function(el){
-    zzObserver.observe(el);
-  });
-})();
-
-document.querySelectorAll('a[href]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h[0]==='#'||h.startsWith('http')||h.startsWith('mailto'))return;
-  a.addEventListener('click',function(e){
-    e.preventDefault();document.body.classList.add('page-exit');
-    setTimeout(function(){window.location=h;},270);
-  });
-});
-</script>
-<script>
-// ── HTML5 video player — clean, no scroll locks ──
-document.querySelectorAll('.video-thumb[data-mp4]').forEach(function(thumb) {
-  thumb.addEventListener('click', function() {
-    var src = thumb.getAttribute('data-mp4');
-    if (!src) return; // already playing
-
-    var video = document.createElement('video');
-    video.src = src;
-    video.controls = true;
-    video.autoplay = true;
-    video.playsInline = true;
-    video.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;background:#000;object-fit:contain;display:block;border:none;';
-
-    thumb.innerHTML = '';
-    thumb.style.background = '#000';
-    thumb.style.cursor = 'default';
-    thumb.removeAttribute('data-mp4');
-    thumb.appendChild(video);
-  });
-});
-</script>
-</div><!-- /reviews-grid -->
-
-</section>
-
-<footer class="bg-slate-50 w-full py-16 border-t-0">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 font-sans text-sm">
-  <div>
-    <div class="text-xl font-serif text-blue-900 mb-5">Dr. Vivek Allahbadia</div>
-    <p class="text-slate-500 mb-5 text-sm">Hinduja Healthcare Surgical, Khar · </p>
-    <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank">
-      <span class="material-symbols-outlined text-blue-900 opacity-60 hover:opacity-100 cursor-pointer">person</span>
-    </a>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Quick Links</h5>
-    <ul class="space-y-3 text-slate-500">
-      <li><a class="hover:text-blue-900 transition-all" href="about.html">About Dr. Allahbadia</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="robot.html">CORI Robotics</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="#">Medical Disclaimer</a></li>
-    </ul>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Expertise</h5>
-    <ul class="space-y-3 text-slate-500">
-      <li>Total Knee Replacement</li>
-      <li>CORI Robotic Surgery</li>
-      <li>Revision Knee Surgery</li>
-      <li>Sports Injuries</li>
-    </ul>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Newsletter</h5>
-    <p class="text-slate-500 mb-4 text-sm">Recovery tips and surgical advancements.</p>
-    <div class="flex bg-white rounded-lg p-1 border border-outline-variant/30">
-      <input class="bg-transparent border-none focus:ring-0 text-xs flex-1" placeholder="Your Email" type="email"/>
-      <button class="bg-primary text-white p-2 rounded-md"><span class="material-symbols-outlined text-sm">send</span></button>
-    </div>
-  </div>
-</div>
-<div class="max-w-7xl mx-auto px-8 pt-10 mt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-  <p class="text-slate-400 text-xs">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
-  <div class="flex gap-8">
-    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Medical Accuracy Guaranteed</span>
-    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Patient Data Protected</span>
-  </div>
-</div>
-</footer>
+<script src="main.js"></script>
 
 </body>
 </html>

@@ -1,166 +1,271 @@
 /* ============================================================
    Dr. Vivek Allahbadia | main.js
-   Handles: nav, mobile menu, scroll effects, carousels, FAQ
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── Active Nav Link ───────────────────────────────────────── */
+  /* ── 1. Active Nav Link ─────────────────────────────────────*/
   const currentPage = window.location.pathname.split('/').pop() || 'index.html';
   document.querySelectorAll('nav a[data-page]').forEach(a => {
     if (a.dataset.page === currentPage) a.classList.add('active');
   });
 
-  /* ── Mobile Menu Toggle ────────────────────────────────────── */
-  const menuBtn   = document.getElementById('menu-btn');
-  const menuClose = document.getElementById('menu-close');
+  /* ── 2. Mobile Menu ─────────────────────────────────────────*/
+  const menuBtn    = document.getElementById('menu-btn');
+  const menuClose  = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
 
-  if (menuBtn && mobileMenu) {
-    menuBtn.addEventListener('click', () => {
-      mobileMenu.classList.add('open');
-      document.body.style.overflow = 'hidden';
+  function openMenu()  { mobileMenu.classList.add('open');    document.body.style.overflow = 'hidden'; menuBtn.setAttribute('aria-expanded', 'true'); }
+  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = '';       menuBtn.setAttribute('aria-expanded', 'false'); }
+
+  if (menuBtn)    menuBtn.addEventListener('click', openMenu);
+  if (menuClose)  menuClose.addEventListener('click', closeMenu);
+  if (mobileMenu) mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+  /* ── 3. Scroll Reveal ───────────────────────────────────────*/
+  const revealEls = document.querySelectorAll('.fade-in-up');
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      if (el.closest('#editorial-usp')) return;
+      const delay = parseInt(el.dataset.delay || 0);
+      setTimeout(() => el.classList.add('visible'), delay);
+      revealObserver.unobserve(el);
     });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  revealEls.forEach(el => revealObserver.observe(el));
+
+  /* ── 4. Editorial USP — always fully visible ────────────────*/
+  function lockUsp() {
+    const usp = document.getElementById('editorial-usp');
+    if (!usp) return;
+    usp.classList.remove('fade-in-up');
+    usp.classList.add('visible');
+    usp.querySelectorAll('*').forEach(c => { c.classList.remove('fade-in-up'); c.classList.add('visible'); });
   }
-  if (menuClose && mobileMenu) {
-    menuClose.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      document.body.style.overflow = '';
-    });
+  lockUsp();
+  window.addEventListener('load', lockUsp);
+
+  /* ── 5. Stat Counter Animation ──────────────────────────────*/
+  function formatNum(val, fmt, dec) {
+    if (dec)              return parseFloat(val).toFixed(parseInt(dec));
+    if (fmt === 'thousands') {
+      const v = Math.floor(val);
+      return v >= 1000 ? Math.floor(v/1000) + ',' + ('000' + (v%1000)).slice(-3) : v.toString();
+    }
+    return Math.floor(val).toString();
   }
-  if (mobileMenu) {
-    mobileMenu.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => {
-        mobileMenu.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+
+  // Isolate numeric span from suffix span
+  document.querySelectorAll('.stat-counter').forEach(el => {
+    const suffixSpan = el.querySelector('.stat-suffix');
+    const numSpan = document.createElement('span');
+    numSpan.className = 'num-val';
+    numSpan.textContent = '0';
+    el.innerHTML = '';
+    el.appendChild(numSpan);
+    if (suffixSpan) el.appendChild(suffixSpan);
+  });
+
+  let countersStarted = false;
+  function runCounters() {
+    if (countersStarted) return;
+    countersStarted = true;
+    document.querySelectorAll('.stat-counter').forEach(el => {
+      const target = parseFloat(el.dataset.target || 0);
+      const fmt    = el.dataset.format  || '';
+      const dec    = el.dataset.decimal || '';
+      const num    = el.querySelector('.num-val');
+      const dur    = 1600;
+      const t0     = performance.now();
+      function tick(now) {
+        const p = Math.min((now - t0) / dur, 1);
+        const e = 1 - Math.pow(1 - p, 3);
+        if (num) num.textContent = formatNum(e * target, fmt, dec);
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
     });
   }
 
-  /* ── Intersection Observer – Reveal on Scroll ──────────────── */
-  const revealEls = document.querySelectorAll('.reveal');
-  if (revealEls.length) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
-        if (entry.isIntersecting) {
-          // Stagger children if parent has data-stagger
-          const delay = entry.target.dataset.delay || 0;
-          setTimeout(() => entry.target.classList.add('is-visible'), delay);
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+  const heroRight = document.querySelector('.hero-right');
+  if (heroRight) heroRight.addEventListener('animationstart', runCounters, { once: true });
+  setTimeout(runCounters, 300);
 
-    revealEls.forEach((el, i) => observer.observe(el));
-  }
-
-  /* ── Reviews Carousel (horizontal scroll + buttons) ────────── */
-  const carousel  = document.getElementById('reviews-carousel');
-  const prevBtn   = document.getElementById('reviews-prev');
-  const nextBtn   = document.getElementById('reviews-next');
-
-  if (carousel && nextBtn && prevBtn) {
-    const scrollAmount = 430;
-    nextBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-    });
-    prevBtn.addEventListener('click', () => {
-      carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-    });
-  }
-
-  /* ── FAQ Accordion ─────────────────────────────────────────── */
-  document.querySelectorAll('.faq-item').forEach(item => {
-    item.addEventListener('click', () => {
-      const isOpen = item.classList.contains('open');
-      // Close all
-      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
-      // Toggle clicked
-      if (!isOpen) item.classList.add('open');
+  /* ── 6. Page-exit Transition ────────────────────────────────*/
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || href[0] === '#' || href.startsWith('http') || href.startsWith('mailto') || href.startsWith('tel')) return;
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.body.classList.add('page-exit');
+      setTimeout(() => { window.location.href = href; }, 280);
     });
   });
 
-  /* ── Scroll-to-top Button ──────────────────────────────────── */
-  const scrollTopBtn = document.getElementById('scroll-top');
-  if (scrollTopBtn) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 400) {
-        scrollTopBtn.classList.add('visible');
-      } else {
-        scrollTopBtn.classList.remove('visible');
-      }
-    });
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  }
+  /* ── 7. FAQ Accordion ───────────────────────────────────────*/
+  document.querySelectorAll('.faq__btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const body   = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
 
-  /* ── Smooth Scroll for anchor links ───────────────────────── */
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', e => {
-      const target = document.querySelector(anchor.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      // Close all in same list
+      const list = btn.closest('.faq__list') || document.body;
+      list.querySelectorAll('.faq__btn.open').forEach(b => {
+        b.classList.remove('open');
+        b.setAttribute('aria-expanded', 'false');
+        const icon = b.querySelector('.faq__icon');
+        if (icon) icon.style.transform = '';
+        const bd = b.nextElementSibling;
+        if (bd) bd.style.maxHeight = '0';
+      });
+
+      if (!isOpen) {
+        btn.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        const icon = btn.querySelector('.faq__icon');
+        if (icon) icon.style.transform = 'rotate(45deg)';
+        if (body) body.style.maxHeight = body.scrollHeight + 'px';
       }
     });
   });
 
-  /* ── Header shadow on scroll ───────────────────────────────── */
-  const header = document.querySelector('header');
+  /* ── 8. Scroll-to-top ───────────────────────────────────────*/
+  const scrollBtn = document.getElementById('scroll-top');
+  if (scrollBtn) {
+    window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 400), { passive: true });
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+  }
+
+  /* ── 9. Header shadow ───────────────────────────────────────*/
+  const header = document.querySelector('.site-header');
   if (header) {
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 10) {
-        header.style.boxShadow = '0 4px 40px rgba(0,53,95,0.10)';
-      } else {
-        header.style.boxShadow = '0 2px 40px rgba(0,53,95,0.06)';
-      }
-    });
+    window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 10), { passive: true });
   }
 
-  /* ── 3D Knee Interactive Hint (robot page) ─────────────────── */
-  const kneeModel = document.getElementById('knee-model-hint');
-  if (kneeModel) {
-    let tilt = 0;
-    kneeModel.addEventListener('mousemove', (e) => {
-      const rect = kneeModel.getBoundingClientRect();
-      const cx = rect.left + rect.width / 2;
-      const cy = rect.top + rect.height / 2;
-      const dx = (e.clientX - cx) / rect.width;
-      const dy = (e.clientY - cy) / rect.height;
-      kneeModel.style.transform = `perspective(600px) rotateY(${dx * 14}deg) rotateX(${-dy * 8}deg) scale(1.02)`;
+  /* ── 10. Smooth anchor scrolling ────────────────────────────*/
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
     });
-    kneeModel.addEventListener('mouseleave', () => {
-      kneeModel.style.transform = 'perspective(600px) rotateY(0deg) rotateX(0deg) scale(1)';
-    });
-    kneeModel.style.transition = 'transform 0.25s ease';
-  }
+  });
 
-  /* ── Counter Animation ─────────────────────────────────────── */
-  const counters = document.querySelectorAll('[data-count]');
-  if (counters.length) {
-    const countObserver = new IntersectionObserver((entries) => {
+  /* ── 11. Zigzag split-from-centre animation ─────────────────
+     Wraps each side's children in .side-wrap so overflow:hidden
+     clips correctly, then observes each .zigzag-item.           */
+  const zigzagItems = document.querySelectorAll('.zigzag-item');
+  if (zigzagItems.length) {
+    zigzagItems.forEach(item => {
+      item.querySelectorAll('.video-side, .content-side').forEach(side => {
+        const wrap = document.createElement('div');
+        wrap.className = 'side-wrap';
+        while (side.firstChild) wrap.appendChild(side.firstChild);
+        side.appendChild(wrap);
+      });
+    });
+
+    const zzObserver = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.count);
-          const suffix = el.dataset.suffix || '';
-          const duration = 1400;
-          const start = performance.now();
-          const update = (now) => {
-            const elapsed = now - start;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            el.textContent = Math.round(eased * target) + suffix;
-            if (progress < 1) requestAnimationFrame(update);
-          };
-          requestAnimationFrame(update);
-          countObserver.unobserve(el);
+          entry.target.classList.add('zz-visible');
+          zzObserver.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.5 });
+    }, { threshold: 0, rootMargin: '0px 0px -40% 0px' });
 
-    counters.forEach(c => countObserver.observe(c));
+    zigzagItems.forEach(el => zzObserver.observe(el));
+  }
+
+  /* ── 12. HTML5 video player ─────────────────────────────────
+     Click on a .video-thumb[data-mp4] replaces the thumbnail
+     with an inline HTML5 video that autoplays.                  */
+  document.querySelectorAll('.video-thumb[data-mp4]').forEach(thumb => {
+    thumb.addEventListener('click', () => {
+      const src = thumb.getAttribute('data-mp4');
+      if (!src) return;
+
+      const video = document.createElement('video');
+      video.src = src;
+      video.controls = true;
+      video.autoplay = true;
+      video.playsInline = true;
+
+      thumb.innerHTML = '';
+      thumb.classList.add('is-playing');
+      thumb.removeAttribute('data-mp4');
+      thumb.appendChild(video);
+    });
+  });
+
+  /* ── 13. Gallery Lightbox ───────────────────────────────────
+     Opens full-size image when a .pol polaroid is clicked.
+     Closes on overlay click, close button, or Escape key.     */
+  const lb    = document.getElementById('lb');
+  const lbImg = document.getElementById('lb-img');
+  const lbX   = document.getElementById('lb-x');
+
+  if (lb) {
+    document.querySelectorAll('.pol').forEach(pol => {
+      pol.addEventListener('click', () => {
+        const img = pol.querySelector('img');
+        if (!img) return;
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    const closeLb = () => {
+      lb.classList.remove('open');
+      document.body.style.overflow = '';
+      lbImg.src = '';
+    };
+
+    lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+    if (lbX) lbX.addEventListener('click', closeLb);
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lb.classList.contains('open')) closeLb();
+    });
+  }
+
+  /* ── 14. International Patient Modal ────────────────────────
+     Triggered by the CTA button in the appointments page.
+     Opens with fade + scale animation, closes on backdrop
+     click, close button, or Escape key.                        */
+  const modal     = document.getElementById('intl-modal');
+  const modalClose = document.getElementById('modal-close');
+
+  if (modal) {
+    const openModal = () => {
+      modal.classList.add('modal-open');
+      document.body.style.overflow = 'hidden';
+      // Move focus to close button for accessibility
+      if (modalClose) setTimeout(() => modalClose.focus(), 50);
+    };
+    const closeModal = () => {
+      modal.classList.remove('modal-open');
+      document.body.style.overflow = '';
+    };
+
+    // Trigger button
+    const modalTrigger = document.getElementById('modal-trigger');
+    if (modalTrigger) modalTrigger.addEventListener('click', openModal);
+
+    // Close button
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+
+    // Backdrop click
+    modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+
+    // Escape key
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.classList.contains('modal-open')) closeModal();
+    });
   }
 
 });

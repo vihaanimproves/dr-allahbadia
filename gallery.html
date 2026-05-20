@@ -1,283 +1,441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<link rel="icon" type="image/x-icon" href="images/favicon.ico"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script>
-  tailwind.config = {
-    theme: {
-      extend: {
-        colors: {
-          "primary": "#00355f",
-          "primary-container": "#0f4c81",
-          "on-primary": "#ffffff",
-          "surface": "#E8EAED",
-          "surface-container-low": "#DFE2E6",
-          "surface-container-high": "#d0d3d8",
-          "surface-container-lowest": "#ffffff",
-          "on-surface": "#191c1e",
-          "on-surface-variant": "#42474f",
-          "on-tertiary-container": "#5dc8d8",
-          "outline-variant": "#c2c7d1",
-          "tertiary": "#5dc8d8"
-        },
-        fontFamily: {
-          "headline": ["Newsreader", "serif"],
-          "body": ["Manrope", "sans-serif"],
-          "label": ["Manrope", "sans-serif"]
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── Primary SEO ──────────────────────────────────────────── -->
+  <title>Gallery | Dr. Vivek Allahbadia | Surgeries, Recognitions & Research | Mumbai</title>
+  <meta name="description" content="Photo gallery of Dr. Vivek Allahbadia — surgeries, celebrity patients, international conferences, awards, and research. HOD Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai." />
+  <meta name="keywords" content="Dr Vivek Allahbadia gallery, knee surgery Mumbai photos, CORI robotic surgery gallery, Hinduja Khar orthopaedic surgeon, Dr Allahbadia patients celebrities" />
+  <meta name="author" content="Dr. Vivek Allahbadia" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.drvivekallahbadia.com/gallery.html" />
+
+  <!-- ── Geo ──────────────────────────────────────────────────── -->
+  <meta name="geo.region" content="IN-MH" />
+  <meta name="geo.placename" content="Mumbai, Maharashtra, India" />
+  <meta name="geo.position" content="19.0760;72.8777" />
+  <meta name="ICBM" content="19.0760, 72.8777" />
+
+  <!-- ── Open Graph ───────────────────────────────────────────── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.drvivekallahbadia.com/gallery.html" />
+  <meta property="og:title" content="Gallery | Dr. Vivek Allahbadia — Surgeries, Recognitions & Research" />
+  <meta property="og:description" content="A curated gallery of Dr. Vivek Allahbadia's surgical work, celebrity patients, international conferences, awards, and research — Hinduja Healthcare Surgical, Khar, Mumbai." />
+  <meta property="og:image" content="https://www.drvivekallahbadia.com/images/og-cover.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_IN" />
+  <meta property="og:site_name" content="Dr. Vivek Allahbadia" />
+
+  <!-- ── Twitter Card ─────────────────────────────────────────── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Gallery | Dr. Vivek Allahbadia | Surgeries, Recognitions & Research" />
+  <meta name="twitter:description" content="Surgical work, celebrity patients, conferences, and awards. HOD Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai." />
+  <meta name="twitter:image" content="https://www.drvivekallahbadia.com/images/og-cover.jpg" />
+
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+
+  <!-- ── Fonts ─────────────────────────────────────────────────── -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+
+  <!-- ── Styles ────────────────────────────────────────────────── -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- ── Structured Data ──────────────────────────────────────── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home",    "item": "https://www.drvivekallahbadia.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Gallery", "item": "https://www.drvivekallahbadia.com/gallery.html" }
+        ]
+      },
+
+      {
+        "@type": "ImageGallery",
+        "name": "Dr. Vivek Allahbadia — Surgeries, Recognitions & Research Gallery",
+        "description": "A curated collection of photographs documenting Dr. Vivek Allahbadia's surgical practice, international conferences, professional recognitions, and the patients whose lives have changed.",
+        "url": "https://www.drvivekallahbadia.com/gallery.html",
+        "author": { "@id": "https://www.drvivekallahbadia.com/#doctor" },
+        "associatedMedia": [
+          {
+            "@type": "ImageObject",
+            "name": "Dr. Vivek Allahbadia — Portrait",
+            "description": "Professional portrait of Dr. Vivek Allahbadia, HOD Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery1.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Dr. Allahbadia with Prem Chopra",
+            "description": "Dr. Vivek Allahbadia with veteran Bollywood actor Prem Chopra.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/prem.jpg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "The Ranveer Show — Dr. Allahbadia",
+            "description": "Dr. Vivek Allahbadia featured on The Ranveer Show.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery3.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Research — Dr. Vivek Allahbadia",
+            "description": "Dr. Allahbadia's peer-reviewed research and published medical work.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery5.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Dr. Allahbadia with John Abraham",
+            "description": "Dr. Vivek Allahbadia with Bollywood actor John Abraham.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/abraham.jpg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "International Orthopaedic Conference",
+            "description": "Dr. Allahbadia presenting at an international orthopaedic conference.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery6.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Awards and Recognitions",
+            "description": "Dr. Vivek Allahbadia receiving professional awards and recognitions for surgical excellence.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery7.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Patient Recovery",
+            "description": "A patient in recovery following knee replacement surgery performed by Dr. Allahbadia at Hinduja Healthcare Surgical, Khar.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery8.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Dr. Allahbadia with Ranveer Allahbadia",
+            "description": "Dr. Vivek Allahbadia with podcaster and fitness influencer Ranveer Allahbadia.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/ranveer.jpg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "Operating Theatre — Knee Surgery",
+            "description": "Dr. Allahbadia performing orthopaedic surgery in the operating theatre at Hinduja Healthcare Surgical, Khar.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery4.jpeg"
+          },
+          {
+            "@type": "ImageObject",
+            "name": "CORI Robotic Surgical System",
+            "description": "The Smith+Nephew CORI robotic surgical system at Hinduja Healthcare Surgical, Khar, used by Dr. Vivek Allahbadia for robotic knee replacement.",
+            "contentUrl": "https://www.drvivekallahbadia.com/images/gallery2.jpeg"
+          }
+        ]
+      },
+
+      {
+        "@type": "Physician",
+        "@id": "https://www.drvivekallahbadia.com/#doctor",
+        "name": "Dr. Vivek Allahbadia",
+        "honorificPrefix": "Dr.",
+        "jobTitle": "Head of Department, Orthopaedics",
+        "worksFor": { "@id": "https://www.drvivekallahbadia.com/#clinic" },
+        "url": "https://www.drvivekallahbadia.com/"
+      },
+
+      {
+        "@type": "MedicalClinic",
+        "@id": "https://www.drvivekallahbadia.com/#clinic",
+        "name": "Hinduja Healthcare Surgical, Khar",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "724, SV Road, Khar West",
+          "addressLocality": "Khar, Mumbai",
+          "addressRegion": "Maharashtra",
+          "postalCode": "400052",
+          "addressCountry": "IN"
         }
       }
-    }
+
+    ]
   }
-</script>
+  </script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Gallery | Dr. Vivek Allahbadia</title>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Manrope:wght@200..800&family=Caveat:wght@400..700&display=swap" rel="stylesheet"/>
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'Manrope',sans-serif;background:#E8EAED;color:#191c1e;overflow-x:hidden;}
-h1{font-family:'Newsreader',serif;}
-.hand{font-family:'Caveat',cursive;}
-
-.pol{
-  position:relative;
-  background:#fffdf0;
-  padding:9px 9px 44px 9px;
-  box-shadow:2px 5px 18px rgba(0,0,0,.2),0 1px 3px rgba(0,0,0,.1);
-  cursor:pointer;
-  transition:transform .28s cubic-bezier(.22,.6,.36,1),box-shadow .28s;
-}
-.pol:hover{transform:scale(1.05) rotate(0deg) !important;box-shadow:0 16px 48px rgba(0,0,0,.25);z-index:30!important;}
-.pol img{display:block;width:100%;height:100%;object-fit:cover;}
-.pol .cap{
-  position:absolute;bottom:9px;left:10px;right:10px;
-  font-family:'Caveat',cursive;font-size:16px;color:rgba(0,30,60,.58);
-}
-
-.tape{position:absolute;z-index:10;
-  background:rgba(195,180,148,.52);
-  background-image:repeating-linear-gradient(90deg,transparent 0,transparent 3px,rgba(255,255,255,.18) 3px,rgba(255,255,255,.18) 4px);
-  border-radius:1px;box-shadow:0 1px 2px rgba(0,0,0,.09);}
-.tc{width:58px;height:20px;top:-10px;left:50%;transform:translateX(-50%) rotate(-1deg);}
-.tl{width:54px;height:20px;top:-10px;left:8px;transform:rotate(-3deg);}
-.tr{width:54px;height:20px;top:-10px;right:8px;transform:rotate(2.5deg);}
-
-.clip{position:absolute;top:-22px;left:50%;transform:translateX(-50%);z-index:10;}
-.pin{position:absolute;top:-14px;left:50%;transform:translateX(-50%);
-  width:16px;height:16px;border-radius:50%;z-index:10;
-  background:radial-gradient(circle at 35% 30%,#c09090,#7a4040);
-  box-shadow:0 2px 5px rgba(0,0,0,.32);}
-.pin.bl{background:radial-gradient(circle at 35% 30%,#9090c0,#404070);}
-
-#lb{position:fixed;inset:0;background:rgba(0,15,35,.9);z-index:200;display:none;align-items:center;justify-content:center;backdrop-filter:blur(14px);}
-#lb.open{display:flex;}
-#lb img{max-width:88vw;max-height:86vh;object-fit:contain;border-radius:4px;box-shadow:0 24px 80px rgba(0,0,0,.55);}
-#lb-x{position:fixed;top:1.2rem;right:1.5rem;background:rgba(255,255,255,.14);border:none;color:white;font-size:1.3rem;width:2.3rem;height:2.3rem;border-radius:50%;cursor:pointer;display:flex;align-items:center;justify-content:center;}
-
-.rv{opacity:0;transform:translateY(14px);transition:opacity .55s ease,transform .55s ease;}
-.rv.on{opacity:1;transform:translateY(0);}
-</style>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 </head>
+
 <body>
 
-<!-- UNIFORM HEADER -->
-<header class="fixed top-0 w-full z-50 bg-[#E8EAED]/85 backdrop-blur-xl border-b border-slate-200/50">
-<nav class="flex justify-between items-center max-w-7xl mx-auto px-8 h-20">
-  <a href="index.html" class="text-2xl font-serif italic text-blue-900 shrink-0">Dr. Vivek Allahbadia</a>
-  <div class="hidden md:flex items-center gap-7">
-    <a href="index.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Home</a>
-    <a href="about.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">About</a>
-    <a href="testimonials.html"  class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Patient Testimonials</a>
-    <a href="robot.html"         class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">CORI Robotics</a>
-    <a href="gallery.html"         class="text-blue-700 border-b-2 border-blue-700 pb-1 font-sans font-medium">Gallery</a>
-    <a href="appointments.html" class="text-slate-600 font-sans font-medium hover:text-blue-800 transition-colors duration-300">Appointments</a>
-  </div>
-  <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener" class="shrink-0"><button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-medium transition-all scale-95 active:opacity-80 text-sm">Schedule Consultation</button></a>
-</nav>
+<!-- ═══════════════════════════════════
+     HEADER
+════════════════════════════════════ -->
+<header class="site-header" role="banner">
+  <nav class="site-nav" aria-label="Primary navigation">
+    <a href="index.html" class="nav-brand" aria-label="Dr. Vivek Allahbadia — Home">Dr. Vivek Allahbadia</a>
+    <div class="nav-links" role="list">
+      <a href="index.html"        data-page="index.html"        class="nav-link" role="listitem">Home</a>
+      <a href="about.html"        data-page="about.html"        class="nav-link" role="listitem">About</a>
+      <a href="testimonials.html" data-page="testimonials.html" class="nav-link" role="listitem">Patient Testimonials</a>
+      <a href="robot.html"        data-page="robot.html"        class="nav-link" role="listitem">CORI Robotics</a>
+      <a href="gallery.html"      data-page="gallery.html"      class="nav-link" role="listitem">Gallery</a>
+      <a href="appointments.html" data-page="appointments.html" class="nav-link" role="listitem">Appointments</a>
+    </div>
+    <div class="nav-actions">
+      <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia."
+         target="_blank" rel="noopener"
+         class="btn btn--primary nav-cta"
+         aria-label="Book consultation on WhatsApp">
+        Schedule Consultation
+      </a>
+      <button id="menu-btn" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
 </header>
 
-<main style="padding-top:72px;position:relative;overflow:hidden;">
-
-<!-- PAGE HEADER -->
-<div style="max-width:1280px;margin:0 auto;padding:2.2rem 2.5rem .8rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:start;">
-  <div>
-    <p style="font-size:10.5px;font-weight:800;letter-spacing:.25em;text-transform:uppercase;color:rgba(0,53,95,.45);margin-bottom:.65rem;">Dr. Vivek Allahbadia</p>
-    <h1 style="font-family:'Newsreader',serif;font-size:clamp(4.5rem,9vw,8rem);font-weight:300;color:#00355f;line-height:.88;margin-bottom:.8rem;">Gallery</h1>
-    <p style="font-size:.96rem;color:#42474f;line-height:1.6;">surgeries, recognitions, research, and<br/>the patients whose lives have changed.</p>
-  </div>
-  <div style="text-align:right;padding-top:1.2rem;">
-    <div style="width:50px;height:1.5px;background:rgba(0,53,95,.18);margin:.35rem 0 0 auto;border-radius:2px;"></div>
-  </div>
+<!-- Mobile menu -->
+<div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
+  <button id="menu-close" class="mobile-menu__close" aria-label="Close navigation menu">
+    <span class="material-symbols-outlined">close</span>
+  </button>
+  <a href="index.html"        class="mobile-menu__link">Home</a>
+  <a href="about.html"        class="mobile-menu__link">About</a>
+  <a href="testimonials.html" class="mobile-menu__link">Testimonials</a>
+  <a href="robot.html"        class="mobile-menu__link">CORI Robotics</a>
+  <a href="gallery.html"      class="mobile-menu__link">Gallery</a>
+  <a href="appointments.html" class="mobile-menu__link">Appointments</a>
 </div>
 
-<!-- PHOTO GRID — tight, 3 cols -->
-<div style="max-width:1280px;margin:0 auto;padding:.5rem 1rem 1.5rem;display:grid;grid-template-columns:repeat(3,1fr);column-gap:.6rem;row-gap:.8rem;align-items:start;">
-<div class="rv" style="display:flex;justify-content:center;padding-top:0px;">
-    <div class="pol" style="width:360px;transform:rotate(-1.8deg);">
-      <div class="tl tape"></div>
-      <div style="width:342px;height:220px;overflow:hidden;">
-        <img src="images/gallery1.jpeg" alt="Portrait"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:18px;">
-    <div class="pol" style="width:355px;transform:rotate(2.5deg);">
-      <div class="tape tl"></div>
-      <div style="width:337px;height:260px;overflow:hidden;">
-        <img src="images/prem.jpg" alt="Prem Chopra"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:8px;">
-    <div class="pol" style="width:355px;transform:rotate(-3.2deg);">
-      <div class="tr tape"></div>
-      <div style="width:337px;height:250px;overflow:hidden;">
-        <img src="images/gallery3.jpeg" alt="The Ranveer Show"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:26px;">
-    <div class="pol" style="width:360px;transform:rotate(1.2deg);">
-      <div class="pin"></div>
-      <div style="width:342px;height:270px;overflow:hidden;">
-        <img src="images/gallery5.jpeg" alt="Research"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:6px;">
-    <div class="pol" style="width:360px;transform:rotate(-2.8deg);">
-      <div class="tape tr"></div>
-      <div style="width:342px;height:260px;overflow:hidden;">
-        <img src="images/abraham.jpg" alt="John Abraham"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:14px;">
-    <div class="pol" style="width:355px;transform:rotate(3.5deg);">
-      <div class="tc tape"></div>
-      <div style="width:337px;height:215px;overflow:hidden;">
-        <img src="images/gallery6.jpeg" alt="Conference"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:30px;">
-    <div class="pol" style="width:358px;transform:rotate(-1.5deg);">
-      <div class="tc tape"></div>
-      <div style="width:340px;height:195px;overflow:hidden;">
-        <img src="images/gallery7.jpeg" alt="Awards"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:4px;">
-    <div class="pol" style="width:370px;transform:rotate(4.0deg);">
-      <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round"><path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/></svg>
-      <div style="width:352px;height:340px;overflow:hidden;">
-        <img src="images/gallery8.jpeg" alt="Patient Recovery"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:20px;">
-    <div class="pol" style="width:358px;transform:rotate(2.0deg);">
-      <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round"><path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/></svg>
-      <div style="width:340px;height:260px;overflow:hidden;">
-        <img src="images/ranveer.jpg" alt="Ranveer Allahbadia"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:12px;">
-    <div class="pol" style="width:352px;transform:rotate(-2.2deg);">
-      <div class="tl tape"></div>
-      <div style="width:334px;height:185px;overflow:hidden;">
-        <img src="images/gallery4.jpeg" alt="Operating Theatre"/>
-      </div>
-    </div>
-  </div>
-<div class="rv" style="display:flex;justify-content:center;padding-top:24px;">
-    <div class="pol" style="width:365px;transform:rotate(1.8deg);">
-      <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round"><path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/></svg>
-      <div style="width:347px;height:205px;overflow:hidden;">
-        <img src="images/gallery2.jpeg" alt="CORI Surgical System"/>
-      </div>
-    </div>
-  </div>
 
-</div><!-- /grid -->
+<!-- ═══════════════════════════════════
+     MAIN
+════════════════════════════════════ -->
+<main role="main" class="page-main gallery-main">
 
-</div>
+  <!-- Page header -->
+  <header class="gallery-header">
+    <div>
+      <p class="gallery-header__eyebrow">Dr. Vivek Allahbadia</p>
+      <h1 class="gallery-header__heading">Gallery</h1>
+      <p class="gallery-header__sub">surgeries, recognitions, research, and<br/>the patients whose lives have changed.</p>
+    </div>
+    <div aria-hidden="true">
+      <div class="gallery-header__rule"></div>
+    </div>
+  </header>
 
+  <!-- Photo grid -->
+  <section class="gallery-grid" aria-label="Photo gallery — surgeries, patients, conferences, and awards">
+
+    <!-- 1 — Portrait -->
+    <div class="pol-cell pol-cell--pt0 fade-in-up" data-delay="0">
+      <div class="pol pol--1" role="button" tabindex="0" aria-label="View full size: Dr. Vivek Allahbadia portrait">
+        <div class="tape tape--tl" aria-hidden="true"></div>
+        <div class="pol-img pol-img--1">
+          <img src="images/gallery1.jpeg" alt="Dr. Vivek Allahbadia — professional portrait, HOD Orthopaedics, Hinduja Healthcare Surgical, Khar, Mumbai" loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 — Prem Chopra -->
+    <div class="pol-cell pol-cell--pt18 fade-in-up" data-delay="50">
+      <div class="pol pol--2" role="button" tabindex="0" aria-label="View full size: Dr. Allahbadia with Prem Chopra">
+        <div class="tape tape--tl" aria-hidden="true"></div>
+        <div class="pol-img pol-img--2">
+          <img src="images/prem.jpg" alt="Dr. Vivek Allahbadia with veteran Bollywood actor Prem Chopra" loading="lazy" />
+        </div>
+        <p class="cap">Prem Chopra</p>
+      </div>
+    </div>
+
+    <!-- 3 — The Ranveer Show -->
+    <div class="pol-cell pol-cell--pt8 fade-in-up" data-delay="100">
+      <div class="pol pol--3" role="button" tabindex="0" aria-label="View full size: Dr. Allahbadia on The Ranveer Show">
+        <div class="tape tape--tr" aria-hidden="true"></div>
+        <div class="pol-img pol-img--3">
+          <img src="images/gallery3.jpeg" alt="Dr. Vivek Allahbadia featured on The Ranveer Show podcast" loading="lazy" />
+        </div>
+        <p class="cap">The Ranveer Show</p>
+      </div>
+    </div>
+
+    <!-- 4 — Research -->
+    <div class="pol-cell pol-cell--pt26 fade-in-up" data-delay="0">
+      <div class="pol pol--4" role="button" tabindex="0" aria-label="View full size: Research publications">
+        <div class="pin" aria-hidden="true"></div>
+        <div class="pol-img pol-img--4">
+          <img src="images/gallery5.jpeg" alt="Dr. Vivek Allahbadia's peer-reviewed research — published in Bombay Hospital Journal and Journal of Postgraduate Medicine" loading="lazy" />
+        </div>
+        <p class="cap">Research</p>
+      </div>
+    </div>
+
+    <!-- 5 — John Abraham -->
+    <div class="pol-cell pol-cell--pt6 fade-in-up" data-delay="50">
+      <div class="pol pol--5" role="button" tabindex="0" aria-label="View full size: Dr. Allahbadia with John Abraham">
+        <div class="tape tape--tr" aria-hidden="true"></div>
+        <div class="pol-img pol-img--5">
+          <img src="images/abraham.jpg" alt="Dr. Vivek Allahbadia with Bollywood actor John Abraham" loading="lazy" />
+        </div>
+        <p class="cap">John Abraham</p>
+      </div>
+    </div>
+
+    <!-- 6 — Conference -->
+    <div class="pol-cell pol-cell--pt14 fade-in-up" data-delay="100">
+      <div class="pol pol--6" role="button" tabindex="0" aria-label="View full size: International orthopaedic conference">
+        <div class="tape tape--c" aria-hidden="true"></div>
+        <div class="pol-img pol-img--6">
+          <img src="images/gallery6.jpeg" alt="Dr. Vivek Allahbadia presenting at an international orthopaedic conference" loading="lazy" />
+        </div>
+        <p class="cap">Conference</p>
+      </div>
+    </div>
+
+    <!-- 7 — Awards -->
+    <div class="pol-cell pol-cell--pt30 fade-in-up" data-delay="0">
+      <div class="pol pol--7" role="button" tabindex="0" aria-label="View full size: Awards and recognitions">
+        <div class="tape tape--c" aria-hidden="true"></div>
+        <div class="pol-img pol-img--7">
+          <img src="images/gallery7.jpeg" alt="Dr. Vivek Allahbadia receiving professional awards and recognitions for surgical excellence" loading="lazy" />
+        </div>
+        <p class="cap">Awards</p>
+      </div>
+    </div>
+
+    <!-- 8 — Patient Recovery -->
+    <div class="pol-cell pol-cell--pt4 fade-in-up" data-delay="50">
+      <div class="pol pol--8" role="button" tabindex="0" aria-label="View full size: Patient recovery after knee surgery">
+        <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/>
+        </svg>
+        <div class="pol-img pol-img--8">
+          <img src="images/gallery8.jpeg" alt="Patient in recovery following knee replacement surgery by Dr. Vivek Allahbadia at Hinduja Healthcare Surgical, Khar" loading="lazy" />
+        </div>
+        <p class="cap">Patient Recovery</p>
+      </div>
+    </div>
+
+    <!-- 9 — Ranveer Allahbadia -->
+    <div class="pol-cell pol-cell--pt20 fade-in-up" data-delay="100">
+      <div class="pol pol--9" role="button" tabindex="0" aria-label="View full size: Dr. Allahbadia with Ranveer Allahbadia">
+        <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/>
+        </svg>
+        <div class="pol-img pol-img--9">
+          <img src="images/ranveer.jpg" alt="Dr. Vivek Allahbadia with podcaster and fitness influencer Ranveer Allahbadia" loading="lazy" />
+        </div>
+        <p class="cap">Ranveer Allahbadia</p>
+      </div>
+    </div>
+
+    <!-- 10 — Operating Theatre -->
+    <div class="pol-cell pol-cell--pt12 fade-in-up" data-delay="0">
+      <div class="pol pol--10" role="button" tabindex="0" aria-label="View full size: Operating theatre — knee surgery">
+        <div class="tape tape--tl" aria-hidden="true"></div>
+        <div class="pol-img pol-img--10">
+          <img src="images/gallery4.jpeg" alt="Dr. Vivek Allahbadia performing orthopaedic knee surgery in the operating theatre at Hinduja Healthcare Surgical, Khar" loading="lazy" />
+        </div>
+        <p class="cap">Operating Theatre</p>
+      </div>
+    </div>
+
+    <!-- 11 — CORI Surgical System -->
+    <div class="pol-cell pol-cell--pt24 fade-in-up" data-delay="50">
+      <div class="pol pol--11" role="button" tabindex="0" aria-label="View full size: CORI Robotic Surgical System">
+        <svg class="clip" viewBox="0 0 24 52" width="20" fill="none" stroke="#aaa" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+          <path d="M12 48C4 48,4 6,12 6C20 6,20 44,12 44C7 44,7 14,12 14C17 14,17 38,12 38"/>
+        </svg>
+        <div class="pol-img pol-img--11">
+          <img src="images/gallery2.jpeg" alt="Smith+Nephew CORI robotic surgical system at Hinduja Healthcare Surgical, Khar — used by Dr. Vivek Allahbadia for robotic knee replacement" loading="lazy" />
+        </div>
+        <p class="cap">CORI Surgical System</p>
+      </div>
+    </div>
+
+  </section>
 
 </main>
 
+
 <!-- Lightbox -->
-<div id="lb" onclick="if(event.target===this)this.classList.remove('open')">
-  <button id="lb-x" onclick="document.getElementById('lb').classList.remove('open')">✕</button>
-  <img id="lb-img" src="" alt=""/>
+<div id="lb" role="dialog" aria-label="Full size image viewer" aria-modal="true">
+  <button id="lb-x" aria-label="Close image viewer">✕</button>
+  <img id="lb-img" src="" alt="Full size gallery image — Dr. Vivek Allahbadia" />
 </div>
 
-<footer class="bg-slate-50 w-full py-16 border-t-0">
-<div class="grid grid-cols-1 md:grid-cols-4 gap-12 max-w-7xl mx-auto px-8 font-sans text-sm">
-  <div>
-    <div class="text-xl font-serif text-blue-900 mb-5">Dr. Vivek Allahbadia</div>
-    <p class="text-slate-500 mb-5 text-sm">Hinduja Healthcare Surgical, Khar · </p>
-    <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank">
-      <span class="material-symbols-outlined text-blue-900 opacity-60 hover:opacity-100 cursor-pointer">person</span>
-    </a>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Quick Links</h5>
-    <ul class="space-y-3 text-slate-500">
-      <li><a class="hover:text-blue-900 transition-all" href="about.html">About Dr. Allahbadia</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="robot.html">CORI Robotics</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
-      <li><a class="hover:text-blue-900 transition-all" href="#">Medical Disclaimer</a></li>
-    </ul>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Expertise</h5>
-    <ul class="space-y-3 text-slate-500">
-      <li>Total Knee Replacement</li>
-      <li>CORI Robotic Surgery</li>
-      <li>Revision Knee Surgery</li>
-      <li>Sports Injuries</li>
-    </ul>
-  </div>
-  <div>
-    <h5 class="font-bold text-blue-900 mb-5 uppercase tracking-widest text-[10px]">Newsletter</h5>
-    <p class="text-slate-500 mb-4 text-sm">Recovery tips and surgical advancements.</p>
-    <div class="flex bg-white rounded-lg p-1 border border-outline-variant/30">
-      <input class="bg-transparent border-none focus:ring-0 text-xs flex-1" placeholder="Your Email" type="email"/>
-      <button class="bg-primary text-white p-2 rounded-md"><span class="material-symbols-outlined text-sm">send</span></button>
+
+<!-- ═══════════════════════════════════
+     FOOTER
+════════════════════════════════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+
+      <div>
+        <p class="footer__brand-name">Dr. Vivek Allahbadia</p>
+        <p class="footer__tagline">Hinduja Healthcare Surgical, Khar · Mumbai.</p>
+        <div class="footer__social">
+          <a href="https://www.linkedin.com/in/vivek-allahbadia-7404577/" target="_blank" rel="noopener"
+             class="footer__social-link" aria-label="Dr. Allahbadia on LinkedIn">
+            <span class="material-symbols-outlined">person</span>
+          </a>
+        </div>
+      </div>
+
+      <nav role="navigation" aria-label="Footer quick links">
+        <h4 class="footer__col-heading">Quick Links</h4>
+        <ul class="footer__links">
+          <li><a class="footer__link" href="about.html">About Dr. Allahbadia</a></li>
+          <li><a class="footer__link" href="robot.html">CORI Robotics</a></li>
+          <li><a class="footer__link" href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia." target="_blank" rel="noopener">Book Appointment</a></li>
+          <li><a class="footer__link" href="#">Medical Disclaimer</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h4 class="footer__col-heading">Expertise</h4>
+        <ul class="footer__expertise-list">
+          <li class="footer__expertise-item">Total Knee Replacement</li>
+          <li class="footer__expertise-item">CORI Robotic Surgery</li>
+          <li class="footer__expertise-item">Revision Knee Surgery</li>
+          <li class="footer__expertise-item">Sports Injuries</li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer__col-heading">Newsletter</h4>
+        <p class="footer__newsletter-desc">Recovery tips and surgical advancements.</p>
+        <div class="footer__email-form">
+          <label for="footer-email" class="sr-only">Your email address</label>
+          <input id="footer-email" class="footer__email-input" type="email" placeholder="Your Email" autocomplete="email" />
+          <button class="footer__email-btn" aria-label="Subscribe to newsletter">
+            <span class="material-symbols-outlined" aria-hidden="true">send</span>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer__bottom">
+      <p class="footer__copy">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
+      <div class="footer__badges">
+        <span class="footer__badge">Medical Accuracy Guaranteed</span>
+        <span class="footer__badge">Patient Data Protected</span>
+      </div>
     </div>
   </div>
-</div>
-<div class="max-w-7xl mx-auto px-8 pt-10 mt-10 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-  <p class="text-slate-400 text-xs">© 2025 Dr. Vivek Allahbadia · Hinduja Healthcare Surgical, Khar, Mumbai.</p>
-  <div class="flex gap-8">
-    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Medical Accuracy Guaranteed</span>
-    <span class="text-slate-400 text-[10px] uppercase font-bold tracking-widest">Patient Data Protected</span>
-  </div>
-</div>
 </footer>
 
-<script>
-var io=new IntersectionObserver(function(e){e.forEach(function(x,i){if(x.isIntersecting){setTimeout(function(){x.target.classList.add('on');},(i%4)*50);io.unobserve(x.target);}});},{threshold:.04});
-document.querySelectorAll('.rv').forEach(function(el){io.observe(el);});
-document.querySelectorAll('.pol').forEach(function(p){
-  p.addEventListener('click',function(){
-    var img=p.querySelector('img');if(!img)return;
-    document.getElementById('lb-img').src=img.src;
-    document.getElementById('lb').classList.add('open');
-  });
-});
-document.addEventListener('keydown',function(e){if(e.key==='Escape')document.getElementById('lb').classList.remove('open');});
-document.querySelectorAll('a[href]').forEach(function(a){
-  var h=a.getAttribute('href');
-  if(!h||h[0]==='#'||h.startsWith('http')||h.startsWith('mailto'))return;
-  a.addEventListener('click',function(e){e.preventDefault();setTimeout(function(){window.location=h;},180);});
-});
-</script>
+<button id="scroll-top" aria-label="Scroll back to top">
+  <span class="material-symbols-outlined" aria-hidden="true">arrow_upward</span>
+</button>
+
+<script src="main.js"></script>
+
 </body>
 </html>
