@@ -253,7 +253,8 @@
         Schedule Consultation
       </a>
       <button id="menu-btn" class="menu-btn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-menu">
-        <span class="material-symbols-outlined">menu</span>
+        <span class="material-symbols-outlined icon-menu">menu</span>
+        <span class="material-symbols-outlined icon-close">close</span>
       </button>
     </div>
   </nav>
@@ -261,16 +262,39 @@
 
 <!-- Mobile menu -->
 <div id="mobile-menu" class="mobile-menu" role="dialog" aria-label="Navigation menu" aria-modal="true">
-  <button id="menu-close" class="mobile-menu__close" aria-label="Close navigation menu">
-    <span class="material-symbols-outlined">close</span>
-  </button>
-  <a href="index.html"        class="mobile-menu__link">Home</a>
-  <a href="about.html"        class="mobile-menu__link">About</a>
-  <a href="testimonials.html" class="mobile-menu__link">Testimonials</a>
-  <a href="robot.html"        class="mobile-menu__link">CORI Robotics</a>
-  <a href="gallery.html"      class="mobile-menu__link">Gallery</a>
-  <a href="appointments.html" class="mobile-menu__link">Appointments</a>
-</div>
+<div class="mobile-menu__panel">
+
+  <div class="mobile-menu__topbar">
+    <span class="mobile-menu__brand">Dr. Vivek Allahbadia</span>
+    <button id="menu-close" class="mobile-menu__close" aria-label="Close navigation menu">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+  </div>
+
+  <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+    <a href="index.html" class="mobile-menu__item" data-index="0"><span class="mobile-menu__icon material-symbols-outlined" aria-hidden="true">home</span><span class="mobile-menu__label">Home</span><span class="mobile-menu__arrow material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+    <a href="about.html" class="mobile-menu__item" data-index="1"><span class="mobile-menu__icon material-symbols-outlined" aria-hidden="true">person</span><span class="mobile-menu__label">About</span><span class="mobile-menu__arrow material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+    <a href="robot.html" class="mobile-menu__item active" data-index="2"><span class="mobile-menu__icon material-symbols-outlined" aria-hidden="true">precision_manufacturing</span><span class="mobile-menu__label">CORI Robotics</span><span class="mobile-menu__arrow material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+    <a href="testimonials.html" class="mobile-menu__item" data-index="3"><span class="mobile-menu__icon material-symbols-outlined" aria-hidden="true">star</span><span class="mobile-menu__label">Testimonials</span><span class="mobile-menu__arrow material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+    <a href="gallery.html" class="mobile-menu__item" data-index="4"><span class="mobile-menu__icon material-symbols-outlined" aria-hidden="true">photo_library</span><span class="mobile-menu__label">Gallery</span><span class="mobile-menu__arrow material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+    <a href="appointments.html" class="mobile-menu__item" data-index="5"><span class="mobile-menu__icon material-symbols-outlined" aria-hidden="true">calendar_month</span><span class="mobile-menu__label">Appointments</span><span class="mobile-menu__arrow material-symbols-outlined" aria-hidden="true">chevron_right</span></a>
+  </nav>
+
+  <div class="mobile-menu__cta-wrap">
+    <div class="mobile-menu__nudge">
+      <span class="mobile-menu__nudge-icon material-symbols-outlined" aria-hidden="true">info</span>
+      <p class="mobile-menu__nudge-text">Still confused? Don't live in pain. Book an appointment and get the correct guidance and treatment.</p>
+    </div>
+    <a href="https://wa.me/919820218181?text=Hello%2C%20I%20would%20like%20to%20book%20a%20consultation%20with%20Dr.%20Vivek%20Allahbadia."
+       target="_blank" rel="noopener" class="mobile-menu__cta"
+       aria-label="Schedule a consultation on WhatsApp">
+      <span class="material-symbols-outlined" aria-hidden="true" style="font-variation-settings:'FILL' 1;">calendar_month</span>
+      Schedule Consultation
+    </a>
+  </div>
+
+</div><!-- /.mobile-menu__panel -->
+</div><!-- /#mobile-menu -->
 
 
 <!-- ═══════════════════════════════════

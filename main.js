@@ -14,13 +14,46 @@ document.addEventListener('DOMContentLoaded', () => {
   const menuBtn    = document.getElementById('menu-btn');
   const menuClose  = document.getElementById('menu-close');
   const mobileMenu = document.getElementById('mobile-menu');
+  const menuItems  = mobileMenu ? mobileMenu.querySelectorAll('.mobile-menu__item') : [];
 
-  function openMenu()  { mobileMenu.classList.add('open');    document.body.style.overflow = 'hidden'; menuBtn.setAttribute('aria-expanded', 'true'); }
-  function closeMenu() { mobileMenu.classList.remove('open'); document.body.style.overflow = '';       menuBtn.setAttribute('aria-expanded', 'false'); }
+  function openMenu() {
+    mobileMenu.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    menuBtn.setAttribute('aria-expanded', 'true');
+    menuBtn.classList.add('is-open');
 
-  if (menuBtn)    menuBtn.addEventListener('click', openMenu);
-  if (menuClose)  menuClose.addEventListener('click', closeMenu);
-  if (mobileMenu) mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+    // Staggered fade-in for each nav item
+    menuItems.forEach((item, i) => {
+      item.classList.remove('item-visible');
+      const delay = 120 + i * 65; // home first, then each following 65ms later
+      setTimeout(() => item.classList.add('item-visible'), delay);
+    });
+  }
+
+  function closeMenu() {
+    mobileMenu.classList.remove('open');
+    document.body.style.overflow = '';
+    menuBtn.setAttribute('aria-expanded', 'false');
+    menuBtn.classList.remove('is-open');
+    // Reset items so they animate fresh next open
+    menuItems.forEach(item => item.classList.remove('item-visible'));
+  }
+
+  if (menuBtn)   menuBtn.addEventListener('click', openMenu);
+  if (menuClose) menuClose.addEventListener('click', closeMenu);
+
+  // Close on backdrop click (click outside the panel)
+  if (mobileMenu) {
+    mobileMenu.addEventListener('click', e => {
+      if (e.target === mobileMenu) closeMenu();
+    });
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+  }
+
+  // Close on Escape key
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) closeMenu();
+  });
 
   /* ── 3. Scroll Reveal ───────────────────────────────────────*/
   const revealEls = document.querySelectorAll('.fade-in-up');
